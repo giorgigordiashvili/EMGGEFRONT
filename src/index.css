@@ -1,13 +1,417 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.navv {
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  color: white;
+}
+
+.location {
+  padding: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.bg-emg-blue {
+  background-color: #3d5971;
+}
+
+.bg-emg-green {
+  background-color: #74bb53;
+}
+
+* {
+  box-sizing: border-box;
+}
+.search {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.search:before {
+  content: "";
+  display: block;
+  width: 1.2px;
+  height: 100%;
+  position: relative;
+  background-color: #74bb53;
+  transition: all 0.5s ease;
+}
+.search.open {
+  background-color: white;
+  width: 200px;
+}
+
+.search.open input {
+  color: black;
+}
+.search.open:before {
+  height: 48px;
+  position: absolute;
+}
+.search-box {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 8px 40px 8px 18px;
+  font-size: 16px;
+}
+.search-box:focus {
+  outline: none;
+}
+.search-button {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.search-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  border: 1.2px solid #74bb53;
+  display: block;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.search-icon:before {
+  content: "";
+  width: 1.2px;
+  height: 6px;
+  position: absolute;
+  right: -0.8px;
+  top: 12px;
+  display: block;
+  background-color: #74bb53;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
+.search-icon:after {
+  content: "";
+  width: 1.2px;
+  height: 6px;
+  position: absolute;
+  right: -4.8px;
+  top: 16px;
+  display: block;
+  background-color: #74bb53;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+}
+.open .search-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+}
+.open .search-icon:before {
+  transform: rotate(52deg);
+  right: 8.8px;
+  top: 9.2px;
+  height: 6.4px;
+}
+.open .search-icon:after {
+  transform: rotate(-230deg);
+  right: 8.8px;
+  top: 5.2px;
+  height: 7.2px;
+}
+
+.navbar-nav > li {
+  margin-right: 5px;
+}
+
+.logoes {
+  height: 30vh;
+}
+
+.partner-img {
+  max-height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.border-emg {
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(120, 192, 57, 1);
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(120, 192, 57, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(120, 192, 57, 1);
+}
+.thumbnail {
+  height: 30vh;
+  background-image: url("res/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.min-vh-25 {
+  min-height: 25vh;
+}
+ul > li {
+  list-style: none;
+  text-align: left;
+}
+.str > li::before {
+  content: "\25AA"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #74bb53;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.border-color-emg {
+  border-color: #74bb53 !important;
+}
+
+.slider {
+  height: 70vh;
+  background-image: url("res/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.currentPageTitle {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.currentPageTitle::first-letter {
+  color: #78c039;
+  font-size: 150%;
+  border-bottom: 2px solid #78c039;
+}
+
+.color-emg {
+  color: #78c039;
+}
+
+.highlight {
+  background-color: #f7f7f9;
+}
+
+.vh-30 {
+  height: 30vh;
+}
+
+.inner-shadow-emg {
+  padding-bottom: 0.2rem;
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  -moz-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  box-shadow: inset 0px -4px 0px 0px rgba(120, 192, 57, 1);
+}
+
+.inner-line-emg {
+  padding-bottom: 0.2rem;
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  -moz-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+}
+
+.nav-link.active,
+.nav-item.show .nav-link-emg {
+  border-color: white !important;
+  padding-bottom: 0.7rem;
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  -moz-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+}
+.nav-tabs {
+  border: none !important;
+}
+
+.nav-link-emg {
+  color: black !important;
+}
+.nav-item:hover {
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  -moz-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+}
+.card-deck {
+  margin-right: auto;
+  margin-left: auto;
+}
+.card-emg {
+  padding: 0.5rem;
+  border-radius: 0;
+  border: none;
+}
+
+.card-emg-dark {
+  padding: 0.5rem;
+  border-radius: 0;
+  border: none;
+  background-color: #f7f7f9;
+}
+
+.emg-button {
+  background-color: #78c039;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0 0.2rem 0 0.2rem;
+}
+.home-card-img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-link-emg {
+  margin-left: 0.1rem;
+}
+
+.card-link + .card-link {
+  margin-left: 0.5rem;
+}
+
+.checked {
+  color: orange;
+}
+
+.p-customers {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.color-white {
+  color: white;
+}
+
+.thumbnails {
+  max-width: 15rem;
+}
+
+.opacity-8 {
+  opacity: 0.5;
+}
+
+.emg-button:hover {
+  background-color: #0c2f4d;
+  cursor: pointer;
+}
+
+.vh-50 {
+  height: 30vh !important;
+}
+
+.project-title-container {
+  background-color: white;
+}
+.project {
+  border-radius: 0;
+  height: 50%;
+  background: linear-gradient(rgba(10, 87, 128, 0.4), rgba(10, 87, 128, 0.4)),
+    url("res/place.jpg");
+}
+.project-body {
+  padding: 0;
+}
+.white-emg {
+  color: white;
+}
+
+.pt-10 {
+  padding-top: 5rem;
+}
+
+.pt-8 {
+  padding-top: 4rem;
+}
+
+@media only screen and (max-width: 2500px) {
+  .wt {
+    width: 15% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wt {
+    width: 25% !important;
+  }
+}
+
+.career-tab {
+  text-decoration: none !important;
+}
+
+.career-date {
+  font-size: 1rem;
+}
+
+.navbar {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 30% !important;
+  }
+}
+
+.news-link {
+  color: white;
+}
+
+.news-link:hover {
+  color: #78c039;
+}
+
+.home-news-link {
+  color: black;
+  text-decoration: none;
+}
+
+.home-news-link:hover {
+  color: green;
+  text-decoration: none;
 }
