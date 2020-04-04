@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "BPG Arial Caps";
-  src: url("../node_modules/bpg-arial-caps/css/bpg-arial-caps.min.css");
-}
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial-caps/css/bpg-arial-caps.min.css");
 
 body {
   font-family: "BPG Arial Caps", sans-serif;
