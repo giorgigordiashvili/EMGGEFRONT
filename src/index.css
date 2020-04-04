@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "BPG Arial Caps";
+  src: url("../node_modules/bpg-arial-caps/css/bpg-arial-caps.min.css");
+}
+
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "BPG Arial Caps", sans-serif;
 }
 
 .navv {

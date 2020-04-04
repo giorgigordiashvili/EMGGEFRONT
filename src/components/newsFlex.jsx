@@ -12,7 +12,7 @@ class NewsFlex extends Component {
     const isAdmin = auth.isAdmin();
     return (
       <div className="card-deck">
-        {newss.map(news => (
+        {newss.map((news) => (
           <div key={news._id} className="card m-2">
             {isAdmin && (
               <React.Fragment>
@@ -20,7 +20,7 @@ class NewsFlex extends Component {
                   to={"/editnews/" + news._id}
                   className="mt-auto card-btn btn btn-primary"
                 >
-                  Edit
+                  რედაქტირება
                 </Link>
 
                 <Button
@@ -28,7 +28,7 @@ class NewsFlex extends Component {
                   variant="btn card-btn btn-danger"
                   className="mt-auto"
                 >
-                  Delete
+                  წაშლა
                 </Button>
                 <br />
               </React.Fragment>
@@ -36,24 +36,20 @@ class NewsFlex extends Component {
             <div className="card-body project-body">
               <div className="project vh-50 d-flex column align-items-end">
                 <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
-                  <span className="inner-shadow-emg ">TITLE</span>
+                  <span className="inner-shadow-emg ">{news.title}</span>
                 </h5>
               </div>
-              <p className="card-text p-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Commodi laborum cum doloribus dignissimos, minus necessitatibus
-                officia.
-              </p>
+              <p className="card-text p-2">{news.shortDesc}</p>
             </div>
             <div className="card-footer">
               <small className="text-muted row justify-content-between">
                 <div>
-                  <Link to="#" className="card-link color-emg">
+                  <a href={news.fbLink} className="card-link color-emg">
                     <FontAwesomeIcon icon={faFacebook} />
-                  </Link>
-                  <Link to="#" className="card-link color-emg">
+                  </a>
+                  <a href={news.twLink} className="card-link color-emg">
                     <FontAwesomeIcon icon={faTwitter} />
-                  </Link>
+                  </a>
                 </div>
                 <div className="color-emg">
                   <Moment format="DD MM YYYY" withTitle>

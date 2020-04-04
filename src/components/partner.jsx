@@ -11,7 +11,7 @@ class Partner extends Component {
 
     return (
       <div className="container">
-        <h1 className="currentPageTitle  mt-3 pl-04">Partners</h1>
+        <h1 className="currentPageTitle  mt-3 pl-04">პარტნიორები</h1>
         {isAdmin && (
           <React.Fragment>
             <Link
@@ -19,12 +19,12 @@ class Partner extends Component {
               className="btn btn-primary"
               to="/partners/new"
             >
-              New Partner
+              პარტნიორის დამატება
             </Link>
           </React.Fragment>
         )}
         <div className="container row">
-          {partners.map(partner => (
+          {partners.map((partner) => (
             <div className="col-sm-6 col-md-3  p-1  ">
               <div className="border-emg row logoes justify-content-center">
                 <img
@@ -39,7 +39,7 @@ class Partner extends Component {
                     to={"/partners/" + partner._id}
                     className="mt-auto card-btn btn btn-primary"
                   >
-                    Edit
+                    რედაქტირება
                   </Link>
                   {` `}
                   <Button
@@ -47,7 +47,7 @@ class Partner extends Component {
                     variant="btn card-btn btn-danger"
                     className="mt-auto"
                   >
-                    Delete
+                    წაშლა
                   </Button>
                   <br />
                 </React.Fragment>

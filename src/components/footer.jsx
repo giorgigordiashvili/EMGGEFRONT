@@ -10,7 +10,7 @@ class Footer extends Component {
         <div className="container pt-5 pb-5 column pl-04">
           <div className="row">
             <div className="col-md-6 col-12">
-              <h5 className="color-emg pb-5">CONTACT</h5>
+              <h5 className="color-emg pb-5">კონტაქტი</h5>
               <table className="table-contact">
                 <tbody>
                   <tr>
@@ -32,7 +32,7 @@ class Footer extends Component {
                         src="https://emg.groot.ge/location.png"
                       />
                     </td>
-                    <td>8 K. Kutateladze, Tbilisi 0101</td>
+                    <td>8 კ. ქუთათელაძე, თბილისი 0101</td>
                   </tr>
                 </tbody>
               </table>
@@ -52,7 +52,7 @@ class Footer extends Component {
         <div className="fluid-container p-3 mb-5 bg-emg-green color-white opacity-8">
           <div className="container">
             <div className="pl-04">
-              Follow us on
+              გამოგვყევით
               <Link to="#" className="card-link-emg p-2 color-white">
                 <FontAwesome className="fab fa-facebook-f"></FontAwesome>
               </Link>
@@ -63,7 +63,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="fluid-container d-flex justify-content-center bg-emg-blue p-4 col-sm-12 color-white">
-          © 2019 Engineering Monitoring Group. All rights reserved
+          © 2019 ინჟინერიის მონიტორინგის ჯგუფი.
         </div>
       </footer>
     );

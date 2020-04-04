@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Moment from "react-moment";
-import emgLogo from "../res/logo.png";
+import emgLogo from "../res/logoge.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.min.js";
@@ -23,27 +23,27 @@ class Home extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true
-          }
+            infinite: true,
+          },
         },
         {
           breakpoint: 990,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
-          }
+            slidesToScroll: 2,
+          },
         },
         {
           breakpoint: 780,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
+            slidesToScroll: 1,
+          },
+        },
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
-      ]
+      ],
     };
     const responsive = {
       slidesToShow: 4,
@@ -54,27 +54,27 @@ class Home extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true
-          }
+            infinite: true,
+          },
         },
         {
           breakpoint: 770,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
-          }
+            slidesToScroll: 2,
+          },
         },
         {
           breakpoint: 590,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
+            slidesToScroll: 1,
+          },
+        },
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
-      ]
+      ],
     };
     const { projects, newss } = this.props;
     return (
@@ -123,10 +123,10 @@ class Home extends Component {
 
         <div className="fluid-container highlight pt-3 pb-3">
           <div className="container">
-            <h2 className="currentPageTitle pl-03">News & Media</h2>
+            <h2 className="currentPageTitle pl-03">სიახლეები</h2>
           </div>
           <Slider className="container" {...responsive}>
-            {newss.slice(0, 8).map(news => (
+            {newss.slice(0, 8).map((news) => (
               <div>
                 <div className="card card-emg mr-4">
                   <img
@@ -170,12 +170,12 @@ class Home extends Component {
 
         {/* PROJECTS START */}
         <div className="container">
-          <h2 className="currentPageTitle pl-03">Projects</h2>
+          <h2 className="currentPageTitle pl-03">პროექტები</h2>
         </div>
         <div className="fluid-container pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
-            {projects.slice(0, 8).map(project => (
-              <div>
+            {projects.slice(0, 8).map((project) => (
+              <div key={project._id}>
                 <div className="card card-emg-dark mr-4">
                   <img
                     alt={project.name}

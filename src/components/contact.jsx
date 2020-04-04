@@ -15,8 +15,8 @@ class Contact extends Component {
       longitude: -74,
       latitude: 40.7,
       zoom: 11,
-      maxZoom: 16
-    }
+      maxZoom: 16,
+    },
   };
 
   async componentDidMount() {
@@ -27,7 +27,7 @@ class Contact extends Component {
     return (
       <React.Fragment>
         <div className="container pt-5">
-          <h1 className="currentPageTitle pl-04">Contact</h1>
+          <h1 className="currentPageTitle pl-04">კონტაქტი</h1>
 
           <div className="row">
             <div className="col-12 ">
@@ -70,24 +70,24 @@ class Contact extends Component {
                 <div className="form-row ">
                   <div className="form-group col-md-6 ">
                     <label htmlFor="inputEmail4" className="color-emg">
-                      Name
+                      სახელი
                     </label>
                     <input
                       type="text"
                       className="form-control"
                       id="inputEmail4"
-                      placeholder="Name"
+                      placeholder="სახელი"
                     />
                   </div>
                   <div className="form-group col-md-6">
                     <label htmlFor="inputPassword4" className="color-emg">
-                      Subject
+                      თემა
                     </label>
                     <input
                       type="text"
                       className="form-control"
                       id="inputPassword4"
-                      placeholder="Subject"
+                      placeholder="თემა"
                     />
                   </div>
                 </div>
@@ -96,7 +96,7 @@ class Contact extends Component {
                     htmlFor="exampleFormControlTextarea1"
                     className="color-emg"
                   >
-                    Your Message
+                    წერილი
                   </label>
                   <textarea
                     className="form-control"
@@ -109,7 +109,7 @@ class Contact extends Component {
                   type="submit"
                   className="btn btn-primary emg-button pl-3 pr-3 pt-1 pb-1"
                 >
-                  Send
+                  გაგზავნა
                 </button>
               </form>
             </div>
@@ -117,7 +117,7 @@ class Contact extends Component {
           </div>
           <div className="fluid-container">
             <div className="container">
-              <h1 className="currentPageTitle pl-04">Branches</h1>
+              <h1 className="currentPageTitle pl-04">ფილიალები</h1>
               <div className="row">
                 <div className="col-12 row">
                   <div
@@ -127,11 +127,9 @@ class Contact extends Component {
                     <img className="location" src={locationImage} alt="" />
                     <div className="column">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Head office: Tbilisi
+                        სათაო ოფისი: თბილისი
                       </p>
-                      <p style={{ margin: 0, fontSize: 25 }}>
-                        K. Kutateladze 8
-                      </p>
+                      <p style={{ margin: 0, fontSize: 25 }}>კ. ქუთათელაძე 8</p>
                     </div>
                   </div>
                   <div className="container p-5"></div>
@@ -139,54 +137,54 @@ class Contact extends Component {
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Kutaisi
+                        ქუთაისი
                       </p>
-                      <p>Tamar Mepe #66/68</p>
+                      <p>თამარ მეფე #66/68</p>
                     </div>
                   </div>
                   <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Terjola
+                        თერჯოლა
                       </p>
-                      <p>Rustvelsi Street #99</p>
+                      <p>რუსთველსის ქუჩა #99</p>
                     </div>
                   </div>
                   <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Zestaponi
+                        ზესტაფონი
                       </p>
-                      <p>G. Nikoadze #36</p>
+                      <p>გ. ნიკოლაძე #36</p>
                     </div>
                   </div>
                   <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Chiatura{" "}
+                        ჭიათურა{" "}
                       </p>
-                      <p>Ninoshvili Street #5</p>
+                      <p>ნინოშვილის ქუჩა #5</p>
                     </div>
                   </div>
                   <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Telavi
+                        თელავი
                       </p>
-                      <p>Rustaveli Street #86</p>
+                      <p>რუსთაველის ქუჩა #86</p>
                     </div>
                   </div>
                   <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Tsnori
+                        წნორი
                       </p>
-                      <p>Freedom Street #74</p>
+                      <p>თავისუფლების ქუჩა #74</p>
                     </div>
                   </div>
                 </div>

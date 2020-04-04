@@ -16,7 +16,7 @@ class Activities extends Component {
               aria-controls="nav-governance"
               aria-selected="true"
             >
-              MARKETS
+              ბაზარი
             </a>
             <a
               className="nav-item nav-link nav-link-emg p-04"
@@ -27,7 +27,7 @@ class Activities extends Component {
               aria-controls="nav-strategic-vision"
               aria-selected="false"
             >
-              SERVICES
+              სერვისები
             </a>
             <a
               className="nav-item nav-link nav-link-emg p-04"
@@ -38,7 +38,7 @@ class Activities extends Component {
               aria-controls="nav-quality-and-permits"
               aria-selected="false"
             >
-              PRICES
+              ფასები
             </a>
           </div>
         </nav>
@@ -51,13 +51,15 @@ class Activities extends Component {
             aria-labelledby="nav-home-tab"
           >
             <div className="container ">
-              <h1 className="currentPageTitle pl-04">ACTIVITIES</h1>
-              <h5 className="color-emg pb-4 pl-04">FIELD OF ACTIVITIES</h5>
+              <h1 className="currentPageTitle pl-04">საქმიანობები</h1>
+              <h5 className="color-emg pb-4 pl-04">
+                საქმიანობების ჩამონათვალი
+              </h5>
             </div>
             <div className="fluid-container highlight p-3">
               <div className="container">
                 <h5 className="pt-2 pb-2 pl-04">
-                  COMPANY ACTIVITY SECTORS AND INDUSTRIES
+                  კომპანიის მიერ მოცული ინდუსტრიები
                 </h5>
                 <div className="row pl-03">
                   <div className="col-sm-6 col-md-3  p-1  ">

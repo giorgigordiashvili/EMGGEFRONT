@@ -46,7 +46,7 @@ class NavBar extends Component {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <NavLink to="/home" className="nav-link">
-                    HOME
+                    მთავარი
                   </NavLink>
                 </li>
                 <li class="nav-item dropdown">
@@ -58,70 +58,70 @@ class NavBar extends Component {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    ABOUT US
+                    ჩვენ შესახებ
                   </NavLink>
                   <div className="dropdown-menu" aria-labelledby="aboutus">
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about", hash: "#whoweare" }}
                     >
-                      WHO WE ARE
+                      ვინ ვართ ჩვენ
                     </Link>
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about", hash: "#governance" }}
                     >
-                      GOVERNANCE
+                      მმართველობა
                     </Link>
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about", hash: "#strategicvision" }}
                     >
-                      STRATEGIC VISION
+                      სტრატეგიული ხედვა
                     </Link>
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about", hash: "#qualityandpermits" }}
                     >
-                      QUALITY AND PERMITS
+                      ხარისხი და ნებართვა
                     </Link>
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about", hash: "#partners" }}
                     >
-                      PARTNERS
+                      პარტნიორები
                     </Link>
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about", hash: "#branches" }}
                     >
-                      BRANCHES
+                      ფილიალები
                     </Link>
                   </div>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/activities" className="nav-link">
-                    ACTIVITIES
+                    საქმიანობები
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/projects" className="nav-link">
-                    PROJECTS
+                    პროექტები
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/news" className="nav-link">
-                    NEWS & MEDIA
+                    სიახლეები
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/career" className="nav-link">
-                    CAREER
+                    კარიერა
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/contact" className="nav-link">
-                    CONTACT
+                    კონტაქტი
                   </NavLink>
                 </li>
                 <li className={this.state.isOpen ? "search open" : "search"}>
@@ -141,18 +141,18 @@ class NavBar extends Component {
                 {this.props.user.isAdmin && (
                   <li className="nav-item">
                     <a className="nav-link" href="/logout">
-                      LOGOUT
+                      გასვლა
                     </a>
                   </li>
                 )}
                 <li className="nav-item">
                   <a className="nav-link" href="http://portal.emg.ge">
-                    PORTAL
+                    პორტალი
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://ge.emg.ge">
-                    GE
+                  <a className="nav-link" href="https://emg.ge">
+                    EN
                   </a>
                 </li>
               </ul>

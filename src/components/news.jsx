@@ -16,7 +16,7 @@ class News extends Component {
     currentPage: 1,
     searchQuery: "",
     selectedStyle: null,
-    sortColumn: { path: "title", order: "asc" }
+    sortColumn: { path: "title", order: "asc" },
   };
 
   async componentDidMount() {
@@ -24,9 +24,9 @@ class News extends Component {
     this.setState({ newss });
   }
 
-  handleDelete = async project => {
+  handleDelete = async (project) => {
     const originalProjects = this.state.newss;
-    const projects = originalProjects.filter(s => s._id !== project._id);
+    const projects = originalProjects.filter((s) => s._id !== project._id);
     this.setState({ projects });
     try {
       await deleteNews(project._id);
@@ -38,23 +38,23 @@ class News extends Component {
     }
   };
 
-  handlePageChange = page => {
+  handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
-  handleStyleSelect = style => {
+  handleStyleSelect = (style) => {
     this.setState({ selectedStyle: style, searchQuery: "", currentPage: 1 });
   };
 
-  handleSort = sortColumn => {
+  handleSort = (sortColumn) => {
     this.setState({ sortColumn });
   };
 
-  handleSearch = query => {
+  handleSearch = (query) => {
     this.setState({ searchQuery: query, selectedStyle: null, currentPage: 1 });
   };
 
-  renderSortIcon = column => {
+  renderSortIcon = (column) => {
     const { sortColumn } = this.state;
 
     if (column.path !== sortColumn.path) return null;
@@ -68,17 +68,17 @@ class News extends Component {
       currentPage,
       selectedStyle,
       sortColumn,
-      searchQuery
+      searchQuery,
     } = this.state;
     const { newss: allProjects } = this.props;
     let filtered = allProjects;
 
     if (searchQuery)
-      filtered = allProjects.filter(s =>
+      filtered = allProjects.filter((s) =>
         s.title.toLowerCase().startsWith(searchQuery.toLowerCase())
       );
     else if (selectedStyle && selectedStyle._id)
-      filtered = allProjects.filter(m => m.style._id === selectedStyle._id);
+      filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
 
     const sorted = _.orderBy(filtered, [sortColumn.path], sortColumn.order);
 
@@ -95,15 +95,15 @@ class News extends Component {
 
     if (count === 0)
       return (
-        <div className="container">
+        <div className="container pt-8">
           <Link
             style={{ marginBottom: "10px" }}
             className="btn btn-primary ml-1"
             to="/editnews/new"
           >
-            New News
+            სიახლის დამატება
           </Link>
-          <p className="pt-5">There are no news in the database</p>
+          <p>ბაზაში სიახლეები არ არის დამატებული</p>
         </div>
       );
     const { totalCount, data: newss } = this.getPagedData();
@@ -116,14 +116,14 @@ class News extends Component {
             className="btn btn-primary ml-1"
             to="/editnews/new"
           >
-            New News
+            სიახლის დამატება
           </Link>
         )}
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="index.html">მთავარი</a>
           </li>
-          <li className="breadcrumb-item active">News & Media</li>
+          <li className="breadcrumb-item active">სიახლეები</li>
         </ol>
         {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
         <NewsFlex

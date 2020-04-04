@@ -9,14 +9,14 @@ class CategoriesFlex extends Component {
     const isAdmin = auth.isAdmin();
     return (
       <div className="row">
-        {categories.map(project => (
+        {categories.map((project) => (
           <div key={project._id} className="col-md-6 col-lg-4">
             <div className="card border-0 transform-on-hover">
               <Link
                 className="lightbox"
                 to={{
                   pathname: "/projects/category/" + project._id,
-                  state: { projects }
+                  state: { projects },
                 }}
               >
                 <img
@@ -30,7 +30,7 @@ class CategoriesFlex extends Component {
                   <Link
                     to={{
                       pathname: "/projects/category/" + project._id,
-                      state: { projects }
+                      state: { projects },
                     }}
                   >
                     {project.name}
@@ -42,7 +42,7 @@ class CategoriesFlex extends Component {
                         to={"/category/" + project._id}
                         className="mt-auto card-btn btn btn-primary"
                       >
-                        Edit
+                        რედაქტირება
                       </Link>
                       {` `}
                       <Button
@@ -50,7 +50,7 @@ class CategoriesFlex extends Component {
                         variant="btn card-btn btn-danger"
                         className="mt-auto"
                       >
-                        Delete
+                        წაშლა
                       </Button>
                       <br />
                     </React.Fragment>

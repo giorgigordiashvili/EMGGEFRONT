@@ -14,9 +14,9 @@ class Career extends Component {
       <React.Fragment>
         <div className="thumbnail"></div>
         <div className="container">
-          <h1 className="currentPageTitle pl-04 ">Career</h1>
-          <h5 className="color-emg pb-4 pl-04">WORKS WITH US</h5>
-          <h5 className="pl-04">OUR PRINCIPLES</h5>
+          <h1 className="currentPageTitle pl-04 ">კარიერა</h1>
+          <h5 className="color-emg pb-4 pl-04">იმუშავე ჩვენთან</h5>
+          <h5 className="pl-04">ჩვენი პრინციპები</h5>
           <p className="pl-04">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
             accusantium aut a est quidem exercitationem voluptates ipsam
@@ -36,7 +36,7 @@ class Career extends Component {
               className="btn btn-primary"
               to="/career/new"
             >
-              New Career
+              ვაკანსიის დამატება
             </Link>
           )}
         </div>
@@ -49,7 +49,7 @@ class Career extends Component {
               aria-multiselectable="true"
             >
               {careers &&
-                careers.map(career => (
+                careers.map((career) => (
                   <div className="card" key={career._id}>
                     <div
                       className="card-header"
@@ -76,14 +76,14 @@ class Career extends Component {
                                 to={"/career/" + career._id}
                                 className="mt-auto card-btn btn btn-primary"
                               >
-                                Edit
+                                რედაქტირება
                               </Link>
                               <Button
                                 onClick={() => onDelete(career)}
                                 variant="btn card-btn btn-danger"
                                 className="mt-auto"
                               >
-                                Delete
+                                წაშლა
                               </Button>
                             </React.Fragment>
                           )}

@@ -13,7 +13,7 @@ class ProjectFlex extends Component {
 
     return (
       <div className="card-deck">
-        {projects.map(project => (
+        {projects.map((project) => (
           <div key={project._id} className="card m-2">
             {isAdmin && (
               <React.Fragment>
@@ -21,7 +21,7 @@ class ProjectFlex extends Component {
                   to={"/project/" + project._id}
                   className="mt-auto card-btn btn btn-primary"
                 >
-                  Edit
+                  რედაქტირება
                 </Link>
 
                 <Button
@@ -29,7 +29,7 @@ class ProjectFlex extends Component {
                   variant="btn card-btn btn-danger"
                   className="mt-auto"
                 >
-                  Delete
+                  წაშლა
                 </Button>
                 <br />
               </React.Fragment>
@@ -37,46 +37,38 @@ class ProjectFlex extends Component {
             <div className="card-body project-body">
               <div className="project vh-50 d-flex column align-items-end">
                 <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
-                  <span className="inner-shadow-emg ">TITLE</span>
+                  <span className="inner-shadow-emg ">{project.title}</span>
                 </h5>
               </div>
               <p className="card-text p-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Commodi laborum cum doloribus dignissimos, minus necessitatibus
-                officia.
+                {project.shortDesc}
                 <br />
-                <span className="color-emg">Client: </span> ???
+                <span className="color-emg">კლიენტი: </span> {project.client}
                 <br />
-                <span className="color-emg">Size/Area: </span> ???
+                <span className="color-emg">ფართობი: </span> ???
                 <br />
-                <span className="color-emg">
-                  Number of employed people:{" "}
-                </span>{" "}
-                ???
+                <span className="color-emg">დასაქმებული ადამიანები: </span> ???
                 <br />
-                <span className="color-emg">Duration: </span> ???
+                <span className="color-emg">ხანგრძლივობა: </span> ???
                 <br />
-                <span className="color-emg">Conducted works: </span> ???
+                <span className="color-emg">შესრულებული სამუშაოები: </span> ???
                 <br />
-                <span className="color-emg">Partners: </span> ???
+                <span className="color-emg">პარტნიორები: </span> ???
                 <br />
-                <span className="color-emg">
-                  Total cost of the project:{" "}
-                </span>{" "}
+                <span className="color-emg">ღირებულება:</span>
                 ???
               </p>
             </div>
             <div className="card-footer">
               <small className="text-muted row justify-content-between">
                 <div>
-                  <Link to="#" className="card-link color-emg">
+                  <a href={project.fbLink} className="card-link color-emg">
                     <FontAwesomeIcon icon={faFacebook} />
-                  </Link>
-                  <Link to="#" className="card-link color-emg">
+                  </a>
+                  <a href={project.twLink} className="card-link color-emg">
                     <FontAwesomeIcon icon={faTwitter} />
-                  </Link>
+                  </a>
                 </div>
-                <button className="emg-button p-1">Make Feedback</button>
                 <div className="color-emg">
                   <Moment format="DD MM YYYY" withTitle>
                     {project.publishDate}

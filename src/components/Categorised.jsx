@@ -15,23 +15,23 @@ class Categorised extends Component {
     currentPage: 1,
     searchQuery: "",
     selectedStyle: null,
-    sortColumn: { path: "title", order: "asc" }
+    sortColumn: { path: "title", order: "asc" },
   };
 
   async componentDidMount() {
     let { projects } = this.props.location.state;
     console.log(projects);
     projects = projects.filter(
-      obj => obj.category._id === this.props.match.params.id
+      (obj) => obj.category._id === this.props.match.params.id
     );
 
     const { category } = projects[0] || {};
     this.setState({ projects, category });
   }
 
-  handleDelete = async project => {
+  handleDelete = async (project) => {
     const originalProjects = this.state.projects;
-    const projects = originalProjects.filter(s => s._id !== project._id);
+    const projects = originalProjects.filter((s) => s._id !== project._id);
     this.setState({ projects });
     try {
       await deleteProject(project._id);
@@ -43,23 +43,23 @@ class Categorised extends Component {
     }
   };
 
-  handlePageChange = page => {
+  handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
-  handleStyleSelect = style => {
+  handleStyleSelect = (style) => {
     this.setState({ selectedStyle: style, searchQuery: "", currentPage: 1 });
   };
 
-  handleSort = sortColumn => {
+  handleSort = (sortColumn) => {
     this.setState({ sortColumn });
   };
 
-  handleSearch = query => {
+  handleSearch = (query) => {
     this.setState({ searchQuery: query, selectedStyle: null, currentPage: 1 });
   };
 
-  renderSortIcon = column => {
+  renderSortIcon = (column) => {
     const { sortColumn } = this.state;
 
     if (column.path !== sortColumn.path) return null;
@@ -75,16 +75,16 @@ class Categorised extends Component {
       selectedStyle,
       sortColumn,
       searchQuery,
-      category
+      category,
     } = this.state;
     let filtered = allProjects;
 
     if (searchQuery)
-      filtered = allProjects.filter(s =>
+      filtered = allProjects.filter((s) =>
         s.title.toLowerCase().startsWith(searchQuery.toLowerCase())
       );
     else if (selectedStyle && selectedStyle._id)
-      filtered = allProjects.filter(m => m.style._id === selectedStyle._id);
+      filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
 
     const sorted = _.orderBy(filtered, [sortColumn.path], sortColumn.order);
 
@@ -99,7 +99,7 @@ class Categorised extends Component {
       currentPage,
       sortColumn,
       searchQuery,
-      category
+      category,
     } = this.state;
     const { user } = this.props;
     let isAdmin = false;
@@ -113,9 +113,9 @@ class Categorised extends Component {
             className="btn btn-primary ml-1"
             to="/projects/new"
           >
-            New Project
+            პროექტის დამატება
           </Link>
-          <p className="pt-8">There are no projects in the database</p>;
+          <p className="pt-8">ბაზაში პროექტები არ არის დამატებული</p>;
         </div>
       );
 
@@ -129,7 +129,7 @@ class Categorised extends Component {
             className="btn btn-primary"
             to="/projects/new"
           >
-            New Project
+            პროექტის დამატება
           </Link>
         )}
         <h1 className="mt-4 mb-3 ">
@@ -137,7 +137,7 @@ class Categorised extends Component {
         </h1>
         <ol className="breadcrumb ">
           <li className="breadcrumb-item">
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects">პროექტები</Link>
           </li>
           <li className="breadcrumb-item active">{category.name}</li>
         </ol>

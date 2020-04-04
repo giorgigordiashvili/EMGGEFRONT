@@ -15,12 +15,12 @@ class Projects extends Component {
     currentPage: 1,
     searchQuery: "",
     selectedStyle: null,
-    sortColumn: { path: "title", order: "asc" }
+    sortColumn: { path: "title", order: "asc" },
   };
 
-  handleDelete = async project => {
+  handleDelete = async (project) => {
     const originalProjects = this.state.projects;
-    const projects = originalProjects.filter(s => s._id !== project._id);
+    const projects = originalProjects.filter((s) => s._id !== project._id);
     this.setState({ projects });
     try {
       await deleteProject(project._id);
@@ -32,9 +32,9 @@ class Projects extends Component {
     }
   };
 
-  handleDeleteCategory = async category => {
+  handleDeleteCategory = async (category) => {
     const originalCategories = this.state.categories;
-    const categories = originalCategories.filter(s => s._id !== category._id);
+    const categories = originalCategories.filter((s) => s._id !== category._id);
     this.setState({ categories });
     try {
       await deleteCategory(category._id);
@@ -55,35 +55,30 @@ class Projects extends Component {
 
     if (count === 0)
       return (
-        <div className="pt-8">
+        <div className="pt-8 container">
           {isAdmin && (
             <React.Fragment>
               <Link
                 style={{ marginBottom: "10px" }}
                 className="btn btn-primary ml-1"
-                to="/projects/new"
+                to="/category/new"
               >
-                New Category
+                კატეგორიის შექმნა
               </Link>
               <Link
                 style={{ marginBottom: "10px" }}
                 className="btn btn-primary ml-1"
                 to="/projects/new"
               >
-                New Project
+                პროექტის დამატება
               </Link>
             </React.Fragment>
           )}
-          <p>There are no categories in the database</p>
+          <p>ბაზაში კატეგორიები არ არის დამატებული</p>
         </div>
       );
     return (
-      <div className="container pt-5">
-        <h1 className="currentPageTitle pl-04">PROJECTS</h1>
-        <h5 className="color-emg pb-4 pl-04">
-          ROADS, HIGHWAYS, BRIDGES, TUNNELS
-        </h5>
-
+      <div className="container pt-8">
         {isAdmin && (
           <React.Fragment>
             <Link
@@ -91,7 +86,7 @@ class Projects extends Component {
               className="btn btn-primary"
               to="/projects/new"
             >
-              New Project
+              პროექტის დამატება
             </Link>
             <span> </span>
             <Link
@@ -99,7 +94,7 @@ class Projects extends Component {
               className="btn btn-primary"
               to="/category/new"
             >
-              New Category
+              კატეგორიის შექმნა
             </Link>
           </React.Fragment>
         )}

@@ -22,7 +22,7 @@ class About extends Component {
               aria-controls="nav-info"
               aria-selected="true"
             >
-              WHO WE ARE
+              ვინ ვართ ჩვენ
             </a>
             <a
               className="nav-item nav-link nav-link-emg "
@@ -33,7 +33,7 @@ class About extends Component {
               aria-controls="nav-governance"
               aria-selected="true"
             >
-              GOVERNANCE
+              მმართველობა
             </a>
             <a
               className="nav-item nav-link nav-link-emg"
@@ -44,7 +44,7 @@ class About extends Component {
               aria-controls="nav-strategic-vision"
               aria-selected="false"
             >
-              STRATEGIC VISION
+              სტრატეგიული ხედვა
             </a>
             <a
               className="nav-item nav-link nav-link-emg"
@@ -55,7 +55,7 @@ class About extends Component {
               aria-controls="nav-quality-and-permits"
               aria-selected="false"
             >
-              QUALITY AND PERMITS
+              ხარისხი და ნებართვა
             </a>
             {/* <a
               className="nav-item nav-link nav-link-emg"
@@ -77,7 +77,7 @@ class About extends Component {
               aria-controls="nav-partners"
               aria-selected="false"
             >
-              PARTNERS
+              პარტნიორები
             </a>
             <a
               className="nav-item nav-link nav-link-emg"
@@ -88,7 +88,7 @@ class About extends Component {
               aria-controls="nav-branches"
               aria-selected="false"
             >
-              BRANCHES
+              ფილიალები
             </a>
           </div>
         </nav>
@@ -99,52 +99,43 @@ class About extends Component {
             role="tabpanel"
             aria-labelledby="nav-home-tab"
           >
+            <div className="container p-3"></div>
             <div className="container ">
               <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                ABOUT US
+                ჩვენ შესახებ
               </h1>
               <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
-                ENGINEERING MONITORING GROUP
+                „საინჟინრო მონიტორინგის ჯგუფი“
               </h5>
             </div>
-            <div className="fluid-container p-5">
+            <div className="fluid-container">
               <div className="container">
                 <div className="row">
                   <div className="col-12 col-md-12 pl-04">
-                    <p>
-                      Engineering Monitoring Group LLC as A type accredited
-                      inspection body, over the last few years, has been
-                      actively working on Georgian Market. By attracting local
-                      and international intellectual resources, adamant
-                      protection of internationally recognized rules,
-                      regulations and values of Inspecting bodies and team work
-                      allowed company to find itself on Georgian market as one
-                      of the leading inspection organizations. For the high
-                      quality, professionalism and constant development of
-                      services, Engineering Monitoring Group has gained on
-                      Georgia's construction sector trust and respect, which
-                      reflected a sharp rise in market share and
-                      competitiveness. Engineering Monitoring Group LLC operates
-                      in all sectors of infrastructural construction sphere in
-                      Georgia. Apart from the head office located in Tbilisi,
-                      our company is represented by several regional offices and
-                      serves the construction site in any region of Georgia
-                      without restriction. The company management is focused on
-                      the best international practice of organizational
-                      corporate management systems, cooperating with
-                      international and local partners, on the expansion of
-                      sectoral and geographical area of services and activities,
-                      introduction of international experience and technologies
-                      in engineering in Georgia. A number of projects have
-                      already been implemented with partners in this direction.
-                      Much more is planned to do. Permanent growth and
-                      development is the main priority of our company.
+                    <p className="text-justify">
+                      „საინჟინრო მონიტორინგის ჯგუფი“ 2016 წელს დაფუძნდა.
+                      კომპანია A ტიპის ინსპექტირების აკრედიტებული ორგანოა და
+                      საინჟინრო-საკონსულტაციო მომსახურებას უწევს სამშენებლო
+                      სფეროს თითქმის ყველა დარგს. საერთაშორისო სტანდარტების
+                      მკაცრი დაცვით, პრინციპულობითა და პროფესიული ღირებულებების
+                      ერთგულებით კომპანიამ დაარსების დღიდან დაიმკვიდრა
+                      ინსპექტირების წამყვანი ორგანოს სტატუსი ქართულ ბაზარზე.
+                      სამშენებლო სექტორის ნდობა და პატივისცემა „საინჟინრო
+                      მონიტორინგის ჯგუფმა“ პროფესიონალიზმითა და მომსახურების
+                      ხარისხით დაიმსახურა. მუდმივ განვითარებაზე ორიენტაციამ,
+                      ადგილობრივი და საერთაშორისო ინტელექტუალური რესურსების
+                      მოზიდვამ და გუნდურმა მუშაობამ სტაბილური წინსვლა
+                      განაპირობა. ეს ყველაფერი, საბოლოოდ, ბაზრის წილისა და
+                      კონკურენტუნარიანობის მკვეთრ ზრდაზე აისახა. „საინჟინრო
+                      მონიტორინგის ჯგუფის“ თბილისის სათავო და რეგიონული ოფისები
+                      შეუზღუდავად ემსახურება სამშენებლო ობიექტებს საქართველოს
+                      მთელ ტერიტორიაზე.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="container p-5"></div>
+            <div className="container p-3"></div>
           </div>
 
           <div
@@ -153,52 +144,50 @@ class About extends Component {
             role="tabpanel"
             aria-labelledby="nav-governance-tab"
           >
+            <div className="container p-3"></div>
             <div className="container">
               <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                Structure
+                მენეჯმენტი
               </h1>
-              <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
-                ENGINEERING MONITORING GROUP
-              </h5>
             </div>
-            <div className="fluid-container p-5">
+            <div className="fluid-container ">
               <div className="container">
                 <div className="row">
                   <div className="col-12 col-md-12 pl-04">
                     <p>
-                      Engineering Monitoring Group LLC as A type accredited
-                      inspection body, over the last few years, has been
-                      actively working on Georgian Market. By attracting local
-                      and international intellectual resources, adamant
-                      protection of internationally recognized rules,
-                      regulations and values of Inspecting bodies and team work
-                      allowed company to find itself on Georgian market as one
-                      of the leading inspection organizations. For the high
-                      quality, professionalism and constant development of
-                      services, Engineering Monitoring Group has gained on
-                      Georgia's construction sector trust and respect, which
-                      reflected a sharp rise in market share and
-                      competitiveness. Engineering Monitoring Group LLC operates
-                      in all sectors of infrastructural construction sphere in
-                      Georgia. Apart from the head office located in Tbilisi,
-                      our company is represented by several regional offices and
-                      serves the construction site in any region of Georgia
-                      without restriction. The company management is focused on
-                      the best international practice of organizational
-                      corporate management systems, cooperating with
-                      international and local partners, on the expansion of
-                      sectoral and geographical area of services and activities,
-                      introduction of international experience and technologies
-                      in engineering in Georgia. A number of projects have
-                      already been implemented with partners in this direction.
-                      Much more is planned to do. Permanent growth and
-                      development is the main priority of our company.
+                      კომპანიის მენეჯმენტი:{" "}
+                      <ul>
+                        <li>
+                          • ეყრდნობა ორგანიზაციის კორპორაციული მართვის საუკეთესო
+                          საერთაშორისო პრაქტიკას;{" "}
+                        </li>
+                        <li>
+                          • აძლიერებს კორპორაციულ კულტურას და მიზნების
+                          შესაბამისად სრულყოფს ორგანიზაციის სტრუქტურას;
+                        </li>
+                        <li>
+                          {" "}
+                          • თანამშრომლობს როგორც ადგილობრივ, ისე უცხოელ
+                          პარტნიორებთან;
+                        </li>
+                        <li>
+                          {" "}
+                          • აფართოებს საქმიანობის სექტორულ და გეოგრაფიულ არეალს;{" "}
+                        </li>
+                        <li>
+                          • საერთაშორისო გამოცდილების გათვალისწინებით
+                          საქართველოში ნერგავს საინჟინრო და სამშენებლო სფეროში
+                          მსოფლიოში აპრობირებულ თანამედროვე ტექნოლოგიებსა და
+                          ინოვაციებს. მუდმივი ზრდა და განვითარება – ეს ჩვენი
+                          გუნდის მთავარი პრინციპია.
+                        </li>
+                      </ul>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="container p-5"></div>
+            <div className="container p-3"></div>
           </div>
 
           <div
@@ -207,9 +196,9 @@ class About extends Component {
             role="tabpanel"
             aria-labelledby="nav-strategic-vision-tab"
           >
+            <div className="container p-3"></div>
             <div className="container">
-              <h1 className="currentPageTitle mt-3 pl-04">Strategic Vision</h1>
-              <h5 className="color-emg pb-4 pl-04">ORGANIZATION'S PLANS</h5>
+              <h1 className="currentPageTitle mt-3 pl-04">სტრატეგიული ხედვა</h1>
             </div>
             <div className="fluid-container highlight">
               <div className="container">
@@ -217,59 +206,66 @@ class About extends Component {
                   <div className="col-sm-12 col-md-6 min-vh-25 ">
                     <div className="column text-center">
                       <img src="https://emg.groot.ge/1.png" alt="" />
-                      <p className="p-2 color-emg">COMPANY BASIC PRINCIPLES</p>
+                      <p className="p-2 color-emg">ძირითადი პრინციპები</p>
                       <ul className="str">
                         <li>
-                          Protection of legal requirements and regulations
+                          სამართლებრივი მოთხოვნებისა და რეგულაციების დაცვა;{" "}
                         </li>
-                        <li>Independence</li>
-                        <li>Objectivity</li>
-                        <li>
-                          Working in accordance with international standards and
-                          best practices
-                        </li>
+                        <li>პრინციპულობა;</li>
+                        <li>დამოუკიდებლობა;</li>
+                        <li>ობიექტურობა</li>
+                        <li>საერთაშორისო სტანდარტებით ხელმძღვანელობა.</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 min-vh-25 ">
                     <div className="column text-center">
                       <img src="https://emg.groot.ge/2.png" alt="" />
-                      <p className="p-2 color-emg">OUR GOALS</p>
+                      <p className="p-2 color-emg">მიზნები</p>
                       <ul className="str">
-                        <li>Nonstop improvement of professional level</li>
-                        <li>Service according to international standards</li>
+                        <li>მუდმივი პროფესიული განვითარება</li>
+                        <li>მომსახურების სფეროს გაფართოება</li>
+                        <li>კვალიფიციური მომსახურების შეთავაზება</li>
                         <li>
-                          Continuous maintenance of high level of credibility
-                          and trust
+                          სანდო და საიმედო კომპანიის რეპუტაციის შენარჩუნება
                         </li>
-                        <li>Constant extension of service spheres</li>
-                        <li>Leadership of the Georgian market</li>
+                        <li>საქართველოს ბაზრის ლიდერობა</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 min-vh-25">
                     <div className="column text-center">
                       <img src="https://emg.groot.ge/3.png" alt="" />
-                      <p className="p-2 color-emg">OUR MISSION</p>
+                      <p className="p-2 color-emg">მისია</p>
                       <p className="text-left">
-                        Introduction and implementation of international
-                        standards, best engineering solutions, and correct
-                        decision making practice as in inspection and
-                        supervising, as weel as in the construction sector of
-                        Georgia
+                        <ul className="str">
+                          <li>
+                            საერთაშორისო სტანდარტების დამკვიდრება ადგილობრივ
+                            ბაზარზე
+                          </li>
+                          <li>
+                            საუკეთესო საინჟინრო გადაწყვეტილებების მიღების სწორი
+                            პრაქტიკის დანერგვა
+                          </li>
+                          <li>
+                            ინსპექტირების, ზედამხედველობისა და ზოგადად,
+                            სამშენებლო სექტორის განვითარება მსოფლიოს ინოვაციური
+                            ტენდენციების შესაბამისად
+                          </li>
+                        </ul>
                       </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 min-vh-25">
                     <div className="column text-center">
                       <img src="https://emg.groot.ge/4.png" alt="" />
-                      <p className="p-2 color-emg">OUR COMPANY'S PRIORITIES</p>
+                      <p className="p-2 color-emg">პრიორიტეტები</p>
                       <ul className="str">
-                        <li>Impartiality</li>
-                        <li>Credibility</li>
-                        <li>High quality service</li>
-                        <li>Teamwork</li>
-                        <li>Continuous growth and development</li>
+                        <li>მიუკერძოებლობა</li>
+                        <li>სანდოობა</li>
+                        <li>მომსახურების უმაღლესი ხარისხი</li>
+                        <li>გუნდური მუშაობა</li>
+                        <li>მუდმივი ზრდა და განვითარება</li>
                       </ul>
                     </div>
                   </div>
@@ -393,82 +389,84 @@ class About extends Component {
             role="tabpanel"
             aria-labelledby="nav-branches-tab"
           >
-            <div className="container">
-              <h1 className="currentPageTitle mt-3 pl-04">Branches</h1>
-              <div className="row">
-                <div className="col-12 row">
-                  <div
-                    className="col-12"
-                    style={{ margin: 0, fontSize: 40, textAlign: "center" }}
-                  >
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Head office: Tbilisi
-                      </p>
-                      <p style={{ margin: 0, fontSize: 25 }}>
-                        K. Kutateladze 8
-                      </p>
+            <div className="fluid-container">
+              <div className="container">
+                <h1 className="currentPageTitle pl-04">ფილიალები</h1>
+                <div className="row">
+                  <div className="col-12 row">
+                    <div
+                      className="col-12"
+                      style={{ margin: 0, fontSize: 40, textAlign: "center" }}
+                    >
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          სათაო ოფისი: თბილისი
+                        </p>
+                        <p style={{ margin: 0, fontSize: 25 }}>
+                          კ. ქუთათელაძე 8
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="container p-5"></div>
-
-                  <div className="col-6 col-md-4 row">
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Kutaisi
-                      </p>
-                      <p>Tamar Mepe #66/68</p>
+                    <div className="container p-5"></div>
+                    <div className="col-6 col-md-4 row">
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column mt-3">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          ქუთაისი
+                        </p>
+                        <p>თამარ მეფე #66/68</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 col-md-4 row">
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Terjola
-                      </p>
-                      <p>Rustvelsi Street #99</p>
+                    <div className="col-6 col-md-4 row">
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column mt-3">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          თერჯოლა
+                        </p>
+                        <p>რუსთველსის ქუჩა #99</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 col-md-4 row">
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Zestaponi
-                      </p>
-                      <p>G. Nikoadze #36</p>
+                    <div className="col-6 col-md-4 row">
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column mt-3">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          ზესტაფონი
+                        </p>
+                        <p>გ. ნიკოლაძე #36</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 col-md-4 row">
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Chiatura{" "}
-                      </p>
-                      <p>Ninoshvili Street #5</p>
+                    <div className="col-6 col-md-4 row">
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column mt-3">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          ჭიათურა{" "}
+                        </p>
+                        <p>ნინოშვილის ქუჩა #5</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 col-md-4 row">
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Telavi
-                      </p>
-                      <p>Rustaveli Street #86</p>
+                    <div className="col-6 col-md-4 row">
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column mt-3">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          თელავი
+                        </p>
+                        <p>რუსთაველის ქუჩა #86</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 col-md-4 row">
-                    <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
-                      <p className="color-emg" style={{ margin: 0 }}>
-                        Tsnori
-                      </p>
-                      <p>Freedom Street #74</p>
+                    <div className="col-6 col-md-4 row">
+                      <img className="location" src={locationImage} alt="" />
+                      <div className="column mt-3">
+                        <p className="color-emg" style={{ margin: 0 }}>
+                          წნორი
+                        </p>
+                        <p>თავისუფლების ქუჩა #74</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="container p-5"></div>
             </div>
           </div>
           <div className="container p-5"></div>
