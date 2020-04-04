@@ -14,10 +14,10 @@ class Career extends Component {
       <React.Fragment>
         <div className="thumbnail"></div>
         <div className="container">
-          <h1 className="currentPageTitle  ">Career</h1>
-          <h5 className="color-emg pb-4">WORKS WITH US</h5>
-          <h5>OUR PRINCIPLES</h5>
-          <p>
+          <h1 className="currentPageTitle pl-04 ">Career</h1>
+          <h5 className="color-emg pb-4 pl-04">WORKS WITH US</h5>
+          <h5 className="pl-04">OUR PRINCIPLES</h5>
+          <p className="pl-04">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
             accusantium aut a est quidem exercitationem voluptates ipsam
             perferendis impedit officiis laboriosam distinctio in! Ea veniam
@@ -40,10 +40,10 @@ class Career extends Component {
             </Link>
           )}
         </div>
-        <div className="fluid-container highlight p-5">
+        <div className="fluid-container  p-5">
           <div className="container">
             <div
-              className="mb-4 accordion"
+              className="mb-4 pl-04 accordion"
               id="accordion"
               role="tablist"
               aria-multiselectable="true"
@@ -66,7 +66,7 @@ class Career extends Component {
                             aria-controls={"collapse" + career._id}
                             className="btn btn-link career-tab text-dark"
                           >
-                            <img src={careerPlus} alt="Career plus image" />
+                            <img src={careerPlus} alt="Career plus" />
                             {" " + career.title}
                           </button>
 
@@ -113,6 +113,7 @@ class Career extends Component {
             </div>
           </div>
         </div>
+        <div className="container p-5"></div>
       </React.Fragment>
     );
   }

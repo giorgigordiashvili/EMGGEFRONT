@@ -209,7 +209,7 @@ ul > li {
 }
 
 .slider {
-  height: 70vh;
+  height: 100vh;
   background-image: url("res/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -414,4 +414,45 @@ ul > li {
 .home-news-link:hover {
   color: green;
   text-decoration: none;
+}
+
+.pl-03 {
+  padding-left: 0.3rem;
+}
+
+.pl-04 {
+  padding-left: 0.4rem;
+}
+
+.p-04 {
+  padding: 0.4rem;
+}
+
+@media (min-width: 576px) {
+  .map {
+    padding-top: 3rem;
+    width: 50vw;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .map {
+    width: 320px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .map {
+    width: 420px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .map {
+    width: 520px;
+    height: 200px;
+  }
 }

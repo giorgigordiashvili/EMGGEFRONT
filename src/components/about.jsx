@@ -22,7 +22,7 @@ class About extends Component {
               aria-controls="nav-info"
               aria-selected="true"
             >
-              Who we are
+              WHO WE ARE
             </a>
             <a
               className="nav-item nav-link nav-link-emg "
@@ -57,7 +57,7 @@ class About extends Component {
             >
               QUALITY AND PERMITS
             </a>
-            <a
+            {/* <a
               className="nav-item nav-link nav-link-emg"
               id="nav-training-tab"
               data-toggle="tab"
@@ -67,7 +67,7 @@ class About extends Component {
               aria-selected="false"
             >
               TRAINING
-            </a>
+            </a> */}
             <a
               className="nav-item nav-link nav-link-emg"
               id="nav-partners-tab"
@@ -99,18 +99,18 @@ class About extends Component {
             role="tabpanel"
             aria-labelledby="nav-home-tab"
           >
-            <div className="container">
-              <h1 className="currentPageTitle mt-3 col-12 col-md-12">
+            <div className="container ">
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
                 ABOUT US
               </h1>
-              <h5 className="color-emg pb-4 col-12 col-md-12">
+              <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
                 ENGINEERING MONITORING GROUP
               </h5>
             </div>
             <div className="fluid-container p-5">
               <div className="container">
                 <div className="row">
-                  <div className="col-12 col-md-12">
+                  <div className="col-12 col-md-12 pl-04">
                     <p>
                       Engineering Monitoring Group LLC as A type accredited
                       inspection body, over the last few years, has been
@@ -144,10 +144,9 @@ class About extends Component {
                 </div>
               </div>
             </div>
-            <div className="container">
-              <h2 className="currentPageTitle mt-3">TEAM</h2>
-            </div>
+            <div className="container p-5"></div>
           </div>
+
           <div
             className="tab-pane fade show"
             id="nav-governance"
@@ -155,74 +154,53 @@ class About extends Component {
             aria-labelledby="nav-governance-tab"
           >
             <div className="container">
-              <h1 className="currentPageTitle mt-3">Structure</h1>
-            </div>
-            <div className="fluid-container highlight p-5">
-              <div className="container">
-                <div className="row">
-                  <div className="col-12 col-md-6">
-                    <img
-                      className="img-fluid"
-                      src="http://emg.ge/wp-content/uploads/2018/11/struktura.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Officiis odio iusto ipsa eos voluptatum in voluptates sed,
-                      autem assumenda numquam, perferendis ea. Quis velit hic
-                      perspiciatis nulla! Nulla, possimus neque.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+                Structure
+              </h1>
+              <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
+                ENGINEERING MONITORING GROUP
+              </h5>
             </div>
             <div className="fluid-container p-5">
               <div className="container">
-                <h5 className="color-emg">MANAGEMENT</h5>
                 <div className="row">
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-12 pl-04">
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Officiis odio iusto ipsa eos voluptatum in voluptates sed,
-                      autem assumenda numquam, perferendis ea. Quis velit hic
-                      perspiciatis nulla! Nulla, possimus neque.
-                    </p>
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <img
-                      className="img-fluid"
-                      src="http://emg.ge/wp-content/uploads/2018/11/struktura.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="fluid-container highlight p-5">
-              <div className="container">
-                <h5 className="color-emg">COMMITEES</h5>
-                <div className="row">
-                  <div className="col-12 col-md-6">
-                    <img
-                      className="img-fluid"
-                      src="http://emg.ge/wp-content/uploads/2018/11/struktura.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Officiis odio iusto ipsa eos voluptatum in voluptates sed,
-                      autem assumenda numquam, perferendis ea. Quis velit hic
-                      perspiciatis nulla! Nulla, possimus neque.
+                      Engineering Monitoring Group LLC as A type accredited
+                      inspection body, over the last few years, has been
+                      actively working on Georgian Market. By attracting local
+                      and international intellectual resources, adamant
+                      protection of internationally recognized rules,
+                      regulations and values of Inspecting bodies and team work
+                      allowed company to find itself on Georgian market as one
+                      of the leading inspection organizations. For the high
+                      quality, professionalism and constant development of
+                      services, Engineering Monitoring Group has gained on
+                      Georgia's construction sector trust and respect, which
+                      reflected a sharp rise in market share and
+                      competitiveness. Engineering Monitoring Group LLC operates
+                      in all sectors of infrastructural construction sphere in
+                      Georgia. Apart from the head office located in Tbilisi,
+                      our company is represented by several regional offices and
+                      serves the construction site in any region of Georgia
+                      without restriction. The company management is focused on
+                      the best international practice of organizational
+                      corporate management systems, cooperating with
+                      international and local partners, on the expansion of
+                      sectoral and geographical area of services and activities,
+                      introduction of international experience and technologies
+                      in engineering in Georgia. A number of projects have
+                      already been implemented with partners in this direction.
+                      Much more is planned to do. Permanent growth and
+                      development is the main priority of our company.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="container p-5"></div>
           </div>
+
           <div
             className="tab-pane fade"
             id="nav-strategic-vision"
@@ -230,8 +208,8 @@ class About extends Component {
             aria-labelledby="nav-strategic-vision-tab"
           >
             <div className="container">
-              <h1 className="currentPageTitle mt-3">Strategic Vision</h1>
-              <h5 className="color-emg pb-4">ORGANIZATION'S PLANS</h5>
+              <h1 className="currentPageTitle mt-3 pl-04">Strategic Vision</h1>
+              <h5 className="color-emg pb-4 pl-04">ORGANIZATION'S PLANS</h5>
             </div>
             <div className="fluid-container highlight">
               <div className="container">
@@ -298,6 +276,7 @@ class About extends Component {
                 </div>
               </div>
             </div>
+            <div className="container p-5"></div>
           </div>
           <div
             className="tab-pane fade"
@@ -306,7 +285,9 @@ class About extends Component {
             aria-labelledby="nav-quality-and-permits-tab"
           >
             <div className="container">
-              <h1 className="currentPageTitle mt-3">QUALITY AND PERMITS</h1>
+              <h1 className="currentPageTitle mt-3 pl-04">
+                QUALITY AND PERMITS
+              </h1>
             </div>
             <div className="fluid-container highlight">
               <div className="container">
@@ -383,15 +364,16 @@ class About extends Component {
                 </div>
               </div>
             </div>
+            <div className="container p-5"></div>
           </div>
-          <div
+          {/* <div
             className="tab-pane fade"
             id="nav-training"
             role="tabpanel"
             aria-labelledby="nav-training-tab"
           >
             training
-          </div>
+          </div> */}
           <div
             className="tab-pane fade"
             id="nav-partners"
@@ -403,6 +385,7 @@ class About extends Component {
               user={this.props.user}
               partners={this.props.partners}
             ></Partner>
+            <div className="container p-5"></div>
           </div>
           <div
             className="tab-pane fade"
@@ -411,19 +394,26 @@ class About extends Component {
             aria-labelledby="nav-branches-tab"
           >
             <div className="container">
-              <h1 className="currentPageTitle mt-3">Branches</h1>
+              <h1 className="currentPageTitle mt-3 pl-04">Branches</h1>
               <div className="row">
-                <div className="col-sm-12 col-md-6 row">
-                  <div className="col-6 row">
+                <div className="col-12 row">
+                  <div
+                    className="col-12"
+                    style={{ margin: 0, fontSize: 40, textAlign: "center" }}
+                  >
                     <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
+                    <div className="column">
                       <p className="color-emg" style={{ margin: 0 }}>
                         Head office: Tbilisi
                       </p>
-                      <p>K. Kutateladze 8</p>
+                      <p style={{ margin: 0, fontSize: 25 }}>
+                        K. Kutateladze 8
+                      </p>
                     </div>
                   </div>
-                  <div className="col-6 row">
+                  <div className="container p-5"></div>
+
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -432,7 +422,7 @@ class About extends Component {
                       <p>Tamar Mepe #66/68</p>
                     </div>
                   </div>
-                  <div className="col-6 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -441,7 +431,7 @@ class About extends Component {
                       <p>Rustvelsi Street #99</p>
                     </div>
                   </div>
-                  <div className="col-6 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -450,16 +440,16 @@ class About extends Component {
                       <p>G. Nikoadze #36</p>
                     </div>
                   </div>
-                  <div className="col-6 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
-                        Chiatura
+                        Chiatura{" "}
                       </p>
                       <p>Ninoshvili Street #5</p>
                     </div>
                   </div>
-                  <div className="col-6 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -468,7 +458,7 @@ class About extends Component {
                       <p>Rustaveli Street #86</p>
                     </div>
                   </div>
-                  <div className="col-6 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -478,10 +468,10 @@ class About extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-12 col-md-6">MAP HERE</div>
               </div>
             </div>
           </div>
+          <div className="container p-5"></div>
         </div>
       </div>
     );

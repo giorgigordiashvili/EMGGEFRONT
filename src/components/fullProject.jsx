@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class FullProject extends Component {
   state = {};
@@ -47,40 +48,40 @@ class FullProject extends Component {
         <h3 className="my-4">Related Projects</h3>
         <div className="row">
           <div className="col-md-3 col-sm-6 mb-4">
-            <a href="#">
+            <Link to="#">
               <img
                 className="img-fluid"
                 src="http://placehold.it/500x300"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 mb-4">
-            <a href="#">
+            <Link to="#">
               <img
                 className="img-fluid"
                 src="http://placehold.it/500x300"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 mb-4">
-            <a href="#">
+            <Link to="#">
               <img
                 className="img-fluid"
                 src="http://placehold.it/500x300"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="col-md-3 col-sm-6 mb-4">
-            <a href="#">
+            <Link to="#">
               <img
                 className="img-fluid"
                 src="http://placehold.it/500x300"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
         {/* /.row */}

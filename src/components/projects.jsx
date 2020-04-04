@@ -3,7 +3,6 @@ import { deleteProject } from "../services/projectService";
 import { deleteCategory } from "../services/categoryService";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import _ from "lodash";
 import CategoriesFlex from "./CategoriesFlex";
 
 class Projects extends Component {
@@ -80,8 +79,10 @@ class Projects extends Component {
       );
     return (
       <div className="container pt-5">
-        <h1 className="currentPageTitle">PROJECTS</h1>
-        <h5 className="color-emg pb-4">ROADS, HIGHWAYS, BRIDGES, TUNNELS</h5>
+        <h1 className="currentPageTitle pl-04">PROJECTS</h1>
+        <h5 className="color-emg pb-4 pl-04">
+          ROADS, HIGHWAYS, BRIDGES, TUNNELS
+        </h5>
 
         {isAdmin && (
           <React.Fragment>
@@ -109,6 +110,7 @@ class Projects extends Component {
           onDelete={this.handleDelete}
           onDeleteCategory={this.handleDeleteCategory}
         />
+        <div className="container p-5"></div>
       </div>
     );
   }

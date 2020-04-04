@@ -11,7 +11,7 @@ class Partner extends Component {
 
     return (
       <div className="container">
-        <h1 className="currentPageTitle  mt-3">Partners</h1>
+        <h1 className="currentPageTitle  mt-3 pl-04">Partners</h1>
         {isAdmin && (
           <React.Fragment>
             <Link
@@ -28,6 +28,7 @@ class Partner extends Component {
             <div className="col-sm-6 col-md-3  p-1  ">
               <div className="border-emg row logoes justify-content-center">
                 <img
+                  alt={partner.name}
                   src={partner.logo}
                   className="img-fluid partner-img p-1 align-self-center"
                 />

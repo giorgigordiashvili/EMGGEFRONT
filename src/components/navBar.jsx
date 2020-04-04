@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+
 import auth from "../services/authService";
 
 class NavBar extends Component {
@@ -9,9 +10,9 @@ class NavBar extends Component {
       bag: "",
       email: "",
       isAdmin: "",
-      name: ""
+      name: "",
     },
-    isOpen: false
+    isOpen: false,
   };
   componentDidMount() {
     const user = auth.getCurrentUser();
@@ -48,10 +49,55 @@ class NavBar extends Component {
                     HOME
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink to="/about" className="nav-link">
+                <li class="nav-item dropdown">
+                  <NavLink
+                    className="nav-link dropdown-toggle"
+                    to="/about"
+                    id="aboutus"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
                     ABOUT US
                   </NavLink>
+                  <div className="dropdown-menu" aria-labelledby="aboutus">
+                    <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about", hash: "#whoweare" }}
+                    >
+                      WHO WE ARE
+                    </Link>
+                    <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about", hash: "#governance" }}
+                    >
+                      GOVERNANCE
+                    </Link>
+                    <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about", hash: "#strategicvision" }}
+                    >
+                      STRATEGIC VISION
+                    </Link>
+                    <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about", hash: "#qualityandpermits" }}
+                    >
+                      QUALITY AND PERMITS
+                    </Link>
+                    <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about", hash: "#partners" }}
+                    >
+                      PARTNERS
+                    </Link>
+                    <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about", hash: "#branches" }}
+                    >
+                      BRANCHES
+                    </Link>
+                  </div>
                 </li>
                 <li className="nav-item">
                   <NavLink to="/activities" className="nav-link">
@@ -91,6 +137,7 @@ class NavBar extends Component {
                     REGISTER
                   </a>
                 </li> */}
+
                 {this.props.user.isAdmin && (
                   <li className="nav-item">
                     <a className="nav-link" href="/logout">

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import FontAwesome from "react-fontawesome";
 import { getBranches } from "../services/branchService";
-import MapGL from "react-map-gl";
 import locationImage from "../res/location.png";
 import contactImageOne from "../res/ccc1.jpg";
 import contactImageTwo from "../res/ccc2.jpg";
@@ -29,11 +27,12 @@ class Contact extends Component {
     return (
       <React.Fragment>
         <div className="container pt-5">
-          <h1 className="currentPageTitle">Contact</h1>
+          <h1 className="currentPageTitle pl-04">Contact</h1>
 
           <div className="row">
             <div className="col-12 ">
               <iframe
+                title="Big map on contact page"
                 width="100%"
                 height="400px"
                 frameBorder={0}
@@ -45,8 +44,10 @@ class Contact extends Component {
             </div>
           </div>
         </div>
+        <div className="container p-5"></div>
         <div>
           <div className="fluid-container highlight">
+            <div className="container p-5"></div>
             <div className="container ">
               <div className="row justify-content-center">
                 <img
@@ -112,22 +113,29 @@ class Contact extends Component {
                 </button>
               </form>
             </div>
+            <div className="container p-5"></div>
           </div>
           <div className="fluid-container">
             <div className="container">
-              <h1 className="currentPageTitle">Branches</h1>
+              <h1 className="currentPageTitle pl-04">Branches</h1>
               <div className="row">
                 <div className="col-12 row">
-                  <div className="col-6 col-md-3 row">
+                  <div
+                    className="col-12"
+                    style={{ margin: 0, fontSize: 40, textAlign: "center" }}
+                  >
                     <img className="location" src={locationImage} alt="" />
-                    <div className="column mt-3">
+                    <div className="column">
                       <p className="color-emg" style={{ margin: 0 }}>
                         Head office: Tbilisi
                       </p>
-                      <p>K. Kutateladze 8</p>
+                      <p style={{ margin: 0, fontSize: 25 }}>
+                        K. Kutateladze 8
+                      </p>
                     </div>
                   </div>
-                  <div className="col-6 col-md-3 row">
+                  <div className="container p-5"></div>
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -136,7 +144,7 @@ class Contact extends Component {
                       <p>Tamar Mepe #66/68</p>
                     </div>
                   </div>
-                  <div className="col-6 col-md-3 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -145,7 +153,7 @@ class Contact extends Component {
                       <p>Rustvelsi Street #99</p>
                     </div>
                   </div>
-                  <div className="col-6 col-md-3 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -154,7 +162,7 @@ class Contact extends Component {
                       <p>G. Nikoadze #36</p>
                     </div>
                   </div>
-                  <div className="col-6 col-md-3 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -163,7 +171,7 @@ class Contact extends Component {
                       <p>Ninoshvili Street #5</p>
                     </div>
                   </div>
-                  <div className="col-6 col-md-3 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -172,7 +180,7 @@ class Contact extends Component {
                       <p>Rustaveli Street #86</p>
                     </div>
                   </div>
-                  <div className="col-6 col-md-3 row">
+                  <div className="col-6 col-md-4 row">
                     <img className="location" src={locationImage} alt="" />
                     <div className="column mt-3">
                       <p className="color-emg" style={{ margin: 0 }}>
@@ -184,6 +192,7 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
+            <div className="container p-5"></div>
           </div>
         </div>
       </React.Fragment>

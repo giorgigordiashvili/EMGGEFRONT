@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  deleteProject,
-  getProjectsCategorised
-} from "../services/projectService";
-import { getCategory } from "../services/categoryService";
+import { deleteProject } from "../services/projectService";
 import { paginate } from "../utils/paginate";
 import Pagination from "./common/pagination";
 import { Link } from "react-router-dom";
@@ -26,7 +22,7 @@ class Categorised extends Component {
     let { projects } = this.props.location.state;
     console.log(projects);
     projects = projects.filter(
-      obj => obj.category._id == this.props.match.params.id
+      obj => obj.category._id === this.props.match.params.id
     );
 
     const { category } = projects[0] || {};
@@ -136,12 +132,12 @@ class Categorised extends Component {
             New Project
           </Link>
         )}
-        <h1 className="mt-4 mb-3">
+        <h1 className="mt-4 mb-3 ">
           <span className="first-letter"></span>
         </h1>
-        <ol className="breadcrumb">
+        <ol className="breadcrumb ">
           <li className="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li className="breadcrumb-item active">{category.name}</li>
         </ol>
@@ -152,6 +148,7 @@ class Categorised extends Component {
           projects={projects}
           onDelete={this.handleDelete}
         />
+        <div className="container p-5"></div>
         <Pagination
           itemsCount={totalCount}
           pageSize={pageSize}

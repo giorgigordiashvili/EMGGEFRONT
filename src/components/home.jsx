@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import Moment from "react-moment";
 import emgLogo from "../res/logo.png";
-import certOne from "../res/ea.jpg";
-import certTwo from "../res/gac.png";
-import certThree from "../res/powerpoint.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.min.js";
@@ -83,7 +80,8 @@ class Home extends Component {
     return (
       <React.Fragment>
         {/* LOGO */}
-        <div className="slider fluid-container row justify-content-center slider">
+
+        <div className="slider fluid-container row justify-content-center">
           <img
             src={emgLogo}
             className="align-self-center img-fluid p-4 logo"
@@ -92,7 +90,7 @@ class Home extends Component {
         </div>
         {/* END LOGO */}
         {/* Certs */}
-        <div className="container p-3 justify-content-center rounded">
+        {/* <div className="container p-3 justify-content-center rounded">
           <hr />
           <div className="align-self-center">
             <a href="https://emg.groot.ge/accreditation.pdf">
@@ -118,22 +116,23 @@ class Home extends Component {
             </a>
           </div>
           <hr />
-        </div>
+        </div> */}
         {/* END CERTS */}
 
         {/* Komentari */}
-        <div className="container">
-          <h2 className="currentPageTitle">News & Media</h2>
-        </div>
-        <div className="fluid-container highlight p-5">
+
+        <div className="fluid-container highlight pt-3 pb-3">
+          <div className="container">
+            <h2 className="currentPageTitle pl-03">News & Media</h2>
+          </div>
           <Slider className="container" {...responsive}>
             {newss.slice(0, 8).map(news => (
               <div>
                 <div className="card card-emg mr-4">
                   <img
-                    className="card-img-top home-card-img"
+                    className="card-img-top home-card-img inner-shadow-emg"
                     src={news.shortImage}
-                    alt="Card image cap"
+                    alt="Alt"
                   />
                   <div className="card-body">
                     <h5 className="card-title">
@@ -171,17 +170,17 @@ class Home extends Component {
 
         {/* PROJECTS START */}
         <div className="container">
-          <h2 className="currentPageTitle">Projects</h2>
+          <h2 className="currentPageTitle pl-03">Projects</h2>
         </div>
-        <div className="fluid-container p-5 ">
+        <div className="fluid-container pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
             {projects.slice(0, 8).map(project => (
               <div>
                 <div className="card card-emg-dark mr-4">
                   <img
-                    className="card-img-top home-card-img"
+                    alt={project.name}
+                    className="card-img-top home-card-img inner-shadow-emg"
                     src={project.shortImage}
-                    alt="Card image cap"
                   />
                   <div className="card-body">
                     <h5 className="card-title">
@@ -212,7 +211,6 @@ class Home extends Component {
                       </a>
                     </div>
 
-                    <button className="emg-button">Make Feedback</button>
                     <div className="color-emg minimal-date">
                       <Moment format="DD MM YYYY" withTitle>
                         {project.publishDate}
@@ -225,117 +223,7 @@ class Home extends Component {
           </Slider>
         </div>
         {/* PROJECTS END */}
-        {/* Reviews start */}
-        <div className="fluid-container highlight p-5">
-          <div className="d-flex justify-content-center">
-            <h1 className="p-5">WHAT CUSTOMERS SAY</h1>
-          </div>
-          <div className="container card-deck reviews-slick">
-            <div className="card card-emg-dark">
-              <div className="row no-gutters">
-                <div className="col-sm-4">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Valeriy_Konovalyuk_3x4.jpg"
-                    className="card-img rounded-circle"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-body">
-                    <h5 className="card-title">NAME SURNAME</h5>
-                    <p className="p-customers">COMPANY NAME</p>
-                    <p className="p-customers">
-                      <small className="text-muted">POSITION</small>
-                    </p>
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star" />
-                    <span className="fa fa-star" />
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <p className="p-customers">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="card card-emg-dark">
-              <div className="row no-gutters">
-                <div className="col-sm-4">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Valeriy_Konovalyuk_3x4.jpg"
-                    className="card-img rounded-circle"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-body">
-                    <h5 className="card-title">NAME SURNAME</h5>
-                    <p className="p-customers">COMPANY NAME</p>
-                    <p className="p-customers">
-                      <small className="text-muted">POSITION</small>
-                    </p>
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star" />
-                    <span className="fa fa-star" />
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <p className="p-customers">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="card card-emg-dark">
-              <div className="row no-gutters">
-                <div className="col-sm-4">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Valeriy_Konovalyuk_3x4.jpg"
-                    className="card-img rounded-circle"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-body">
-                    <h5 className="card-title">NAME SURNAME</h5>
-                    <p className="p-customers">COMPANY NAME</p>
-                    <p className="p-customers">
-                      <small className="text-muted">POSITION</small>
-                    </p>
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star checked" />
-                    <span className="fa fa-star" />
-                    <span className="fa fa-star" />
-                  </div>
-                </div>
-                <div className="col-sm-12">
-                  <p className="p-customers">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="d-flex justify-content-center p-5">
-            <button className="emg-button pt-2 pb-2 pl-5 pr-5">
-              MAKE FEEDBACK
-            </button>
-          </div>
-        </div>
-        {/* Reviews end */}
         <div className="container p-5"></div>
       </React.Fragment>
     );

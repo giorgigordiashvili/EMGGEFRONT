@@ -1,11 +1,4 @@
 import React, { Component } from "react";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import ActivitiesIndex from "./activitiesIndex";
-import Prices from "./prices";
-import Services from "./services";
-import highway from "../res/highway.png";
-import cooling from "../res/cooling.png";
 
 class Activities extends Component {
   state = {};
@@ -15,7 +8,7 @@ class Activities extends Component {
         <nav className="container pt-8">
           <div className="nav nav-tabs" id="nav-tab" role="tablist">
             <a
-              className="nav-item nav-link nav-link-emg active"
+              className="nav-item nav-link nav-link-emg active p-04"
               id="nav-home-tab"
               data-toggle="tab"
               href="#nav-home"
@@ -26,7 +19,7 @@ class Activities extends Component {
               MARKETS
             </a>
             <a
-              className="nav-item nav-link nav-link-emg"
+              className="nav-item nav-link nav-link-emg p-04"
               id="nav-strategic-vision-tab"
               data-toggle="tab"
               href="#nav-strategic-vision"
@@ -37,7 +30,7 @@ class Activities extends Component {
               SERVICES
             </a>
             <a
-              className="nav-item nav-link nav-link-emg"
+              className="nav-item nav-link nav-link-emg p-04"
               id="nav-quality-and-permits-tab"
               data-toggle="tab"
               href="#nav-quality-and-permits"
@@ -57,19 +50,20 @@ class Activities extends Component {
             role="tabpanel"
             aria-labelledby="nav-home-tab"
           >
-            <div className="container">
-              <h1 className="currentPageTitle">ACTIVITIES</h1>
-              <h5 className="color-emg pb-4">FIELD OF ACTIVITIES</h5>
+            <div className="container ">
+              <h1 className="currentPageTitle pl-04">ACTIVITIES</h1>
+              <h5 className="color-emg pb-4 pl-04">FIELD OF ACTIVITIES</h5>
             </div>
             <div className="fluid-container highlight p-3">
               <div className="container">
-                <h5 className="pt-2 pb-2">
+                <h5 className="pt-2 pb-2 pl-04">
                   COMPANY ACTIVITY SECTORS AND INDUSTRIES
                 </h5>
-                <div className="row">
+                <div className="row pl-03">
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="Highways and roads"
                         src="https://emg.groot.ge/activities/1.png"
                         className="img-fluid align-self-center"
                       />
@@ -78,6 +72,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="Cooling heating ventilation"
                         src="https://emg.groot.ge/activities/2.png"
                         className="img-fluid align-self-center"
                       />
@@ -86,6 +81,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="railway"
                         src="https://emg.groot.ge/activities/3.png"
                         className="img-fluid align-self-center"
                       />
@@ -94,6 +90,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="water and sewage systems"
                         src="https://emg.groot.ge/activities/4.png"
                         className="img-fluid align-self-center"
                       />
@@ -102,6 +99,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="electrification systems"
                         src="https://emg.groot.ge/activities/5.png"
                         className="img-fluid align-self-center"
                       />
@@ -110,6 +108,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="energy"
                         src="https://emg.groot.ge/activities/6.png"
                         className="img-fluid align-self-center"
                       />
@@ -118,6 +117,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="bridges, tunnels, underground"
                         src="https://emg.groot.ge/activities/7.png"
                         className="img-fluid align-self-center"
                       />
@@ -126,6 +126,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="geotechnical engineering"
                         src="https://emg.groot.ge/activities/8.png"
                         className="img-fluid align-self-center"
                       />
@@ -134,6 +135,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="communication, it systems"
                         src="https://emg.groot.ge/activities/9.png"
                         className="img-fluid align-self-center"
                       />
@@ -142,6 +144,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="civil and industrial engineering"
                         src="https://emg.groot.ge/activities/10.png"
                         className="img-fluid align-self-center"
                       />
@@ -150,6 +153,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="cities, urban engineering"
                         src="https://emg.groot.ge/activities/11.png"
                         className="img-fluid align-self-center"
                       />
@@ -158,6 +162,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="aviation engineering airports"
                         src="https://emg.groot.ge/activities/12.png"
                         className="img-fluid align-self-center"
                       />
@@ -166,6 +171,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="marine engineering"
                         src="https://emg.groot.ge/activities/13.png"
                         className="img-fluid align-self-center"
                       />
@@ -174,6 +180,7 @@ class Activities extends Component {
                   <div className="col-sm-6 col-md-3  p-1  ">
                     <div className="row justify-content-center">
                       <img
+                        alt="gas and oil systems"
                         src="https://emg.groot.ge/activities/14.png"
                         className="img-fluid align-self-center"
                       />
@@ -190,8 +197,8 @@ class Activities extends Component {
             aria-labelledby="nav-strategic-vision-tab"
           >
             <div className="container">
-              <h1 className="currentPageTitle">ACTIVITIES</h1>
-              <h5 className="color-emg pb-4">SERVICES</h5>
+              <h1 className="currentPageTitle pl-04">ACTIVITIES</h1>
+              <h5 className="color-emg pb-4 pl-04">SERVICES</h5>
             </div>
             <div className="container">
               <div className="row">
@@ -220,7 +227,7 @@ class Activities extends Component {
                   />
                 </div>
               </div>
-              <h6>LIST OF SERVICES</h6>
+              <h6 className="pl-04">LIST OF SERVICES</h6>
               <div className="row">
                 <div className="col-6">
                   <div className="col" style={{ height: "50vh" }}>
@@ -270,8 +277,8 @@ class Activities extends Component {
             aria-labelledby="nav-quality-and-permits-tab"
           >
             <div className="container">
-              <h1 className="currentPageTitle ">ACTIVITIES</h1>
-              <h5 className="color-emg pb-4">PRICES</h5>
+              <h1 className="currentPageTitle pl-04">ACTIVITIES</h1>
+              <h5 className="color-emg pb-4 pl-04">PRICES</h5>
             </div>
             <div className="container">
               <div className="row">

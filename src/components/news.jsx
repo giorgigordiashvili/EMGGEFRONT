@@ -12,7 +12,7 @@ class News extends Component {
     newss: [],
     categories: [],
     branches: [],
-    pageSize: 6,
+    pageSize: 4,
     currentPage: 1,
     searchQuery: "",
     selectedStyle: null,
@@ -95,7 +95,7 @@ class News extends Component {
 
     if (count === 0)
       return (
-        <div className="pt-8">
+        <div className="container">
           <Link
             style={{ marginBottom: "10px" }}
             className="btn btn-primary ml-1"
@@ -103,13 +103,13 @@ class News extends Component {
           >
             New News
           </Link>
-          <p className="pt-8">There are no news in the database</p>;
+          <p className="pt-5">There are no news in the database</p>
         </div>
       );
     const { totalCount, data: newss } = this.getPagedData();
 
     return (
-      <div className="pt-8">
+      <div className="container pt-10">
         {isAdmin && (
           <Link
             style={{ marginBottom: "10px" }}
@@ -119,9 +119,12 @@ class News extends Component {
             New News
           </Link>
         )}
-        <div className="container  pt-5">
-          <h1 className="currentPageTitle ">NEWS & MEDIA</h1>
-        </div>
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li className="breadcrumb-item active">News & Media</li>
+        </ol>
         {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
         <NewsFlex
           count={this.props.count}
@@ -129,6 +132,7 @@ class News extends Component {
           newss={newss}
           onDelete={this.handleDelete}
         />
+        <div className="container p-5"></div>
         <Pagination
           itemsCount={totalCount}
           pageSize={pageSize}

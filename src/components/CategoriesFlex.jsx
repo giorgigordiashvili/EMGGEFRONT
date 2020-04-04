@@ -21,7 +21,7 @@ class CategoriesFlex extends Component {
               >
                 <img
                   src={project.image}
-                  alt="Card Image"
+                  alt={project.name}
                   className="card-img-top"
                 />
               </Link>
