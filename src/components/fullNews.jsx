@@ -1,30 +1,30 @@
 import React, { Component } from "react";
-import { getNew } from "../services/newsService";
 
 class FullNews extends Component {
-  state = { news: {} };
-
-  async componentDidMount() {
-    const { id } = this.props.match.params;
-    const { data } = await getNew(id);
-    this.setState({ news: data });
-  }
+  state = { rame: "s" };
 
   render() {
-    const { title, longDesc, longImage } = this.state.news;
+    const test = { title: "", longDesc: "", longImage: "" };
+    const news =
+      this.props.newss.filter((s) => s._id === this.props.match.params.id)[0] ||
+      test;
+
     return (
       <React.Fragment>
         <div className="container pt-5">
-          <h1 className="currentPageTitle ">NEWS & MEDIA</h1>
-          <h5 className="color-emg pb-4">{title}</h5>
+          <h5 className="mt-5 mb-3 pl-04 color-emg pb-4">{news.title}</h5>
         </div>
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <p>{longDesc}</p>
+              <p>{news.longDesc}</p>
             </div>
             <div className="col-6">
-              <img src={longImage} alt={title} className="img-fluid" />
+              <img
+                src={news.longImage}
+                alt={news.title}
+                className="img-fluid"
+              />
             </div>
           </div>
         </div>

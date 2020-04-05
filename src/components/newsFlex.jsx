@@ -12,54 +12,75 @@ class NewsFlex extends Component {
     const isAdmin = auth.isAdmin();
     return (
       <div className="card-deck">
-        {newss.map((news) => (
-          <div key={news._id} className="card m-2">
-            {isAdmin && (
-              <React.Fragment>
-                <Link
-                  to={"/editnews/" + news._id}
-                  className="mt-auto card-btn btn btn-primary"
-                >
-                  რედაქტირება
-                </Link>
+        {newss.map((news) =>
+          news.type === "hidden" ? (
+            <div
+              className="card m-2"
+              key={news._id}
+              style={{ border: "none" }}
+            ></div>
+          ) : (
+            <div key={news._id} className="card m-2">
+              {isAdmin && (
+                <React.Fragment>
+                  <Link
+                    to={"/editnews/" + news._id}
+                    className="mt-auto card-btn btn btn-primary"
+                  >
+                    რედაქტირება
+                  </Link>
 
-                <Button
-                  onClick={() => onDelete(news)}
-                  variant="btn card-btn btn-danger"
-                  className="mt-auto"
+                  <Button
+                    onClick={() => onDelete(news)}
+                    variant="btn card-btn btn-danger"
+                    className="mt-auto"
+                  >
+                    წაშლა
+                  </Button>
+                  <br />
+                </React.Fragment>
+              )}
+              <div className="card-body project-body">
+                <Link
+                  to={{
+                    pathname: "/news/" + news._id,
+                  }}
                 >
-                  წაშლა
-                </Button>
-                <br />
-              </React.Fragment>
-            )}
-            <div className="card-body project-body">
-              <div className="project vh-50 d-flex column align-items-end">
-                <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
-                  <span className="inner-shadow-emg ">{news.title}</span>
-                </h5>
+                  <div
+                    className="vh-50 d-flex column align-items-end"
+                    style={{
+                      background: `
+    url(${news.shortImage}) center`,
+                      backgroundSize: "cover",
+                    }}
+                  >
+                    <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
+                      <span className="inner-shadow-emg ">{news.title}</span>
+                    </h5>
+                  </div>
+                </Link>
+                <p className="card-text p-2">{news.shortDesc}</p>
               </div>
-              <p className="card-text p-2">{news.shortDesc}</p>
+              <div className="card-footer">
+                <small className="text-muted row justify-content-between">
+                  <div>
+                    <a href={news.fbLink} className="card-link color-emg">
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                    <a href={news.twLink} className="card-link color-emg">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                  </div>
+                  <div className="color-emg">
+                    <Moment format="DD MM YYYY" withTitle>
+                      {news.publishDate}
+                    </Moment>
+                  </div>
+                </small>
+              </div>
             </div>
-            <div className="card-footer">
-              <small className="text-muted row justify-content-between">
-                <div>
-                  <a href={news.fbLink} className="card-link color-emg">
-                    <FontAwesomeIcon icon={faFacebook} />
-                  </a>
-                  <a href={news.twLink} className="card-link color-emg">
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </a>
-                </div>
-                <div className="color-emg">
-                  <Moment format="DD MM YYYY" withTitle>
-                    {news.publishDate}
-                  </Moment>
-                </div>
-              </small>
-            </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
 
       // <div className="fluid-container">

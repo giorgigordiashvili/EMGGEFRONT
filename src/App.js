@@ -39,7 +39,7 @@ class App extends Component {
     projects: [],
     user: {},
     careers: [],
-    partners: []
+    partners: [],
   };
 
   async componentDidMount() {
@@ -53,9 +53,9 @@ class App extends Component {
     this.setState({ careers, user, newss, projects, categories, partners });
   }
 
-  handleDeletePartner = async partner => {
+  handleDeletePartner = async (partner) => {
     const originalPartners = this.state.partners;
-    const partners = originalPartners.filter(s => s._id !== partner._id);
+    const partners = originalPartners.filter((s) => s._id !== partner._id);
     this.setState({ partners });
     try {
       await deletePartner(partner._id);
@@ -67,9 +67,9 @@ class App extends Component {
     }
   };
 
-  handleDeleteCareer = async career => {
+  handleDeleteCareer = async (career) => {
     const originalCareers = this.state.careers;
-    const careers = originalCareers.filter(s => s._id !== career._id);
+    const careers = originalCareers.filter((s) => s._id !== career._id);
     this.setState({ careers });
     try {
       await deleteCareer(career._id);
@@ -94,7 +94,7 @@ class App extends Component {
 
             <Route
               path="/about"
-              render={props => (
+              render={(props) => (
                 <About
                   onDeletePartner={this.handleDeletePartner}
                   {...props}
@@ -104,7 +104,7 @@ class App extends Component {
               )}
             />
             <Route
-              render={props => (
+              render={(props) => (
                 <Home
                   categories={this.state.categories}
                   projects={this.state.projects}
@@ -118,10 +118,15 @@ class App extends Component {
 
             <Route path="/projects/category/:id" component={Categorised} />
             <Route path="/project/:id" component={FullProject} />
-            <Route path="/news/:id" component={FullNews} />
+            <Route
+              path="/news/:id"
+              render={(props) => (
+                <FullNews newss={this.state.newss} {...props}></FullNews>
+              )}
+            />
             <Route
               path="/news"
-              render={props => (
+              render={(props) => (
                 <News
                   user={this.state.user}
                   newss={this.state.newss}
@@ -140,7 +145,7 @@ class App extends Component {
             <Route path="/logout" component={Logout} />
             <Route
               path="/career"
-              render={props => (
+              render={(props) => (
                 <Career
                   careers={this.state.careers}
                   onDelete={this.handleDeleteCareer}
@@ -151,7 +156,7 @@ class App extends Component {
 
             <Route
               path="/projects"
-              render={props => (
+              render={(props) => (
                 <Projects
                   categories={this.state.categories}
                   projects={this.state.projects}

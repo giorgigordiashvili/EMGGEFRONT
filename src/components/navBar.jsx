@@ -49,7 +49,7 @@ class NavBar extends Component {
                     მთავარი
                   </NavLink>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <NavLink
                     className="nav-link dropdown-toggle"
                     to="/about"
@@ -124,12 +124,12 @@ class NavBar extends Component {
                     კონტაქტი
                   </NavLink>
                 </li>
-                <li className={this.state.isOpen ? "search open" : "search"}>
+                {/* <li className={this.state.isOpen ? "search open" : "search"}>
                   <input type="search" className="search-box" />
                   <span className="search-button" onClick={this.handleSearch}>
                     <span className="search-icon"></span>
                   </span>
-                </li>
+                </li> */}
               </ul>
               <ul className="navbar-nav">
                 {/* <li className="nav-item">

@@ -8,8 +8,8 @@ const Pagination = ({ itemsCount, pageSize, onPageChange, currentPage }) => {
   const pages = _.range(1, pagesCount + 1);
 
   return (
-    <ul style={{ "justify-content": "center" }} className="pagination">
-      {pages.map(page => (
+    <ul style={{ justifyContent: "center" }} className="pagination">
+      {pages.map((page) => (
         <li
           key={page}
           className={page === currentPage ? "page-item active" : "page-item"}
@@ -27,7 +27,7 @@ Pagination.propTypes = {
   itemsCount: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
   onPageChange: PropTypes.func.isRequired,
-  currentPage: PropTypes.number.isRequired
+  currentPage: PropTypes.number.isRequired,
 };
 
 export default Pagination;

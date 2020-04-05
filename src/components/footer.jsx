@@ -54,10 +54,16 @@ class Footer extends Component {
             <div className="pl-04">
               გამოგვყევით
               <Link to="#" className="card-link-emg p-2 color-white">
-                <FontAwesome className="fab fa-facebook-f"></FontAwesome>
+                <FontAwesome
+                  name="facebook"
+                  className="fab fa-facebook-f"
+                ></FontAwesome>
               </Link>
               <Link to="#" className="card-link-emg p-2 color-white">
-                <FontAwesome className="fab fa-twitter"></FontAwesome>
+                <FontAwesome
+                  name="twitter"
+                  className="fab fa-twitter"
+                ></FontAwesome>
               </Link>
             </div>
           </div>

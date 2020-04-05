@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import _ from "lodash";
 import NewsFlex from "./newsFlex";
+import SearchBox from "./searchBox";
 
 class News extends Component {
   state = {
@@ -18,11 +19,6 @@ class News extends Component {
     selectedStyle: null,
     sortColumn: { path: "title", order: "asc" },
   };
-
-  async componentDidMount() {
-    const { newss } = this.props;
-    this.setState({ newss });
-  }
 
   handleDelete = async (project) => {
     const originalProjects = this.state.newss;
@@ -70,12 +66,24 @@ class News extends Component {
       sortColumn,
       searchQuery,
     } = this.state;
-    const { newss: allProjects } = this.props;
+    let { newss: allProjects } = this.props;
+    let number = allProjects.length % pageSize;
+    if (number !== 0) {
+      number = pageSize - (allProjects.length % pageSize);
+      let objs = [];
+      for (let i = 0; i < number; i++) {
+        objs.push({ type: "hidden", _id: `${Math.random()}` });
+      }
+      allProjects = allProjects.concat(objs);
+    }
     let filtered = allProjects;
 
     if (searchQuery)
-      filtered = allProjects.filter((s) =>
-        s.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+      filtered = allProjects.filter(
+        (s) =>
+          s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          s.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          s.longDesc.toLowerCase().includes(searchQuery.toLowerCase())
       );
     else if (selectedStyle && selectedStyle._id)
       filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
@@ -109,7 +117,7 @@ class News extends Component {
     const { totalCount, data: newss } = this.getPagedData();
 
     return (
-      <div className="container pt-10">
+      <div className="container pt-10 ">
         {isAdmin && (
           <Link
             style={{ marginBottom: "10px" }}
@@ -119,13 +127,13 @@ class News extends Component {
             სიახლის დამატება
           </Link>
         )}
-        <ol className="breadcrumb">
+        {/* <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <a href="index.html">მთავარი</a>
           </li>
           <li className="breadcrumb-item active">სიახლეები</li>
-        </ol>
-        {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
+        </ol> */}
+        <SearchBox value={searchQuery} onChange={this.handleSearch} />
         <NewsFlex
           count={this.props.count}
           onRenewBag={this.props.onRenewBag}
