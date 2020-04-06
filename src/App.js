@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProtectedRoute from "./components/common/protectedRoute";
-import { Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import LoginForm from "./components/loginForm";
 import EditProject from "./components/editProject";
@@ -31,6 +31,7 @@ import EditPartner from "./components/editPartner";
 import EditCareer from "./components/editCareer";
 import { toast } from "react-toastify";
 import Activities from "./components/activities";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 class App extends Component {
   state = {
@@ -83,11 +84,11 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <BrowserRouter>
         <div className="fluid-container">
           <ToastContainer />
           <NavBar user={this.state.user} />
-
+          <ScrollToTop></ScrollToTop>
           <Switch>
             <Route path="/login" component={LoginForm} />
             <Route path="/contact" component={Contact} />
@@ -173,7 +174,7 @@ class App extends Component {
           </Switch>
         </div>
         <Footer></Footer>
-      </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
