@@ -43,7 +43,7 @@ class ProjectFlex extends Component {
                     </h5>
                   </div>
                 </Link>
-                <p className="card-text p-2">
+                <p className="card-text p-2 text-justify">
                   {project.shortDesc}
                   <br />
                   <span className="color-emg">კლიენტი: </span> {project.client}
