@@ -129,11 +129,13 @@ class Home extends Component {
             {newss.slice(0, 8).map((news) => (
               <div key={news._id}>
                 <div className="card card-emg mr-4">
-                  <img
-                    className="card-img-top home-card-img inner-shadow-emg"
-                    src={news.shortImage}
-                    alt="Alt"
-                  />
+                  <Link className="home-news-link" to={"/news/" + news._id}>
+                    <img
+                      className="card-img-top home-card-img inner-shadow-emg"
+                      src={news.shortImage}
+                      alt="Alt"
+                    />
+                  </Link>
                   <div className="card-body">
                     <h5 className="card-title">
                       <span className="inner-shadow-emg">
@@ -145,7 +147,7 @@ class Home extends Component {
                         </Link>
                       </span>
                     </h5>
-                    <p className="card-text">{news.shortDesc}</p>
+                    <p className="card-text text-justify">{news.shortDesc}</p>
                   </div>
                   <div className="card-body d-flex justify-content-between">
                     <div>
@@ -178,11 +180,16 @@ class Home extends Component {
             {projects.slice(0, 8).map((project) => (
               <div key={project._id}>
                 <div className="card card-emg-dark mr-4">
-                  <img
-                    alt={project.name}
-                    className="card-img-top home-card-img inner-shadow-emg"
-                    src={project.shortImage}
-                  />
+                  <Link
+                    className="home-news-link"
+                    to={"/project/" + project._id}
+                  >
+                    <img
+                      alt={project.name}
+                      className="card-img-top home-card-img inner-shadow-emg"
+                      src={project.shortImage}
+                    />
+                  </Link>
                   <div className="card-body">
                     <h5 className="card-title">
                       <span className="inner-shadow-emg">
@@ -194,7 +201,9 @@ class Home extends Component {
                         </Link>
                       </span>
                     </h5>
-                    <p className="card-text">{project.shortDesc}</p>
+                    <p className="card-text text-justify">
+                      {project.shortDesc}
+                    </p>
                   </div>
                   <div className="card-body d-flex justify-content-between">
                     <div>

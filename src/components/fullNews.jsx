@@ -16,14 +16,14 @@ class FullNews extends Component {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-lg-6 col-12 p-3">
               <img
                 src={news.longImage}
                 alt={news.title}
-                className="img-fluid"
+                className="img-fluid inner-shadow-emg"
               />
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-12 p-3 text-justify">
               <p>{news.longDesc}</p>
             </div>
           </div>

@@ -75,27 +75,27 @@ class Governance extends Component {
             <div className="fluid-container highlight p-5">
               <div className="container">
                 <div className="row">
-                  <div className="col-12 col-md-12 pl-04 par">
-                    <p>
+                  <div className="col-12 col-md-12 pl-04">
+                    <p className="text-justify">
                       კომპანიის მენეჯმენტი:
                       <p></p>
                       <ul>
-                        <li>
+                        <li className="text-justify">
                           • ეყრდნობა ორგანიზაციის კორპორაციული მართვის საუკეთესო
                           საერთაშორისო პრაქტიკას;
                         </li>
-                        <li>
+                        <li className="text-justify">
                           • აძლიერებს კორპორაციულ კულტურას და მიზნების
                           შესაბამისად სრულყოფს ორგანიზაციის სტრუქტურას;
                         </li>
-                        <li>
+                        <li className="text-justify">
                           • თანამშრომლობს როგორც ადგილობრივ, ისე უცხოელ
                           პარტნიორებთან;
                         </li>
-                        <li>
+                        <li className="text-justify">
                           • აფართოებს საქმიანობის სექტორულ და გეოგრაფიულ არეალს;
                         </li>
-                        <li>
+                        <li className="text-justify">
                           • საერთაშორისო გამოცდილების გათვალისწინებით
                           საქართველოში ნერგავს საინჟინრო და სამშენებლო სფეროში
                           მსოფლიოში აპრობირებულ თანამედროვე ტექნოლოგიებსა და

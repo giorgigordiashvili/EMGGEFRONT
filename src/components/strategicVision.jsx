@@ -83,7 +83,7 @@ class StrategicVision extends Component {
                     <img src={basicPrinciples} alt="" />
                     <h5 className="p-2 color-emg">ძირითადი პრინციპები</h5>
                     <p>
-                      <ul className="str ">
+                      <ul className="str p-3 pl-5">
                         <li>
                           სამართლებრივი მოთხოვნებისა და რეგულაციების დაცვა;{" "}
                         </li>
@@ -100,7 +100,7 @@ class StrategicVision extends Component {
                     <img src={ourGoals} alt="" />
                     <h5 className="p-2 color-emg">მიზნები</h5>
                     <p>
-                      <ul className="str ">
+                      <ul className="str  p-3 pl-5">
                         <li>მუდმივი პროფესიული განვითარება</li>
                         <li>მომსახურების სფეროს გაფართოება</li>
                         <li>კვალიფიციური მომსახურების შეთავაზება</li>
@@ -118,7 +118,7 @@ class StrategicVision extends Component {
                     <img src={ourMission} alt="" />
                     <h5 className="p-2 color-emg">მისია</h5>
                     <p>
-                      <ul className="str ">
+                      <ul className="str  p-3 pl-5">
                         <li>
                           საერთაშორისო სტანდარტების დამკვიდრება ადგილობრივ
                           ბაზარზე
@@ -141,7 +141,7 @@ class StrategicVision extends Component {
                     <img src={priorities} alt="" />
                     <h5 className="p-2 color-emg">პრიორიტეტები</h5>
                     <p>
-                      <ul className="str ">
+                      <ul className="str  p-3 pl-5">
                         <li>მიუკერძოებლობა</li>
                         <li>სანდოობა</li>
                         <li>მომსახურების უმაღლესი ხარისხი</li>
