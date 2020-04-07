@@ -98,14 +98,14 @@ class Projects extends Component {
             </Link>
           </React.Fragment>
         )}
-        <div className="container p-5"></div>
+        <div className="container p-4"></div>
         <CategoriesFlex
           projects={projects}
           categories={categories}
           onDelete={this.handleDelete}
           onDeleteCategory={this.handleDeleteCategory}
         />
-        <div className="container p-5"></div>
+        <div className="container p-4"></div>
       </div>
     );
   }

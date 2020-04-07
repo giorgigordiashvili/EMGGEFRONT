@@ -58,26 +58,25 @@ class WhoWeAre extends Component {
             role="tabpanel"
             aria-labelledby="nav-home-tab"
           >
-            <div className="container p-3"></div>
-            <div className="container ">
+            <div className="container">
               <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                ჩვენ შესახებ
+                ვინ ვართ ჩვენ
               </h1>
               <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
                 „საინჟინრო მონიტორინგის ჯგუფი“
               </h5>
             </div>
-            <div className="fluid-container">
+            <div className="fluid-container highlight p-5">
               <div className="container">
                 <div className="row">
                   <div className="col-12 col-md-12 pl-04">
-                    <p className="text-justify">
+                    <p className="text-justify par">
                       „საინჟინრო მონიტორინგის ჯგუფი“ 2016 წელს დაფუძნდა.
                       კომპანია A ტიპის ინსპექტირების აკრედიტებული ორგანოა და
                       საინჟინრო-საკონსულტაციო მომსახურებას უწევს სამშენებლო
                       სფეროს თითქმის ყველა დარგს.
                     </p>
-                    <p className="text-justify">
+                    <p className="text-justify par">
                       საერთაშორისო სტანდარტების მკაცრი დაცვით, პრინციპულობითა და
                       პროფესიული ღირებულებების ერთგულებით კომპანიამ დაარსების
                       დღიდან დაიმკვიდრა ინსპექტირების წამყვანი ორგანოს სტატუსი
@@ -89,7 +88,7 @@ class WhoWeAre extends Component {
                       განაპირობა. ეს ყველაფერი, საბოლოოდ, ბაზრის წილისა და
                       კონკურენტუნარიანობის მკვეთრ ზრდაზე აისახა.
                     </p>
-                    <p className="text-justify">
+                    <p className="text-justify par">
                       „საინჟინრო მონიტორინგის ჯგუფის“ თბილისის სათავო და
                       რეგიონული ოფისები შეუზღუდავად ემსახურება სამშენებლო
                       ობიექტებს საქართველოს მთელ ტერიტორიაზე.
@@ -99,7 +98,7 @@ class WhoWeAre extends Component {
               </div>
             </div>
           </div>
-          <div className="container p-5"></div>
+          <div className="container p-4"></div>
         </div>
       </div>
     );

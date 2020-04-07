@@ -4,6 +4,39 @@ body {
   overflow-x: hidden;
 }
 
+.dropdown-custom {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-custom > a:hover {
+  background-color: rgba(255, 255, 255);
+}
+
+.dropdown-custom > a:active {
+  color: #74bb53;
+}
+
+p {
+  font-size: 13px;
+}
+
+.map-container-9,
+.map-container-10,
+.map-container-11 {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-container-9 iframe,
+.map-container-10 iframe,
+.map-container-11 iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 @font-face {
   font-family: "DejaVuSans";
   src: url("./fonts/DejaVuSans.eot?#iefix") format("embedded-opentype"),
@@ -262,6 +295,10 @@ ul > li {
   color: #78c039;
 }
 
+.map-button {
+  background-color: none;
+}
+
 .highlight {
   background-color: #f7f7f9;
 }
@@ -319,6 +356,15 @@ ul > li {
   border-radius: 0;
   border: none;
   background-color: #f7f7f9;
+}
+
+.map-button {
+  background-color: #78c039;
+  border: none;
+}
+
+.map-button:hover {
+  color: white;
 }
 
 .emg-button {

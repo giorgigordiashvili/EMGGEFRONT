@@ -61,7 +61,7 @@ class QualityAndPermits extends Component {
           role="tabpanel"
           aria-labelledby="nav-quality-and-permits-tab"
         >
-          <div className="container p-3">
+          <div className="container">
             <h1 className="currentPageTitle mt-3 pl-04">ხარისხი და ნებართვა</h1>
           </div>
           <div className="fluid-container highlight">
@@ -136,7 +136,7 @@ class QualityAndPermits extends Component {
               </div>
             </div>
           </div>
-          <div className="container p-5"></div>
+          <div className="container p-4"></div>
         </div>
       </div>
     );

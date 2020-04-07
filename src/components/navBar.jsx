@@ -50,11 +50,11 @@ class NavBar extends Component {
                     მთავარი
                   </NavLink>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown ">
                   <NavLink
                     className="nav-link"
                     id="aboutus"
-                    to="/about/whoweare"
+                    to="/about/"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
@@ -64,8 +64,8 @@ class NavBar extends Component {
                   <div
                     className={
                       this.state.dropdown
-                        ? "dropdown-menu show"
-                        : "dropdown-menu"
+                        ? "dropdown-menu show dropdown-custom"
+                        : "dropdown-menu dropdown-custom"
                     }
                     aria-labelledby="aboutus"
                   >

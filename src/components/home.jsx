@@ -127,7 +127,7 @@ class Home extends Component {
           </div>
           <Slider className="container" {...responsive}>
             {newss.slice(0, 8).map((news) => (
-              <div>
+              <div key={news._id}>
                 <div className="card card-emg mr-4">
                   <img
                     className="card-img-top home-card-img inner-shadow-emg"

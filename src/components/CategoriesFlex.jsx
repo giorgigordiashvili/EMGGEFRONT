@@ -10,7 +10,7 @@ class CategoriesFlex extends Component {
     return (
       <div className="row">
         {categories.map((project) => (
-          <div key={project._id} className="col-md-6 col-lg-4">
+          <div key={project._id} className="col-md-6 col-lg-6">
             <div className="card border-0 transform-on-hover">
               <Link
                 className="lightbox"
