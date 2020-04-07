@@ -38,7 +38,7 @@ class StrategicVision extends Component {
               className="nav-item nav-link nav-link-emg"
               to="/about/qualityandpermits"
             >
-              ხარისხი და ნებართვა
+              ხარისხი და პასუხისმგებლობა
             </Link>
 
             <Link

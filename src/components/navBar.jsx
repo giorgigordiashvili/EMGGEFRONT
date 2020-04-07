@@ -91,7 +91,7 @@ class NavBar extends Component {
                       className="dropdown-item"
                       to={{ pathname: "/about/qualityandpermits" }}
                     >
-                      ხარისხი და ნებართვა
+                      ხარისხი და პასუხისმგებლობა
                     </Link>
                     <Link
                       className="dropdown-item"

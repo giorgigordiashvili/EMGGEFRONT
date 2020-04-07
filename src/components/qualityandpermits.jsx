@@ -38,7 +38,7 @@ class QualityAndPermits extends Component {
               className="nav-item nav-link nav-link-emg active"
               to="/about/qualityandpermits"
             >
-              ხარისხი და ნებართვა
+              ხარისხი და პასუხისმგებლობა
             </Link>
 
             <Link
@@ -62,7 +62,9 @@ class QualityAndPermits extends Component {
           aria-labelledby="nav-quality-and-permits-tab"
         >
           <div className="container">
-            <h1 className="currentPageTitle mt-3 pl-04">ხარისხი და ნებართვა</h1>
+            <h1 className="currentPageTitle mt-3 pl-04">
+              ხარისხი და პასუხისმგებლობა
+            </h1>
           </div>
           <div className="fluid-container highlight">
             <div className="container">
