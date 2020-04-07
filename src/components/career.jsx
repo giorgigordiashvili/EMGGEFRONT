@@ -89,11 +89,13 @@ class Career extends Component {
                           )}
                         </div>
                         <p className="career-date m-2">
+                          დაწყება:{" "}
                           <Moment format="D MMM YYYY" withTitle>
                             {career.published}
                           </Moment>
                         </p>
                         <p className="career-date m-2">
+                          დასრულება:{" "}
                           <Moment format="D MMM YYYY" withTitle>
                             {career.endDate}
                           </Moment>
