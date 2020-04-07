@@ -98,7 +98,7 @@ class Projects extends Component {
             </Link>
           </React.Fragment>
         )}
-        <hr />
+        <div className="container p-5"></div>
         <CategoriesFlex
           projects={projects}
           categories={categories}

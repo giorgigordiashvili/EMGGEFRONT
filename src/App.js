@@ -19,7 +19,6 @@ import News from "./components/news";
 import Categorised from "./components/Categorised";
 import FullProject from "./components/fullProject";
 import Career from "./components/career";
-import About from "./components/about";
 import Home from "./components/home";
 import { getProjects } from "./services/projectService";
 import { getNews } from "./services/newsService";

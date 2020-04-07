@@ -45,13 +45,7 @@ class ProjectFlex extends Component {
                 <br />
                 <span className="color-emg">კლიენტი: </span> {project.client}
                 <br />
-                <span className="color-emg">ფართობი: </span> ???
-                <br />
-                <span className="color-emg">დასაქმებული ადამიანები: </span> ???
-                <br />
                 <span className="color-emg">ხანგრძლივობა: </span> ???
-                <br />
-                <span className="color-emg">შესრულებული სამუშაოები: </span> ???
                 <br />
                 <span className="color-emg">პარტნიორები: </span> ???
                 <br />

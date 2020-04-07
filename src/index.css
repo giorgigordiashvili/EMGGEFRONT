@@ -368,7 +368,7 @@ ul > li {
 }
 
 .vh-50 {
-  height: 30vh !important;
+  min-height: 50vh !important;
 }
 
 .project-title-container {

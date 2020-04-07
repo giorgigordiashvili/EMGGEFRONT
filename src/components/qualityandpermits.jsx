@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import qualityAndPermits from "../res/qualityandpermits.png";
+import employeeQualification from "../res/employeequalification.png";
+import qualityManagement from "../res/qualitymanagement.png";
+import healthAndSafetyManagement from "../res/healthandsafetymanagement.png";
 
 class QualityAndPermits extends Component {
   render() {
@@ -65,7 +69,7 @@ class QualityAndPermits extends Component {
               <div className="row p-5">
                 <div className="col-sm-12 col-md-6 min-vh-25 ">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/5.png" alt="" />
+                    <img src={qualityAndPermits} alt="" />
                     <p className="p-2 color-emg">QUALITY AND PERMITS</p>
                     <p>
                       Engineering Monitoring Group LLC is A type inspection
@@ -84,7 +88,7 @@ class QualityAndPermits extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6 min-vh-25 ">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/6.png" alt="" />
+                    <img src={employeeQualification} alt="" />
                     <p className="p-2 color-emg">EMPLOYEE QUALIFICATION</p>
                     <p>
                       The company is staffed by accredited, professional and
@@ -100,7 +104,7 @@ class QualityAndPermits extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6 min-vh-25">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/7.png" alt="" />
+                    <img src={qualityManagement} alt="" />
                     <p className="p-2 color-emg">Quality management</p>
                     <p className="text-left">
                       The company’s aim is to cooperate with strong
@@ -113,7 +117,7 @@ class QualityAndPermits extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6 min-vh-25">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/8.png" alt="" />
+                    <img src={healthAndSafetyManagement} alt="" />
                     <p className="p-2 color-emg">
                       Health and Safety Management
                     </p>

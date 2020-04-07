@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import basicPrinciples from "../res/basicprinciples.png";
+import ourGoals from "../res/ourgoals.png";
+import ourMission from "../res/ourmission.png";
+import priorities from "../res/priorities.png";
 
 class StrategicVision extends Component {
   render() {
@@ -66,7 +70,7 @@ class StrategicVision extends Component {
               <div className="row p-5">
                 <div className="col-sm-12 col-md-6 min-vh-25 ">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/1.png" alt="" />
+                    <img src={basicPrinciples} alt="" />
                     <p className="p-2 color-emg">ძირითადი პრინციპები</p>
                     <ul className="str">
                       <li>
@@ -81,7 +85,7 @@ class StrategicVision extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6 min-vh-25 ">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/2.png" alt="" />
+                    <img src={ourGoals} alt="" />
                     <p className="p-2 color-emg">მიზნები</p>
                     <ul className="str">
                       <li>მუდმივი პროფესიული განვითარება</li>
@@ -94,7 +98,7 @@ class StrategicVision extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6 min-vh-25">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/3.png" alt="" />
+                    <img src={ourMission} alt="" />
                     <p className="p-2 color-emg">მისია</p>
 
                     <ul className="str">
@@ -115,7 +119,7 @@ class StrategicVision extends Component {
                 </div>
                 <div className="col-sm-12 col-md-6 min-vh-25">
                   <div className="column text-center">
-                    <img src="https://emg.groot.ge/4.png" alt="" />
+                    <img src={priorities} alt="" />
                     <p className="p-2 color-emg">პრიორიტეტები</p>
                     <ul className="str">
                       <li>მიუკერძოებლობა</li>

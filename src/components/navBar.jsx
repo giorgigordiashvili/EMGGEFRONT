@@ -53,8 +53,8 @@ class NavBar extends Component {
                 <li className="nav-item dropdown">
                   <NavLink
                     className="nav-link"
-                    to="/about"
                     id="aboutus"
+                    to="/about/whoweare"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"

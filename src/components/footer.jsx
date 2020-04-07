@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
 import { Link } from "react-router-dom";
+import phoneFooter from "../res/phoneFooter.png";
+import mailFooter from "../res/mailFooter.png";
+import locationFooter from "../res/locationFooter.png";
 
 class Footer extends Component {
   state = {};
@@ -15,22 +18,19 @@ class Footer extends Component {
                 <tbody>
                   <tr>
                     <td style={{ width: "38px" }}>
-                      <img alt="phone" src="https://emg.groot.ge/phone.png" />
+                      <img alt="phone" src={phoneFooter} />
                     </td>
                     <td>(995) 591 59 92 92 / (032) 2 709 709</td>
                   </tr>
                   <tr>
                     <td style={{ padding: "15px 0" }}>
-                      <img alt="mail" src="https://emg.groot.ge/mail.png" />
+                      <img alt="mail" src={mailFooter} />
                     </td>
                     <td style={{ padding: "15px 0" }}>info@emg.ge</td>
                   </tr>
                   <tr>
                     <td>
-                      <img
-                        alt="location"
-                        src="https://emg.groot.ge/location.png"
-                      />
+                      <img alt="location" src={locationFooter} />
                     </td>
                     <td>8 კ. ქუთათელაძე, თბილისი 0101</td>
                   </tr>
