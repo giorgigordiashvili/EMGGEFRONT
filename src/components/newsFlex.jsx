@@ -59,7 +59,7 @@ class NewsFlex extends Component {
                     </h5>
                   </div>
                 </Link>
-                <p className="card-text p-2">{news.shortDesc}</p>
+                <p className="card-text p-2 text-justify">{news.shortDesc}</p>
               </div>
               <div className="card-footer">
                 <small className="text-muted row justify-content-between">
