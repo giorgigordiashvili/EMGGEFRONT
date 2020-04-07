@@ -76,9 +76,10 @@ class Governance extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-12 col-md-12 pl-04">
-                    <p className="text-justify">
+                    <span className="text-justify">
                       კომპანიის მენეჯმენტი:
-                      <p></p>
+                      <br />
+                      <br />
                       <ul>
                         <li className="text-justify">
                           • ეყრდნობა ორგანიზაციის კორპორაციული მართვის საუკეთესო
@@ -104,7 +105,7 @@ class Governance extends Component {
                       </ul>
                       მუდმივი ზრდა და განვითარება – ეს ჩვენი გუნდის მთავარი
                       პრინციპია.
-                    </p>
+                    </span>
                   </div>
                 </div>
               </div>

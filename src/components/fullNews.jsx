@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class FullNews extends Component {
   state = {};
@@ -11,8 +12,13 @@ class FullNews extends Component {
 
     return (
       <React.Fragment>
-        <div className="container pt-5">
-          <h5 className="mt-5 mb-3 pl-04 color-emg pb-4">{news.title}</h5>
+        <div className="container pt-8">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+              <Link to="/news">სიახლეები</Link>
+            </li>
+            <li className="breadcrumb-item active">{news.title}</li>
+          </ol>
         </div>
         <div className="container">
           <div className="row">
@@ -24,6 +30,7 @@ class FullNews extends Component {
               />
             </div>
             <div className="col-lg-6 col-12 p-3 text-justify">
+              <h5 className=" color-emg ">{news.title}</h5>
               <p>{news.longDesc}</p>
             </div>
           </div>

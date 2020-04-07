@@ -108,7 +108,9 @@ class Career extends Component {
                       role="tabpanel"
                       aria-labelledby={"heading" + career._id}
                     >
-                      <p className="card-body">{career.description}</p>
+                      <p className="card-body text-justify">
+                        {career.description}
+                      </p>
                     </div>
                   </div>
                 ))}

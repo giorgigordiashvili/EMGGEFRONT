@@ -20,7 +20,7 @@ class FullProject extends Component {
         {/* Page Heading/Breadcrumbs */}
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <a href="index.html">პროექტები</a>
+            <Link to="/projects">პროექტები</Link>
           </li>
           <li className="breadcrumb-item active">{project.title}</li>
         </ol>

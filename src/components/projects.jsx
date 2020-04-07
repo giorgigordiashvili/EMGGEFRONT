@@ -68,7 +68,7 @@ class Projects extends Component {
               <Link
                 style={{ marginBottom: "10px" }}
                 className="btn btn-primary ml-1"
-                to="/projects/new"
+                to="/editproject/new"
               >
                 პროექტის დამატება
               </Link>
@@ -84,7 +84,7 @@ class Projects extends Component {
             <Link
               style={{ marginBottom: "10px" }}
               className="btn btn-primary"
-              to="/projects/new"
+              to="/editproject/new"
             >
               პროექტის დამატება
             </Link>

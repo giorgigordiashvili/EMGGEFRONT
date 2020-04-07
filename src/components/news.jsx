@@ -129,7 +129,7 @@ class News extends Component {
         )}
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <a href="index.html">მთავარი</a>
+            <Link to="/home">მთავარი</Link>
           </li>
           <li className="breadcrumb-item active">სიახლეები</li>
         </ol>

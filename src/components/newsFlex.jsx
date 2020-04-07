@@ -55,7 +55,9 @@ class NewsFlex extends Component {
                     }}
                   >
                     <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
-                      <span className="inner-shadow-emg ">{news.title}</span>
+                      <span className="inner-shadow-emg font-bebas">
+                        {news.title}
+                      </span>
                     </h5>
                   </div>
                 </Link>
