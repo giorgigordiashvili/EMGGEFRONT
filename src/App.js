@@ -33,7 +33,7 @@ import Activities from "./components/activities";
 import ScrollToTop from "./components/common/ScrollToTop";
 import WhoWeAre from "./components/whoweare";
 import Governance from "./components/governance";
-import StrategicVision from "./components/strategicvision";
+import StrategicVision from "./components/strategicVision";
 import QualityAndPermits from "./components/qualityandpermits";
 import Branches from "./components/branches";
 import Partners from "./components/partners";
