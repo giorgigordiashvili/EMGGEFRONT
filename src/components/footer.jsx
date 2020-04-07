@@ -13,7 +13,7 @@ class Footer extends Component {
         <div className="container pt-5 pb-5 column pl-04">
           <div className="row">
             <div className="col-md-6 col-12">
-              <h5 className="color-emg pb-5">კონტაქტი</h5>
+              <h5 className="color-emg pb-3">კონტაქტი</h5>
               <table className="table-contact">
                 <tbody>
                   <tr>
@@ -41,9 +41,8 @@ class Footer extends Component {
               <iframe
                 title="Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.9219520194015!2d44.74112131535616!3d41.72220298313488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447310d0442439%3A0x741ac75e14ceafaa!2zOCDhg5nhg5Dhg5rhg5jhg6Hhg6Lhg6Dhg5Dhg6Lhg5Qg4YOl4YOj4YOX4YOQ4YOX4YOU4YOa4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOX4YOR4YOY4YOa4YOY4YOh4YOYIDAxNzc!5e0!3m2!1ska!2sge!4v1568553145362!5m2!1ska!2sge"
-                className="map"
-                frameBorder={0}
-                style={{ border: 0 }}
+                className="map "
+                frameBorder={1}
                 allowFullScreen
               />
             </div>

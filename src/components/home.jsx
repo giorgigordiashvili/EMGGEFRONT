@@ -166,6 +166,7 @@ class Home extends Component {
               </div>
             ))}
           </Slider>
+          <div className="container p-4"></div>
         </div>
 
         {/* PROJECTS START */}
@@ -224,7 +225,7 @@ class Home extends Component {
         </div>
         {/* PROJECTS END */}
 
-        <div className="container p-5"></div>
+        <div className="container p-4"></div>
       </React.Fragment>
     );
   }
