@@ -14,8 +14,9 @@ class Home extends Component {
   state = {};
 
   render() {
+    let { projects, newss } = this.props;
     const projectsResponsive = {
-      slidesToShow: 4,
+      slidesToShow: projects.length > 3 ? 4 : projects.length % 4,
       slidesToScroll: 1,
       responsive: [
         {
@@ -46,7 +47,7 @@ class Home extends Component {
       ],
     };
     const responsive = {
-      slidesToShow: 4,
+      slidesToShow: newss.length > 3 ? 4 : newss.length % 4,
       slidesToScroll: 1,
       responsive: [
         {
@@ -76,7 +77,7 @@ class Home extends Component {
         // instead of a settings object
       ],
     };
-    const { projects, newss } = this.props;
+
     return (
       <React.Fragment>
         {/* LOGO */}
@@ -126,47 +127,51 @@ class Home extends Component {
             <h2 className="currentPageTitle pl-03">სიახლეები</h2>
           </div>
           <Slider className="container" {...responsive}>
-            {newss.slice(0, 8).map((news) => (
-              <div key={news._id}>
-                <div className="card card-emg mr-4">
-                  <Link className="home-news-link" to={"/news/" + news._id}>
-                    <img
-                      className="card-img-top home-card-img inner-shadow-emg"
-                      src={news.shortImage}
-                      alt="Alt"
-                    />
-                  </Link>
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      <span className="inner-shadow-emg">
-                        <Link
-                          className="home-news-link"
-                          to={"/news/" + news._id}
-                        >
-                          {news.title}
-                        </Link>
-                      </span>
-                    </h5>
-                    <p className="card-text text-justify">{news.shortDesc}</p>
-                  </div>
-                  <div className="card-body d-flex justify-content-between">
-                    <div>
-                      <a href={news.fbLink} className="card-link color-emg">
-                        <FontAwesomeIcon icon={faFacebook} />
-                      </a>
-                      <a href={news.twLink} className="card-link color-emg">
-                        <FontAwesomeIcon icon={faTwitter} />
-                      </a>
+            {newss.slice(0, 8).map((news) =>
+              news.type !== "hidden" ? (
+                <div key={news._id}>
+                  <div className="card card-emg mr-4">
+                    <Link className="home-news-link" to={"/news/" + news._id}>
+                      <img
+                        className="card-img-top home-card-img inner-shadow-emg"
+                        src={news.shortImage}
+                        alt="Alt"
+                      />
+                    </Link>
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        <span className="inner-shadow-emg">
+                          <Link
+                            className="home-news-link"
+                            to={"/news/" + news._id}
+                          >
+                            {news.title}
+                          </Link>
+                        </span>
+                      </h5>
+                      <p className="card-text text-justify">{news.shortDesc}</p>
                     </div>
-                    <div className="color-emg">
-                      <Moment format="DD MM YYYY" withTitle>
-                        {news.publishDate}
-                      </Moment>
+                    <div className="card-body d-flex justify-content-between">
+                      <div>
+                        <a href={news.fbLink} className="card-link color-emg">
+                          <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a href={news.twLink} className="card-link color-emg">
+                          <FontAwesomeIcon icon={faTwitter} />
+                        </a>
+                      </div>
+                      <div className="color-emg">
+                        <Moment format="DD MM YYYY" withTitle>
+                          {news.publishDate}
+                        </Moment>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ) : (
+                <div></div>
+              )
+            )}
           </Slider>
           <div className="container p-4"></div>
         </div>
@@ -177,59 +182,63 @@ class Home extends Component {
         </div>
         <div className="fluid-container pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
-            {projects.slice(0, 8).map((project) => (
-              <div key={project._id}>
-                <div className="card card-emg-dark mr-4">
-                  <Link
-                    className="home-news-link"
-                    to={"/project/" + project._id}
-                  >
-                    <img
-                      alt={project.name}
-                      className="card-img-top home-card-img inner-shadow-emg"
-                      src={project.shortImage}
-                    />
-                  </Link>
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      <span className="inner-shadow-emg">
-                        <Link
-                          className="home-news-link"
-                          to={"/project/" + project._id}
-                        >
-                          {project.title}
-                        </Link>
-                      </span>
-                    </h5>
-                    <p className="card-text text-justify">
-                      {project.shortDesc}
-                    </p>
-                  </div>
-                  <div className="card-body d-flex justify-content-between">
-                    <div>
-                      <a
-                        href={project.fbLink}
-                        className="  card-link minimal color-emg"
-                      >
-                        <FontAwesomeIcon icon={faFacebook} />
-                      </a>
-                      <a
-                        href={project.twLink}
-                        className=" card-link minimal color-emg"
-                      >
-                        <FontAwesomeIcon icon={faTwitter} />
-                      </a>
+            {projects.slice(0, 8).map((project) =>
+              project.type !== "hidden" ? (
+                <div key={project._id}>
+                  <div className="card card-emg-dark mr-4">
+                    <Link
+                      className="home-news-link"
+                      to={"/projects/" + project._id}
+                    >
+                      <img
+                        alt={project.name}
+                        className="card-img-top home-card-img inner-shadow-emg"
+                        src={project.shortImage}
+                      />
+                    </Link>
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        <span className="inner-shadow-emg">
+                          <Link
+                            className="home-news-link"
+                            to={"/projects/" + project._id}
+                          >
+                            {project.title}
+                          </Link>
+                        </span>
+                      </h5>
+                      <p className="card-text text-justify">
+                        {project.shortDesc}
+                      </p>
                     </div>
+                    <div className="card-body d-flex justify-content-between">
+                      <div>
+                        <a
+                          href={project.fbLink}
+                          className="  card-link minimal color-emg"
+                        >
+                          <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a
+                          href={project.twLink}
+                          className=" card-link minimal color-emg"
+                        >
+                          <FontAwesomeIcon icon={faTwitter} />
+                        </a>
+                      </div>
 
-                    <div className="color-emg minimal-date">
-                      <Moment format="DD MM YYYY" withTitle>
-                        {project.publishDate}
-                      </Moment>
+                      <div className="color-emg minimal-date">
+                        <Moment format="DD MM YYYY" withTitle>
+                          {project.publishDate}
+                        </Moment>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ) : (
+                <div></div>
+              )
+            )}
           </Slider>
         </div>
         {/* PROJECTS END */}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class FullNews extends Component {
-  state = { rame: "s" };
+  state = {};
 
   render() {
     const test = { title: "", longDesc: "", longImage: "" };

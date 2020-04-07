@@ -117,7 +117,7 @@ class News extends Component {
     const { totalCount, data: newss } = this.getPagedData();
 
     return (
-      <div className="container pt-10 ">
+      <div className="container pt-8 ">
         {isAdmin && (
           <Link
             style={{ marginBottom: "10px" }}
@@ -127,12 +127,12 @@ class News extends Component {
             სიახლის დამატება
           </Link>
         )}
-        {/* <ol className="breadcrumb">
+        <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <a href="index.html">მთავარი</a>
           </li>
           <li className="breadcrumb-item active">სიახლეები</li>
-        </ol> */}
+        </ol>
         <SearchBox value={searchQuery} onChange={this.handleSearch} />
         <NewsFlex
           count={this.props.count}

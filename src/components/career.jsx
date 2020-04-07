@@ -17,18 +17,18 @@ class Career extends Component {
           <h1 className="currentPageTitle pl-04 ">კარიერა</h1>
           <h5 className="color-emg pb-4 pl-04">იმუშავე ჩვენთან</h5>
           <h5 className="pl-04">ჩვენი პრინციპები</h5>
-          <p className="pl-04">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
-            accusantium aut a est quidem exercitationem voluptates ipsam
-            perferendis impedit officiis laboriosam distinctio in! Ea veniam
-            nobis mollitia nam itaque! Voluptas. Delectus aliquid, dolor id ad
-            nisi temporibus pariatur quod fugit aut quo iusto in mollitia,
-            accusamus ducimus expedita quae doloremque velit recusandae eligendi
-            esse modi eos? Quas obcaecati repudiandae eos? Perferendis
-            consectetur unde et quod quisquam magnam necessitatibus earum
-            reprehenderit dicta at perspiciatis, ipsum sequi fugiat numquam
-            aspernatur beatae nobis quidem culpa totam voluptatibus! Porro esse
-            officiis ex dignissimos nulla!
+          <p className="pl-04 text-justify">
+            გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევითი ტექსტი სულაც არაა.
+            მისი ფესვები ჯერკიდევ ჩვ. წ. აღ-მდე 45 წლის დროინდელი კლასიკური
+            ლათინური ლიტერატურიდან მოდის. ვირჯინიის შტატში მდებარე
+            ჰემპდენ-სიდნეის კოლეჯის პროფესორმა რიჩარდ მაკკლინტოკმა აიღო ერთ-ერთი
+            ყველაზე იშვიათი ლათინური სიტყვა "consectetur" Lorem Ipsum-პასაჟიდან
+            და გადაწყვიტა მოეძებნა იგი კლასიკურ ლიტერატურაში. ძიება შედეგიანი
+            აღმოჩნდა — ტექსტი Lorem Ipsum გადმოწერილი ყოფილა ციცერონის "de
+            Finibus Bonorum et Malorum"-ის 1.10.32 და 1.10.33 თავებიდან. ეს
+            წიგნი ეთიკის თეორიის ტრაქტატია, რომელიც რენესანსის პერიოდში ძალიან
+            იყო გავრცელებული. Lorem Ipsum-ის პირველი ხაზი, "Lorem ipsum dolor
+            sit amet..." სწორედ ამ წიგნის 1.10.32 თავიდანაა.
           </p>
           {isAdmin && (
             <Link
@@ -50,7 +50,7 @@ class Career extends Component {
             >
               {careers &&
                 careers.map((career) => (
-                  <div className="card" key={career._id}>
+                  <div className="card career" key={career._id}>
                     <div
                       className="card-header"
                       role="tab"
@@ -106,7 +106,7 @@ class Career extends Component {
                       role="tabpanel"
                       aria-labelledby={"heading" + career._id}
                     >
-                      <div className="card-body">{career.description}</div>
+                      <p className="card-body">{career.description}</p>
                     </div>
                   </div>
                 ))}

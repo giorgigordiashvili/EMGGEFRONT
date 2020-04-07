@@ -38,6 +38,7 @@ class MapLogo extends Component {
                   style={{ height: "400px" }}
                 >
                   <iframe
+                    title={city}
                     src={link}
                     width={600}
                     height={450}
@@ -47,12 +48,6 @@ class MapLogo extends Component {
                     aria-hidden="false"
                     tabIndex={0}
                   />
-                  {/* <iframe
-                    src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d381115.18266540254!2d44.55866895230048!3d41.73211894051142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2z4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1586274787887!5m2!1ska!2sge" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>"
-                    frameBorder={0}
-                    style={{ border: 0 }}
-                    allowFullScreen
-                  /> */}
                 </div>
               </div>
               {/*Footer*/}

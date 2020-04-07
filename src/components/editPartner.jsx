@@ -7,19 +7,15 @@ class EditCareer extends Form {
   state = {
     data: {
       name: "",
-      logo: ""
+      logo: "",
     },
-    errors: {}
+    errors: {},
   };
   schema = {
     _id: Joi.string(),
-    name: Joi.string()
-      .required()
-      .label("Name"),
+    name: Joi.string().required().label("Name"),
 
-    logo: Joi.string()
-      .required()
-      .label("Logo")
+    logo: Joi.string().required().label("Logo"),
   };
 
   async populateShoe() {
@@ -42,13 +38,13 @@ class EditCareer extends Form {
     return {
       _id: shoe._id,
       name: shoe.name,
-      logo: shoe.logo
+      logo: shoe.logo,
     };
   }
 
   doSubmit = async () => {
     await savePartner(this.state.data);
-    this.props.history.push("/about");
+    this.props.history.push("/about/partners");
   };
 
   render() {

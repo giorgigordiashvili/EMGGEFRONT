@@ -4,48 +4,48 @@ import { Link } from "react-router-dom";
 class FullProject extends Component {
   state = {};
   render() {
+    const test = {
+      title: "",
+      client: "",
+      duration: "",
+      longDesc: "",
+      longImage: "",
+    };
+    const project =
+      this.props.projects.filter(
+        (s) => s._id === this.props.match.params.id
+      )[0] || test;
     return (
-      <div className="container">
+      <div className="container pt-8">
         {/* Page Heading/Breadcrumbs */}
-        <h1 className="mt-4 mb-3">
-          Portfolio Item
-          <small>Subheading</small>
-        </h1>
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="index.html">პროექტები</a>
           </li>
-          <li className="breadcrumb-item active">Portfolio Item</li>
+          <li className="breadcrumb-item active">{project.title}</li>
         </ol>
         {/* Portfolio Item Row */}
         <div className="row">
           <div className="col-md-8">
             <img
               className="img-fluid"
-              src="http://placehold.it/750x500"
-              alt=""
+              src={project.longImage}
+              alt={project.title}
             />
           </div>
           <div className="col-md-4">
-            <h3 className="my-3">Project Description</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              viverra euismod odio, gravida pellentesque urna varius vitae. Sed
-              dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris
-              ultricies, justo eu convallis placerat, felis enim.
-            </p>
-            <h3 className="my-3">Project Details</h3>
+            <h3 className="my-3">პროექტის აღწერა</h3>
+            <p className="text-justify  ">{project.longDesc}</p>
+            <h3 className="my-3">პროექტის დეტალები</h3>
             <ul>
-              <li>Lorem Ipsum</li>
-              <li>Dolor Sit Amet</li>
-              <li>Consectetur</li>
-              <li>Adipiscing Elit</li>
+              <li>კლიენტი: {project.client}</li>
+              <li>ხანგრძლივობა: {project.duration} დღე</li>
             </ul>
           </div>
         </div>
         {/* /.row */}
         {/* Related Projects Row */}
-        <h3 className="my-4">Related Projects</h3>
+        <h3 className="my-4">სხვა პროექტები</h3>
         <div className="row">
           <div className="col-md-3 col-sm-6 mb-4">
             <Link to="#">

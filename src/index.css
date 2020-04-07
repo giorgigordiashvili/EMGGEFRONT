@@ -478,6 +478,11 @@ ul > li {
   color: white;
 }
 
+.career {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-radius: 0.25rem !important;
+}
+
 .news-link:hover {
   color: #78c039;
 }
@@ -488,8 +493,12 @@ ul > li {
 }
 
 .home-news-link:hover {
-  color: green;
+  color: #74bb53;
   text-decoration: none;
+}
+
+.item-title:hover {
+  color: #74bb53;
 }
 
 .pl-03 {

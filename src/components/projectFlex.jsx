@@ -14,63 +14,68 @@ class ProjectFlex extends Component {
     return (
       <div className="card-deck">
         {projects.map((project) => (
-          <div key={project._id} className="card m-2">
-            {isAdmin && (
-              <React.Fragment>
-                <Link
-                  to={"/project/" + project._id}
-                  className="mt-auto card-btn btn btn-primary"
-                >
-                  რედაქტირება
-                </Link>
+          <React.Fragment key={project._id}>
+            <div className="card m-2">
+              {isAdmin && (
+                <React.Fragment>
+                  <Link
+                    to={"/editProject/" + project._id}
+                    className="mt-auto card-btn btn btn-primary"
+                  >
+                    რედაქტირება
+                  </Link>
 
-                <Button
-                  onClick={() => onDelete(project)}
-                  variant="btn card-btn btn-danger"
-                  className="mt-auto"
-                >
-                  წაშლა
-                </Button>
-                <br />
-              </React.Fragment>
-            )}
-            <div className="card-body project-body">
-              <div className="project vh-50 d-flex column align-items-end">
-                <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
-                  <span className="inner-shadow-emg ">{project.title}</span>
-                </h5>
+                  <Button
+                    onClick={() => onDelete(project)}
+                    variant="btn card-btn btn-danger"
+                    className="mt-auto"
+                  >
+                    წაშლა
+                  </Button>
+                  <br />
+                </React.Fragment>
+              )}
+              <div className="card-body project-body">
+                <Link to={"/projects/" + project._id}>
+                  <div className="project vh-50 d-flex column align-items-end item-title">
+                    <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
+                      <span className="inner-shadow-emg ">{project.title}</span>
+                    </h5>
+                  </div>
+                </Link>
+                <p className="card-text p-2">
+                  {project.shortDesc}
+                  <br />
+                  <span className="color-emg">კლიენტი: </span> {project.client}
+                  <br />
+                  <span className="color-emg">ხანგრძლივობა: </span>{" "}
+                  {project.duration}
+                  <br />
+                  <span className="color-emg">პარტნიორები: </span> ???
+                  <br />
+                  <span className="color-emg">ღირებულება:</span>
+                  ???
+                </p>
               </div>
-              <p className="card-text p-2">
-                {project.shortDesc}
-                <br />
-                <span className="color-emg">კლიენტი: </span> {project.client}
-                <br />
-                <span className="color-emg">ხანგრძლივობა: </span> ???
-                <br />
-                <span className="color-emg">პარტნიორები: </span> ???
-                <br />
-                <span className="color-emg">ღირებულება:</span>
-                ???
-              </p>
+              <div className="card-footer">
+                <small className="text-muted row justify-content-between">
+                  <div>
+                    <a href={project.fbLink} className="card-link color-emg">
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                    <a href={project.twLink} className="card-link color-emg">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                  </div>
+                  <div className="color-emg">
+                    <Moment format="DD MM YYYY" withTitle>
+                      {project.publishDate}
+                    </Moment>
+                  </div>
+                </small>
+              </div>
             </div>
-            <div className="card-footer">
-              <small className="text-muted row justify-content-between">
-                <div>
-                  <a href={project.fbLink} className="card-link color-emg">
-                    <FontAwesomeIcon icon={faFacebook} />
-                  </a>
-                  <a href={project.twLink} className="card-link color-emg">
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </a>
-                </div>
-                <div className="color-emg">
-                  <Moment format="DD MM YYYY" withTitle>
-                    {project.publishDate}
-                  </Moment>
-                </div>
-              </small>
-            </div>
-          </div>
+          </React.Fragment>
         ))}
       </div>
     );

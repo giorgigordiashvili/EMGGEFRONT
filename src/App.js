@@ -131,8 +131,22 @@ class App extends Component {
               path="/home"
             />
 
-            <Route path="/projects/category/:id" component={Categorised} />
-            <Route path="/project/:id" component={FullProject} />
+            <Route
+              render={(props) => (
+                <Categorised user={this.state.user} {...props} />
+              )}
+              path="/projects/category/:id"
+            />
+
+            <Route
+              path="/projects/:id"
+              render={(props) => (
+                <FullProject
+                  projects={this.state.projects}
+                  {...props}
+                ></FullProject>
+              )}
+            />
             <Route
               path="/news/:id"
               render={(props) => (
@@ -149,11 +163,10 @@ class App extends Component {
                 />
               )}
             />
-            <ProtectedRoute path="/projects/:id" component={EditProject} />
             <ProtectedRoute path="/partners/:id" component={EditPartner} />
             <ProtectedRoute path="/career/:id" component={EditCareer} />
             <ProtectedRoute path="/category/:id" component={EditCategory} />
-
+            <ProtectedRoute path="/editproject/:id" component={EditProject} />
             <ProtectedRoute path="/editnews/:id" component={EditNews} />
             {/* 
           <ProtectedRoute path="/career/:id" component={EditCareer} /> */}

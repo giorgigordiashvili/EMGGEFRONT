@@ -47,7 +47,7 @@ class NewsFlex extends Component {
                   }}
                 >
                   <div
-                    className="vh-50 d-flex column align-items-end"
+                    className="vh-50 d-flex column align-items-end item-title"
                     style={{
                       background: `
     url(${news.shortImage}) center`,

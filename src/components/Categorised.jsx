@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import ProjectFlex from "./projectFlex";
 import { toast } from "react-toastify";
 import _ from "lodash";
+import SearchBox from "./searchBox";
 
 class Categorised extends Component {
   state = {
@@ -20,7 +21,6 @@ class Categorised extends Component {
 
   async componentDidMount() {
     let { projects } = this.props.location.state;
-    console.log(projects);
     projects = projects.filter(
       (obj) => obj.category._id === this.props.match.params.id
     );
@@ -80,8 +80,11 @@ class Categorised extends Component {
     let filtered = allProjects;
 
     if (searchQuery)
-      filtered = allProjects.filter((s) =>
-        s.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+      filtered = allProjects.filter(
+        (s) =>
+          s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          s.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          s.longDesc.toLowerCase().includes(searchQuery.toLowerCase())
       );
     else if (selectedStyle && selectedStyle._id)
       filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
@@ -107,7 +110,7 @@ class Categorised extends Component {
 
     if (count === 0)
       return (
-        <div className="pt-8">
+        <div className="pt-10">
           <Link
             style={{ marginBottom: "10px" }}
             className="btn btn-primary ml-1"
@@ -132,16 +135,15 @@ class Categorised extends Component {
             პროექტის დამატება
           </Link>
         )}
-        <h1 className="mt-4 mb-3 ">
-          <span className="first-letter"></span>
-        </h1>
+
         <ol className="breadcrumb ">
           <li className="breadcrumb-item">
             <Link to="/projects">პროექტები</Link>
           </li>
           <li className="breadcrumb-item active">{category.name}</li>
         </ol>
-        {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
+
+        <SearchBox value={searchQuery} onChange={this.handleSearch} />
         <ProjectFlex
           count={this.props.count}
           onRenewBag={this.props.onRenewBag}
