@@ -95,7 +95,7 @@ class Career extends Component {
                           </Moment>
                         </p>
                         <p className="career-date m-2">
-                          დასრულება:{" "}
+                          დასრულება:
                           <Moment format="D MMM YYYY" withTitle>
                             {career.endDate}
                           </Moment>
