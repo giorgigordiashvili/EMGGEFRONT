@@ -11,7 +11,7 @@ class Partner extends Component {
 
     return (
       <div className="container">
-        <h1 className="currentPageTitle  mt-3 pl-04">პარტნიორები</h1>
+        <h1 className="currentPageTitle   pl-04">პარტნიორები</h1>
         {isAdmin && (
           <React.Fragment>
             <Link

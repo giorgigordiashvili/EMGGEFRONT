@@ -32,6 +32,12 @@ import EditCareer from "./components/editCareer";
 import { toast } from "react-toastify";
 import Activities from "./components/activities";
 import ScrollToTop from "./components/common/ScrollToTop";
+import WhoWeAre from "./components/whoweare";
+import Governance from "./components/governance";
+import StrategicVision from "./components/strategicvision";
+import QualityAndPermits from "./components/qualityandpermits";
+import Branches from "./components/branches";
+import Partners from "./components/partners";
 
 class App extends Component {
   state = {
@@ -92,16 +98,23 @@ class App extends Component {
           <Switch>
             <Route path="/login" component={LoginForm} />
             <Route path="/contact" component={Contact} />
-
+            <Route path="/about/whoweare" component={WhoWeAre} />
+            <Route path="/about/governance" component={Governance} />
+            <Route path="/about/strategicvision" component={StrategicVision} />
+            <Route path="/about/branches" component={Branches} />
             <Route
-              path="/about"
+              path="/about/qualityandpermits"
+              component={QualityAndPermits}
+            />
+            <Route
+              path="/about/partners"
               render={(props) => (
-                <About
+                <Partners
                   onDeletePartner={this.handleDeletePartner}
                   {...props}
                   user={this.state.user}
                   partners={this.state.partners}
-                ></About>
+                ></Partners>
               )}
             />
             <Route

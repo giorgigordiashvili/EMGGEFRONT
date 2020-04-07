@@ -491,3 +491,7 @@ a {
   text-decoration: none !important;
   color: inherit;
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

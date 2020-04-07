@@ -11,6 +11,7 @@ class NavBar extends Component {
       email: "",
       isAdmin: "",
       name: "",
+      dropdown: true,
     },
     isOpen: false,
   };
@@ -51,7 +52,7 @@ class NavBar extends Component {
                 </li>
                 <li className="nav-item dropdown">
                   <NavLink
-                    className="nav-link dropdown-toggle"
+                    className="nav-link"
                     to="/about"
                     id="aboutus"
                     data-toggle="dropdown"
@@ -60,40 +61,47 @@ class NavBar extends Component {
                   >
                     ჩვენ შესახებ
                   </NavLink>
-                  <div className="dropdown-menu" aria-labelledby="aboutus">
+                  <div
+                    className={
+                      this.state.dropdown
+                        ? "dropdown-menu show"
+                        : "dropdown-menu"
+                    }
+                    aria-labelledby="aboutus"
+                  >
                     <Link
                       className="dropdown-item"
-                      to={{ pathname: "/about", hash: "#whoweare" }}
+                      to={{ pathname: "/about/whoweare" }}
                     >
                       ვინ ვართ ჩვენ
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to={{ pathname: "/about", hash: "#governance" }}
+                      to={{ pathname: "/about/governance" }}
                     >
                       მმართველობა
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to={{ pathname: "/about", hash: "#strategicvision" }}
+                      to={{ pathname: "/about/strategicvision" }}
                     >
                       სტრატეგიული ხედვა
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to={{ pathname: "/about", hash: "#qualityandpermits" }}
+                      to={{ pathname: "/about/qualityandpermits" }}
                     >
                       ხარისხი და ნებართვა
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to={{ pathname: "/about", hash: "#partners" }}
+                      to={{ pathname: "/about/partners" }}
                     >
                       პარტნიორები
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to={{ pathname: "/about", hash: "#branches" }}
+                      to={{ pathname: "/about/branches" }}
                     >
                       ფილიალები
                     </Link>

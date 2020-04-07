@@ -126,10 +126,13 @@ class Contact extends Component {
                   >
                     <img className="location" src={locationImage} alt="" />
                     <div className="column">
-                      <p className="color-emg" style={{ margin: 0 }}>
+                      <span className="color-emg" style={{ margin: 0 }}>
                         სათაო ოფისი: თბილისი
-                      </p>
-                      <p style={{ margin: 0, fontSize: 25 }}>კ. ქუთათელაძე 8</p>
+                      </span>
+                      <br />
+                      <span style={{ margin: 0, fontSize: 25 }}>
+                        კ. ქუთათელაძე 8
+                      </span>
                     </div>
                   </div>
                   <div className="container p-5"></div>
