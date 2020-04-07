@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Partner from "./partner";
 
-class Partners extends Component {
+class Training extends Component {
   render() {
     return (
       <div>
@@ -14,7 +13,7 @@ class Partners extends Component {
             role="tablist"
           >
             <Link
-              className="nav-item nav-link nav-link-emg "
+              className="nav-item nav-link nav-link-emg"
               to="/about/whoweare"
             >
               ვინ ვართ ჩვენ
@@ -39,13 +38,13 @@ class Partners extends Component {
             </Link>
 
             <Link
-              className="nav-item nav-link nav-link-emg active"
+              className="nav-item nav-link nav-link-emg"
               to="/about/partners"
             >
               პარტნიორები
             </Link>
             <Link
-              className="nav-item nav-link nav-link-emg"
+              className="nav-item nav-link nav-link-emg active"
               to="/about/training"
             >
               ტრენინგი
@@ -61,21 +60,31 @@ class Partners extends Component {
         <div className="tab-content" id="nav-tabContent">
           <div
             className="tab-pane fade show active"
-            id="nav-partners"
+            id="nav-home"
             role="tabpanel"
-            aria-labelledby="nav-partners-tab"
+            aria-labelledby="nav-home-tab"
           >
-            <Partner
-              onDeletePartner={this.props.onDeletePartner}
-              user={this.props.user}
-              partners={this.props.partners}
-            ></Partner>
-            <div className="container p-4"></div>
+            <div className="container">
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+                ტრენინგი
+              </h1>
+              <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
+                „საინჟინრო მონიტორინგის ჯგუფი“
+              </h5>
+            </div>
+            <div className="fluid-container highlight p-5">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 col-md-12 pl-04"></div>
+                </div>
+              </div>
+            </div>
           </div>
+          <div className="container p-4"></div>
         </div>
       </div>
     );
   }
 }
 
-export default Partners;
+export default Training;

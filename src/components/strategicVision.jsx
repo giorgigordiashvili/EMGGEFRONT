@@ -49,6 +49,12 @@ class StrategicVision extends Component {
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg"
+              to="/about/training"
+            >
+              ტრენინგი
+            </Link>
+            <Link
+              className="nav-item nav-link nav-link-emg"
               to="/about/branches"
             >
               ფილიალები
@@ -106,6 +112,7 @@ class StrategicVision extends Component {
                     </p>
                   </div>
                 </div>
+                <div className="container p-4"></div>
                 <div className="col-sm-12 col-md-6 min-vh-25">
                   <div className="column text-center">
                     <img src={ourMission} alt="" />

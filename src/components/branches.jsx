@@ -45,6 +45,12 @@ class Branches extends Component {
               პარტნიორები
             </Link>
             <Link
+              className="nav-item nav-link nav-link-emg"
+              to="/about/training"
+            >
+              ტრენინგი
+            </Link>
+            <Link
               className="nav-item nav-link nav-link-emg active"
               to="/about/branches"
             >

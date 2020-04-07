@@ -45,6 +45,12 @@ class WhoWeAre extends Component {
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg"
+              to="/about/training"
+            >
+              ტრენინგი
+            </Link>
+            <Link
+              className="nav-item nav-link nav-link-emg"
               to="/about/branches"
             >
               ფილიალები

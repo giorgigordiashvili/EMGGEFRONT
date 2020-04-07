@@ -37,6 +37,7 @@ import StrategicVision from "./components/strategicVision";
 import QualityAndPermits from "./components/qualityandpermits";
 import Branches from "./components/branches";
 import Partners from "./components/partners";
+import Training from "./components/trainings";
 
 class App extends Component {
   state = {
@@ -100,6 +101,7 @@ class App extends Component {
             <Route path="/about/whoweare" component={WhoWeAre} />
             <Route path="/about/governance" component={Governance} />
             <Route path="/about/strategicvision" component={StrategicVision} />
+            <Route path="/about/training" component={Training} />
             <Route path="/about/branches" component={Branches} />
             <Route
               path="/about/qualityandpermits"
