@@ -222,11 +222,7 @@ class Activities extends Component {
                   </p>
                 </div>
                 <div className="col-6">
-                  <img
-                    src="http://emg.ge/wp-content/uploads/2018/11/struktura.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src="" alt="" className="img-fluid" />
                 </div>
               </div>
               <h6 className="pl-04">LIST OF SERVICES</h6>
@@ -302,11 +298,7 @@ class Activities extends Component {
                   </p>
                 </div>
                 <div className="col-6">
-                  <img
-                    src="http://emg.ge/wp-content/uploads/2018/11/struktura.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src="" alt="" className="img-fluid" />
                 </div>
               </div>
             </div>
