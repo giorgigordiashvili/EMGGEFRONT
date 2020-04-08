@@ -51,11 +51,7 @@ class Manager extends Component {
           <div className="modal-dialog modal-lg" role="document">
             <div className="modal-content">
               <div className="modal-body mb-0 p-0">
-                <div
-                  id="map-container-google-16"
-                  className="z-depth-1-half "
-                  style={{ height: "500px" }}
-                >
+                <div id="map-container-google-16" className="z-depth-1-half ">
                   <ul className="pt-4">
                     <li>
                       <b>{name}</b>
