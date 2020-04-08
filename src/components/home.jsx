@@ -7,7 +7,9 @@ import "slick-carousel/slick/slick.min.js";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import certOne from "../res/ea.jpg";
+import certTwo from "../res/gac.png";
+import certThree from "../res/powerpoint.png";
 import { faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 class Home extends Component {
@@ -83,6 +85,23 @@ class Home extends Component {
         {/* LOGO */}
 
         <div className="slider fluid-container row justify-content-center">
+          <div className="certs d-flex flex-column bd-highlight mb-3">
+            <div className="p-2 bd-highlight">
+              <a href={certOne}>
+                <img src={certOne} width="60vh" alt="Accreditation" />
+              </a>
+            </div>
+            <div className="p-2 bd-highlight">
+              <a href={certThree}>
+                <img src={certThree} width="60vh" alt="Presentation" />
+              </a>
+            </div>
+            <div className="p-2 bd-highlight">
+              <a href={certTwo}>
+                <img src={certTwo} width="60vh" alt="Accreditation" />
+              </a>
+            </div>
+          </div>
           <img
             src={emgLogo}
             className="align-self-center img-fluid p-4 logo"

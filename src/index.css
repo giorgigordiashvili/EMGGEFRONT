@@ -66,6 +66,16 @@ p {
   font-size: 13px;
 }
 
+.certs {
+  position: absolute;
+  right: 10px;
+  top: 10vh;
+  z-index: 99;
+  color: white;
+  width: 10vh;
+  height: 10vh;
+}
+
 .navv {
   display: flex;
   align-items: center;
@@ -547,6 +557,10 @@ ul > li {
     border: 3px solid #74bb53;
     width: 100%;
     height: 100%;
+  }
+  .col-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
   }
 }
 

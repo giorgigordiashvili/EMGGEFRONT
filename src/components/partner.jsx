@@ -23,9 +23,9 @@ class Partner extends Component {
             </Link>
           </React.Fragment>
         )}
-        <div className="container row">
+        <div className="container row p-0">
           {partners.map((partner) => (
-            <div className="col-sm-6 col-md-3  p-1  ">
+            <div key={partner._id} className="col-sm-6 col-md-3  p-1  ">
               <div className="border-emg row logoes justify-content-center">
                 <img
                   alt={partner.name}
