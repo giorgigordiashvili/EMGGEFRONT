@@ -87,7 +87,7 @@ class Manager extends Component {
                   className="btn btn-md map-button"
                   data-dismiss="modal"
                 >
-                  Close
+                  დახურვა
                   <FontAwesome className="fas fa-times ml-1"></FontAwesome>
                 </button>
               </div>
