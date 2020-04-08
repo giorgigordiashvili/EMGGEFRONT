@@ -57,6 +57,11 @@ p {
   font-style: normal;
 }
 
+.dejavu {
+  font-family: "DejaVuSans";
+  font-size: 13px;
+}
+
 body {
   font-family: "BebasNeueRegular";
 }

@@ -77,12 +77,12 @@ class Governance extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-12 col-md-12 pl-04">
-                    <span className="text-justify">
+                    <span className="text-justify dejavu">
                       კომპანიის მენეჯმენტი:
                       <br />
                       <br />
                       <ul>
-                        <li className="text-justify">
+                        <li className="text-justify ">
                           • ეყრდნობა ორგანიზაციის კორპორაციული მართვის საუკეთესო
                           საერთაშორისო პრაქტიკას;
                         </li>
