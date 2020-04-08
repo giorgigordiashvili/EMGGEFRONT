@@ -54,7 +54,7 @@ class Manager extends Component {
                 <div
                   id="map-container-google-16"
                   className="z-depth-1-half "
-                  style={{ height: "400px" }}
+                  style={{ height: "500px" }}
                 >
                   <ul className="pt-4">
                     <li>
@@ -68,19 +68,19 @@ class Manager extends Component {
                       />
                     </li>
                     <li>
-                      <b>პოზიცია:</b> {position}
+                      <b>პოზიცია:</b> <p>{position}</p>
                     </li>
                     <li>
-                      <b>პროფესია:</b> {profession}
+                      <b>პროფესია:</b> <p>{profession}</p>
                     </li>
                     <li>
-                      <b>განათლება:</b> {education}
+                      <b>განათლება:</b> <p>{education}</p>
                     </li>
                     <li>
-                      <b>სამუშაო გამოცდილება:</b> {experience}
+                      <b>სამუშაო გამოცდილება:</b> <p>{experience}</p>
                     </li>
                     <li>
-                      <b>განხორციელებული პროექტები:</b> {work}
+                      <b>განხორციელებული პროექტები:</b> <p>{work}</p>
                     </li>
                   </ul>
                 </div>
