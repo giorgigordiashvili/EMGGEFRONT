@@ -10,7 +10,7 @@ class Footer extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container p-4"></div>
+        
         <hr className="line-emg m-0" />
         <div className="container p-4 d-flex justify-content-center">
           <form className="form-inline">
