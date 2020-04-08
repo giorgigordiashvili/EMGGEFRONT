@@ -150,7 +150,6 @@ class Categorised extends Component {
           projects={projects}
           onDelete={this.handleDelete}
         />
-        <div className="container p-5"></div>
         <Pagination
           itemsCount={totalCount}
           pageSize={pageSize}

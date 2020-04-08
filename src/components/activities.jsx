@@ -312,7 +312,6 @@ class Activities extends Component {
             </div>
           </div>
         </div>
-        <div className="container p-4"></div>
       </React.Fragment>
     );
   }

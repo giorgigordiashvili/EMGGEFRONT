@@ -182,8 +182,6 @@ class Governance extends Component {
             </div>
             {/* /.row */}
           </div>
-
-          <div className="container p-4"></div>
         </div>
       </div>
     );

@@ -105,7 +105,6 @@ class Projects extends Component {
           onDelete={this.handleDelete}
           onDeleteCategory={this.handleDeleteCategory}
         />
-        <div className="container p-4"></div>
       </div>
     );
   }

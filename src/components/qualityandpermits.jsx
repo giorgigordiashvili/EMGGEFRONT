@@ -140,7 +140,6 @@ class QualityAndPermits extends Component {
               </div>
             </div>
           </div>
-          <div className="container p-4"></div>
         </div>
       </div>
     );

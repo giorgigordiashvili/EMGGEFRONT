@@ -70,7 +70,6 @@ class Partners extends Component {
               user={this.props.user}
               partners={this.props.partners}
             ></Partner>
-            <div className="container p-4"></div>
           </div>
         </div>
       </div>
