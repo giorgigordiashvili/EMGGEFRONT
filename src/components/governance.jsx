@@ -119,8 +119,8 @@ class Governance extends Component {
           <div className="fluid-container highlight p-5">
             <div className="row">
               <Manager
-                name="იოვანე სიახრულიძე"
-                position="დირექტორი"
+                name="იოვანე სიხარულიძე"
+                position="გენერალური დირექტორი"
                 id="manager1"
                 profession="მათემატიკოსი, ფინანსისტი;"
                 education="საქართველოს ტექნიკური უნივერსიტეტი - მაგისტრი, საბანკო საქმე; თბილისის სახელმწიფო უნივერსიტეტი - მაგისტრი, გამოყენებითი მათემატიკა და კომპიუტერული მეცნიერება;"
