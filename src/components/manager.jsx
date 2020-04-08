@@ -16,10 +16,10 @@ class Manager extends Component {
       surname,
     } = this.props;
     return (
-      <div className="col-xl-3 col-2-4 col-md-6 mb-4">
+      <div className="col-xl-3 col-2-4 col-md-6 mb-4 ">
         <button
           type="button"
-          className="btn "
+          className=" p-0 m-0 border-emg"
           data-toggle="modal"
           data-target={`#` + id}
         >
@@ -29,9 +29,12 @@ class Manager extends Component {
               className="card-img-top"
               alt="..."
             />
-            <div className="card-body text-center">
+            <div
+              className="card-body text-center"
+              style={{ minHeight: "115px" }}
+            >
               <h5 className="card-title mb-0">{name}</h5>
-              <div className="card-text text-black-50">{position}</div>
+              <div className="card-text text-black-50 ">{position}</div>
             </div>
           </div>
         </button>
@@ -50,7 +53,7 @@ class Manager extends Component {
               <div className="modal-body mb-0 p-0">
                 <div
                   id="map-container-google-16"
-                  className="z-depth-1-half map-container-9"
+                  className="z-depth-1-half "
                   style={{ height: "400px" }}
                 >
                   <ul className="pt-4">

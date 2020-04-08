@@ -318,6 +318,16 @@ ul > li {
   height: 30vh;
 }
 
+.border-emg {
+  border: 1px solid #78c039;
+  border-radius: 0.25rem;
+}
+
+.border-emg:hover {
+  border: 2px solid #78c039;
+  border-radius: 0.25rem;
+}
+
 .inner-shadow-emg {
   padding-bottom: 0.2rem;
   -webkit-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
