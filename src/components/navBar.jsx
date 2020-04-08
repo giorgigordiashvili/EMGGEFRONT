@@ -115,6 +115,12 @@ class NavBar extends Component {
                     >
                       პარტნიორები
                     </Link>
+                     <Link
+                      className="dropdown-item"
+                      to={{ pathname: "/about/training" }}
+                    >
+                      ტრენინგი
+                    </Link>
                     <Link
                       className="dropdown-item"
                       to={{ pathname: "/about/branches" }}
@@ -133,11 +139,7 @@ class NavBar extends Component {
                     პროექტები
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink to="/training" className="nav-link">
-                    ტრენინგი
-                  </NavLink>
-                </li>
+                
                 <li className="nav-item">
                   <NavLink to="/news" className="nav-link">
                     სიახლეები
