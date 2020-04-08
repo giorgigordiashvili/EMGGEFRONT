@@ -134,6 +134,11 @@ class NavBar extends Component {
                   </NavLink>
                 </li>
                 <li className="nav-item">
+                  <NavLink to="/training" className="nav-link">
+                    ტრენინგი
+                  </NavLink>
+                </li>
+                <li className="nav-item">
                   <NavLink to="/news" className="nav-link">
                     სიახლეები
                   </NavLink>
