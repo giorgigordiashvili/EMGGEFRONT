@@ -38,6 +38,7 @@ import QualityAndPermits from "./components/qualityandpermits";
 import Branches from "./components/branches";
 import Partners from "./components/partners";
 import Training from "./components/trainings";
+import SearchPage from "./components/searchPage";
 
 class App extends Component {
   state = {
@@ -97,6 +98,7 @@ class App extends Component {
           <ScrollToTop></ScrollToTop>
           <Switch>
             <Route path="/login" component={LoginForm} />
+            <Route path="/search" component={SearchPage} />
             <Route path="/contact" component={Contact} />
             <Route path="/about/whoweare" component={WhoWeAre} />
             <Route path="/about/governance" component={Governance} />

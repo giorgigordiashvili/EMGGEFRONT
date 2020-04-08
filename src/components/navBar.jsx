@@ -4,6 +4,13 @@ import { NavLink, Link } from "react-router-dom";
 import auth from "../services/authService";
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
   state = {
     user: {
       _id: "",
@@ -23,6 +30,15 @@ class NavBar extends Component {
   handleSearch = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    window.location.replace(`/search?${this.state.value}`);
+  }
 
   render() {
     return (
@@ -132,12 +148,22 @@ class NavBar extends Component {
                     კონტაქტი
                   </NavLink>
                 </li>
-                {/* <li className={this.state.isOpen ? "search open" : "search"}>
-                  <input type="search" className="search-box" />
+                <li className={this.state.isOpen ? "search open" : "search"}>
+                  <form
+                    className="d-flex flex-row"
+                    onSubmit={this.handleSubmit}
+                  >
+                    <input
+                      type="text"
+                      className="search-box"
+                      value={this.state.value}
+                      onChange={this.handleChange}
+                    />
+                  </form>
                   <span className="search-button" onClick={this.handleSearch}>
                     <span className="search-icon"></span>
                   </span>
-                </li> */}
+                </li>
               </ul>
               <ul className="navbar-nav">
                 {/* <li className="nav-item">
