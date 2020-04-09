@@ -86,43 +86,43 @@ class NavBar extends Component {
                     aria-labelledby="aboutus"
                   >
                     <Link
-                      className="dropdown-item"
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/whoweare" }}
                     >
                       ვინ ვართ ჩვენ
                     </Link>
                     <Link
-                      className="dropdown-item"
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/governance" }}
                     >
                       მმართველობა
                     </Link>
                     <Link
-                      className="dropdown-item"
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/strategicvision" }}
                     >
                       სტრატეგიული ხედვა
                     </Link>
                     <Link
-                      className="dropdown-item"
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/qualityandpermits" }}
                     >
                       ხარისხი და პასუხისმგებლობა
                     </Link>
                     <Link
-                      className="dropdown-item"
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/partners" }}
                     >
                       პარტნიორები
                     </Link>
-                     <Link
-                      className="dropdown-item"
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/training" }}
                     >
                       ტრენინგი
                     </Link>
                     <Link
-                      className="dropdown-item"
+                      className="dropdown-item dropdown-item-custom"
                       to={{ pathname: "/about/branches" }}
                     >
                       ფილიალები
@@ -130,7 +130,7 @@ class NavBar extends Component {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/activities" className="nav-link">
+                  <NavLink to="/activities" className="nav-link ">
                     საქმიანობები
                   </NavLink>
                 </li>
@@ -139,7 +139,7 @@ class NavBar extends Component {
                     პროექტები
                   </NavLink>
                 </li>
-                
+
                 <li className="nav-item">
                   <NavLink to="/news" className="nav-link">
                     სიახლეები
@@ -155,7 +155,7 @@ class NavBar extends Component {
                     კონტაქტი
                   </NavLink>
                 </li>
-                <li className={this.state.isOpen ? "search open" : "search"}>
+                <li className={this.state.isOpen ? "search open " : "search"}>
                   <form
                     className="d-flex flex-row"
                     onSubmit={this.handleSubmit}
@@ -172,7 +172,7 @@ class NavBar extends Component {
                   </span>
                 </li>
               </ul>
-              <ul className="navbar-nav">
+              <ul className="navbar-nav pr-2">
                 {/* <li className="nav-item">
                   <a className="nav-link" href="#">
                     REGISTER

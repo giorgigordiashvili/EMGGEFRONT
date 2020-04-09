@@ -74,7 +74,7 @@ class QualityAndPermits extends Component {
           </div>
           <div className="fluid-container highlight">
             <div className="container">
-              <div className="row p-5">
+              <div className="row pt-5 pb-5">
                 <div className="col-sm-12 col-md-6 min-vh-25 ">
                   <div className="column text-center">
                     <img src={qualityAndPermits} alt="" />

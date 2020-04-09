@@ -82,10 +82,13 @@ class Home extends Component {
 
     return (
       <React.Fragment>
-        {/* LOGO */}
-
         <div className="slider fluid-container row justify-content-center">
           <div className="certs d-flex flex-column bd-highlight mb-3">
+            <div className="p-2 bd-highlight">
+              <a href={certTwo}>
+                <img src={certTwo} width="60vh" alt="Accreditation" />
+              </a>
+            </div>
             <div className="p-2 bd-highlight">
               <a href={certOne}>
                 <img src={certOne} width="60vh" alt="Accreditation" />
@@ -96,11 +99,6 @@ class Home extends Component {
                 <img src={certThree} width="60vh" alt="Presentation" />
               </a>
             </div>
-            <div className="p-2 bd-highlight">
-              <a href={certTwo}>
-                <img src={certTwo} width="60vh" alt="Accreditation" />
-              </a>
-            </div>
           </div>
           <img
             src={emgLogo}
@@ -108,43 +106,11 @@ class Home extends Component {
             alt=""
           />
         </div>
-        {/* END LOGO */}
-        {/* Certs */}
-        {/* <div className="container p-3 justify-content-center rounded">
-          <hr />
-          <div className="align-self-center">
-            <a href="https://emg.groot.ge/accreditation.pdf">
-              <img
-                src={certOne}
-                className="rounded float-left wt"
-                alt="Accreditation"
-              />
-            </a>
-            <a href="https://emg.groot.ge/EMG-ENG.pdf">
-              <img
-                src={certThree}
-                className="rounded float-right wt"
-                alt="Presentation"
-              />
-            </a>
-            <a href="https://emg.groot.ge/accreditation.pdf">
-              <img
-                src={certTwo}
-                className="rounded mx-auto d-block wt"
-                alt="Accreditation"
-              />
-            </a>
-          </div>
-          <hr />
-        </div> */}
-        {/* END CERTS */}
 
-        {/* Komentari */}
-
+        <div className="container">
+          <h2 className="currentPageTitle pl-03">სიახლეები</h2>
+        </div>
         <div className="fluid-container highlight pt-3 pb-3">
-          <div className="container">
-            <h2 className="currentPageTitle pl-03">სიახლეები</h2>
-          </div>
           <Slider className="container" {...responsive}>
             {newss.slice(0, 8).map((news) =>
               news.type !== "hidden" ? (
@@ -199,12 +165,12 @@ class Home extends Component {
         <div className="container">
           <h2 className="currentPageTitle pl-03">პროექტები</h2>
         </div>
-        <div className="fluid-container pt-3 pb-3 ">
+        <div className="fluid-container highlight pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
             {projects.slice(0, 8).map((project) =>
               project.type !== "hidden" ? (
                 <div key={project._id}>
-                  <div className="card card-emg-dark mr-4">
+                  <div className="card card-emg mr-4">
                     <Link
                       className="home-news-link"
                       to={"/projects/" + project._id}

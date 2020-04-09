@@ -14,7 +14,7 @@ class MapLogo extends Component {
           data-toggle="modal"
           data-target={`#` + city}
         >
-          <img className="location" src={locationImage} alt="" />
+          <img className="location map-button" src={locationImage} alt="" />
         </button>
 
         {/*Modal: Name*/}
@@ -54,11 +54,11 @@ class MapLogo extends Component {
               <div className="modal-footer justify-content-center">
                 <button
                   type="button"
-                  className="btn btn-md map-button"
+                  className="btn map-close btn-md "
                   data-dismiss="modal"
                 >
-                  Close
-                  <FontAwesome className="fas fa-times ml-1"></FontAwesome>
+                  დახურვა
+                  <FontAwesome className="fas fa-times ml-1 "></FontAwesome>
                 </button>
               </div>
             </div>

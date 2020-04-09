@@ -25,7 +25,7 @@ class Partner extends Component {
         )}
         <div className="container row p-0">
           {partners.map((partner) => (
-            <div key={partner._id} className="col-sm-6 col-md-3  p-1  ">
+            <div key={partner._id} className="col-sm-6 col-2-4 p-1">
               <div className="border-emg row logoes justify-content-center">
                 <img
                   alt={partner.name}

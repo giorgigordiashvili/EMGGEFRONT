@@ -26,7 +26,7 @@ class Manager extends Component {
           <div className="card border-0 shadow">
             <img
               src="https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
-              className="card-img-top"
+              className="card-img-top out-img"
               alt="..."
             />
             <div
