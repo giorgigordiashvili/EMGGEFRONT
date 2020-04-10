@@ -3,7 +3,9 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
+.manager-ul {
+  margin-right: 2rem;
+}
 .dropdown-custom {
   background-color: rgb(61, 89, 113);
 }

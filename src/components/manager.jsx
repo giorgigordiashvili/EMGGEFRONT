@@ -13,7 +13,7 @@ class Manager extends Component {
       education,
       work,
       experience,
-      surname,
+      surname
     } = this.props;
     return (
       <div className="col-xl-3 col-2-4 col-md-6 mb-4 ">
@@ -26,14 +26,16 @@ class Manager extends Component {
           <div className="card border-0 shadow">
             <img
               src="https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
-              className="card-img-top out-img"
+              className="card-img-top out-img inner-shadow-emg"
               alt="..."
             />
             <div
               className="card-body text-center"
               style={{ minHeight: "115px" }}
             >
-              <h5 className="card-title mb-0">{name}</h5>
+              <h5 className="card-title mb-0">
+                <span className="inner-shadow-emg">{name}</span>
+              </h5>
               <div className="card-text text-black-50 ">{position}</div>
             </div>
           </div>
@@ -52,7 +54,7 @@ class Manager extends Component {
             <div className="modal-content">
               <div className="modal-body mb-0 p-0">
                 <div id="map-container-google-16" className="z-depth-1-half ">
-                  <ul className="pt-4">
+                  <ul className="pt-4 manager-ul">
                     <li>
                       <b>{name}</b>
                     </li>
@@ -61,6 +63,7 @@ class Manager extends Component {
                         src="https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
                         height="100vh"
                         alt={name}
+                        className="inner-shadow-emg"
                       />
                     </li>
                     <li>
@@ -70,13 +73,16 @@ class Manager extends Component {
                       <b>პროფესია:</b> <p>{profession}</p>
                     </li>
                     <li>
-                      <b>განათლება:</b> <p>{education}</p>
+                      <b>განათლება:</b>{" "}
+                      {education.map(s => (
+                        <p>{s}</p>
+                      ))}
                     </li>
                     <li>
                       <b>სამუშაო გამოცდილება:</b> <p>{experience}</p>
                     </li>
                     <li>
-                      <b>განხორციელებული პროექტები:</b> <p>{work}</p>
+                      <b>{work.pretext}:</b> <p>{work.text}</p>
                     </li>
                   </ul>
                 </div>
@@ -84,7 +90,7 @@ class Manager extends Component {
               <div className="modal-footer justify-content-center">
                 <button
                   type="button"
-                  className="btn btn-md map-button"
+                  className="btn btn-md map-close"
                   data-dismiss="modal"
                 >
                   დახურვა
