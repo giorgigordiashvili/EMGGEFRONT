@@ -67,22 +67,22 @@ class Manager extends Component {
                       />
                     </li>
                     <li>
-                      <b>პოზიცია:</b> <p>{position}</p>
+                      <b>პოზიცია</b> <p>{position}</p>
                     </li>
                     <li>
-                      <b>პროფესია:</b> <p>{profession}</p>
+                      <b>პროფესია</b> <p>{profession}</p>
                     </li>
                     <li>
-                      <b>განათლება:</b>{" "}
+                      <b>განათლება</b>{" "}
                       {education.map(s => (
                         <p>{s}</p>
                       ))}
                     </li>
                     <li>
-                      <b>სამუშაო გამოცდილება:</b> <p>{experience}</p>
+                      <b>სამუშაო გამოცდილება</b> <p>{experience}</p>
                     </li>
                     <li>
-                      <b>{work.pretext}:</b> <p>{work.text}</p>
+                      <b>{work.pretext}</b> <p>{work.text}</p>
                     </li>
                   </ul>
                 </div>
