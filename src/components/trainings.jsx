@@ -47,7 +47,7 @@ class Training extends Component {
               className="nav-item nav-link nav-link-emg active"
               to="/about/training"
             >
-              ტრენინგი
+              ტრენინგები
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg"
@@ -66,16 +66,44 @@ class Training extends Component {
           >
             <div className="container">
               <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                ტრენინგი
+                ტრენინგები
               </h1>
-              <h5 className="color-emg pb-4 col-12 col-md-12 pl-04">
-                „საინჟინრო მონიტორინგის ჯგუფი“
-              </h5>
             </div>
             <div className="fluid-container highlight p-5">
               <div className="container">
                 <div className="row">
-                  <div className="col-12 col-md-12 pl-04"></div>
+                  <div className="col-12 col-md-12 pl-04 dejavu">
+                    „საინჟინრო მონიტორინგის ჯგუფის“ ფარგლებში ფუნქციონირებს
+                    ტრენინგცენტრი, ორიენტირებული კადრების მუდმივ
+                    ზრდა-განვითარებაზე, კვალიფიკაციის ამაღლებაზე, ორგანიზაციის
+                    მომსახურების ხარისხის გაუმჯობესებასა და კორპორაციული
+                    კულტურის სრულყოფაზე. <br /> <br />
+                    <span className="text-justify">
+                      ჩატარებული ტრენინგები:
+                      <br />
+                      <br />
+                      <ul className="management">
+                        <li className="text-justify ">
+                          ინსპექტირების პროცესის განხორციელების მეთოდები
+                          (ოქტომბერი, 2019);
+                        </li>
+                        <li className="text-justify">
+                          ინსპექტირების პროცესის განხორციელების მეთოდები,
+                          დაზუსტება-სწავლება, რესურსების, საშუალებების,
+                          მოწყობილობებისა და ტექნიკური მოთხოვნების მიმოხილვა
+                          (ივნისი, 2019);
+                        </li>
+                        <li className="text-justify">
+                          ხარისხის მართვის სისტემის დოკუმენტების გაცნობა
+                          (აპრილი, 2019);
+                        </li>
+                        <li className="text-justify">
+                          სსტ/იეკ 17020:2012/2013 საერთაშორისო სტანდარტების
+                          მოთხოვნების ზოგადი მიმოხილვა (აპრილი, 2019).
+                        </li>
+                      </ul>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

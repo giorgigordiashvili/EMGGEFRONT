@@ -65,11 +65,27 @@ class Partners extends Component {
             role="tabpanel"
             aria-labelledby="nav-partners-tab"
           >
-            <Partner
-              onDeletePartner={this.props.onDeletePartner}
-              user={this.props.user}
-              partners={this.props.partners}
-            ></Partner>
+            <div className="container">
+              <h1 className="currentPageTitle mt-3  pl-04">პარტნიორები</h1>
+            </div>
+            <div className="fluid-container highlight p-5">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 col-md-12 pl-04 dejavu">
+                    „საინჟინრო მონიტორინგის ჯგუფის“ ფარგლებში ფუნქციონირებს
+                    ტრენინგცენტრი, ორიენტირებული კადრების მუდმივ
+                    ზრდა-განვითარებაზე, კვალიფიკაციის ამაღლებაზე, ორგანიზაციის
+                    მომსახურების ხარისხის გაუმჯობესებასა და კორპორაციული
+                    კულტურის სრულყოფაზე. <br /> <br />
+                    <Partner
+                      onDeletePartner={this.props.onDeletePartner}
+                      user={this.props.user}
+                      partners={this.props.partners}
+                    ></Partner>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
