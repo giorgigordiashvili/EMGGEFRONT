@@ -82,9 +82,12 @@ class StrategicVision extends Component {
                   <div className="column text-center">
                     <img src={ourMission} alt="" />
                     <h5 className="p-2 color-emg">მისია</h5>
-                    <div className="d-flex justify-content-center">
-                      <p className="text-left" style={{ width: "300px" }}>
-                        <ul className="management">
+                    <div className="d-flex justify-content-center ">
+                      <p
+                        className="text-justify"
+                        style={{ lineHeight: "2", width: "350px" }}
+                      >
+                        <ul className="management ">
                           <li>
                             საერთაშორისო სტანდარტების დამკვიდრება ადგილობრივ
                             ბაზარზე
@@ -110,7 +113,10 @@ class StrategicVision extends Component {
                     <img src={ourGoals} alt="" />
                     <h5 className="p-2 color-emg">მიზნები</h5>
                     <div className="d-flex justify-content-center">
-                      <p className="text-left" style={{ width: "250px" }}>
+                      <p
+                        className="text-justify"
+                        style={{ lineHeight: "2", width: "350px" }}
+                      >
                         <ul className="management">
                           <li>მუდმივი პროფესიული განვითარება</li>
                           <li>მომსახურების სფეროს გაფართოება</li>
@@ -130,7 +136,10 @@ class StrategicVision extends Component {
                     <img src={priorities} alt="" />
                     <h5 className="p-2 color-emg">პრიორიტეტები</h5>
                     <div className="d-flex justify-content-center">
-                      <p className="text-left" style={{ width: "250px" }}>
+                      <p
+                        className="text-justify"
+                        style={{ lineHeight: "2", width: "350px" }}
+                      >
                         <ul className="management">
                           <li>მიუკერძოებლობა</li>
                           <li>სანდოობა</li>
@@ -147,16 +156,20 @@ class StrategicVision extends Component {
                     <img src={basicPrinciples} alt="" />
                     <h5 className="p-2 color-emg">ძირითადი პრინციპები</h5>
                     <div className="d-flex justify-content-center">
-                      <p className="text-left" style={{ width: "250px" }}>
+                      <p
+                        className="text-justify"
+                        style={{ lineHeight: "2", width: "350px" }}
+                      >
                         <ul className="management">
                           <li>
-                            სამართლებრივი მოთხოვნებისა და რეგულაციების დაცვა
+                            სამართლებრივი მოთხოვნებისა და {<br />} რეგულაციების
+                            დაცვა
                           </li>
                           <li>პრინციპულობა</li>
                           <li>დამოუკიდებლობა</li>
                           <li>ობიექტურობა</li>
                           <li>
-                            ადგილობრივი და საერთაშორისო სტანდარტებით
+                            ადგილობრივი და საერთაშორისო {<br />} სტანდარტებით
                             ხელმძღვანელობა
                           </li>
                         </ul>
