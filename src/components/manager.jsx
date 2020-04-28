@@ -13,7 +13,7 @@ class Manager extends Component {
       education,
       work,
       experience,
-      surname
+      img,
     } = this.props;
     return (
       <div className="col-xl-3 col-2-4 col-md-6 mb-4 ">
@@ -25,7 +25,7 @@ class Manager extends Component {
         >
           <div className="card border-0 shadow">
             <img
-              src="https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
+              src={img}
               className="card-img-top out-img inner-shadow-emg"
               alt="..."
             />
@@ -60,7 +60,7 @@ class Manager extends Component {
                     </li>
                     <li>
                       <img
-                        src="https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
+                        src={img}
                         height="100vh"
                         alt={name}
                         className="inner-shadow-emg"
@@ -74,7 +74,7 @@ class Manager extends Component {
                     </li>
                     <li>
                       <b>განათლება</b>{" "}
-                      {education.map(s => (
+                      {education.map((s) => (
                         <p>{s}</p>
                       ))}
                     </li>
