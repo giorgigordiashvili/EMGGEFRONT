@@ -10,7 +10,6 @@ class Footer extends Component {
   render() {
     return (
       <React.Fragment>
-        
         <hr className="line-emg m-0" />
         <div className="container p-4 d-flex justify-content-center">
           <form className="form-inline">
@@ -39,22 +38,25 @@ class Footer extends Component {
                 <table className="table-contact">
                   <tbody>
                     <tr>
+                      <td style={{ padding: "15px 0" }}>
+                        <img alt="location" src={locationFooter} />
+                      </td>
+                      <td>საქართველო, თბილისი 0101, კ. ქუთათელაძის ქ. N8</td>
+                    </tr>
+                    <tr>
                       <td style={{ width: "38px" }}>
                         <img alt="phone" src={phoneFooter} />
                       </td>
-                      <td>(995) 591 59 92 92 / (032) 2 709 709</td>
-                    </tr>
-                    <tr>
-                      <td style={{ padding: "15px 0" }}>
-                        <img alt="mail" src={mailFooter} />
+                      <td>
+                        <a href="tel:+995322709709">(+995 32) 2 709 709</a> /{" "}
+                        <a href="tel:+995591599292">(+995) 591 59 92 92</a>
                       </td>
-                      <td style={{ padding: "15px 0" }}>info@emg.ge</td>
                     </tr>
                     <tr>
                       <td>
-                        <img alt="location" src={locationFooter} />
+                        <img alt="mail" src={mailFooter} />
                       </td>
-                      <td>8 კ. ქუთათელაძე, თბილისი 0101</td>
+                      <td style={{ padding: "15px 0" }}>info@emg.ge</td>
                     </tr>
                   </tbody>
                 </table>
