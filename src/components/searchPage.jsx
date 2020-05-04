@@ -35,7 +35,7 @@ class SearchPage extends Component {
                   <img
                     className="card-img-top inner-shadow-emg"
                     src={s.shortImage}
-                    alt="Card image cap"
+                    alt="Card  cap"
                   />
                 </Link>
               ) : (
@@ -43,7 +43,7 @@ class SearchPage extends Component {
                   <img
                     className="card-img-top inner-shadow-emg"
                     src={s.shortImage}
-                    alt="Card image cap"
+                    alt="Card  cap"
                   />
                 </Link>
               )}

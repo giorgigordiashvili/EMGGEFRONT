@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import locationImage from "../res/location.png";
 import FontAwesome from "react-fontawesome";
 
 class Manager extends Component {
