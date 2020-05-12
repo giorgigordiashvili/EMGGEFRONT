@@ -76,7 +76,7 @@ class Branches extends Component {
                     <MapLogo
                       city="Tbilisi"
                       link={
-                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d381115.18266540254!2d44.55866895230048!3d41.73211894051142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2z4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1586274787887!5m2!1ska!2sge"
+                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1252.0587038363265!2d44.74250873038433!3d41.722369434856326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447310d0442439%3A0x741ac75e14ceafaa!2zOCDhg5nhg5Dhg5rhg5jhg6Hhg6Lhg6Dhg5Dhg6Lhg5Qg4YOl4YOj4YOX4YOQ4YOX4YOU4YOa4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOX4YOR4YOY4YOa4YOY4YOh4YOYIDAxNzc!5e0!3m2!1ska!2sge!4v1589286394214!5m2!1ska!2sge"
                       }
                     ></MapLogo>
                     <div className="column">
@@ -94,7 +94,7 @@ class Branches extends Component {
                     <MapLogo
                       city="Kutaisi"
                       link={
-                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47249.83134151659!2d42.68297709916377!3d42.2547282031695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c8ce30e54af2d%3A0xfbec41b2d626656f!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1586275595956!5m2!1ska!2sge"
+                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1241.4626013782088!2d42.70996369598854!3d42.26331570989194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c8ce290e6ff11%3A0xb585f80979398b3f!2zNjYg4YOX4YOQ4YOb4YOQ4YOgIOGDm-GDlOGDpOGDmOGDoSDhg6UuLCDhg6Xhg6Phg5fhg5Dhg5jhg6Hhg5g!5e0!3m2!1ska!2sge!4v1589286721952!5m2!1ska!2sge"
                       }
                     ></MapLogo>
                     <div className="column mt-3 p-3">
@@ -109,7 +109,7 @@ class Branches extends Component {
                     <MapLogo
                       city="Zestafoni"
                       link={
-                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47249.83134151659!2d42.68297709916377!3d42.2547282031695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c8ce30e54af2d%3A0xfbec41b2d626656f!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1586275595956!5m2!1ska!2sge"
+                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.044330124875!2d43.05033733884799!3d42.101025798616476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405cb8edcdabcc89%3A0x9f1c63e277a0c83!2z4YOc4YOY4YOZ4YOd4YOa4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOW4YOU4YOh4YOi4YOQ4YOk4YOd4YOc4YOY!5e0!3m2!1ska!2sge!4v1589286811065!5m2!1ska!2sge"
                       }
                     ></MapLogo>{" "}
                     <div className="column mt-3 p-3">
@@ -123,7 +123,7 @@ class Branches extends Component {
                     <MapLogo
                       city="Chiatura"
                       link={
-                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47249.83134151659!2d42.68297709916377!3d42.2547282031695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c8ce30e54af2d%3A0xfbec41b2d626656f!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1586275595956!5m2!1ska!2sge"
+                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1043.4750447828521!2d43.28689934878282!3d42.29147646069525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405ca091fddd4615%3A0x35cf35f931949f56!2z4YOc4YOY4YOc4YOd4YOo4YOV4YOY4YOa4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOt4YOY4YOQ4YOX4YOj4YOg4YOQ!5e0!3m2!1ska!2sge!4v1589286841193!5m2!1ska!2sge"
                       }
                     ></MapLogo>{" "}
                     <div className="column mt-3 p-3">
@@ -137,7 +137,7 @@ class Branches extends Component {
                     <MapLogo
                       city="Telavi"
                       link={
-                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47249.83134151659!2d42.68297709916377!3d42.2547282031695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c8ce30e54af2d%3A0xfbec41b2d626656f!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1586275595956!5m2!1ska!2sge"
+                        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d262.407061641641!2d45.481464467300384!3d41.91872238112212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404432cfb196223b%3A0x8f7684f32c0f20d7!2zUnVzdGF2ZWxpIFN0LCDhg5fhg5Thg5rhg5Dhg5Xhg5g!5e0!3m2!1ska!2sge!4v1589286969217!5m2!1ska!2sge"
                       }
                     ></MapLogo>{" "}
                     <div className="column mt-3 p-3">

@@ -71,7 +71,7 @@ class NavBar extends Component {
                     className="nav-link"
                     id="aboutus"
                     to="/about/"
-                    data-toggle="dropdown"
+                    data-toggle="dropdown_one"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >

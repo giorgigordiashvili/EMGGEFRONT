@@ -108,9 +108,11 @@ class App extends Component {
             <Route path="/about/strategicvision" component={StrategicVision} />
             <Route path="/about/training" component={Training} />
             <Route path="/about/branches" component={Branches} />
+
             <Route path="/activities/engineering" component={Engineering} />
             <Route path="/activities/services" component={Services} />
             <Route path="/activities/customers" component={Customers} />
+            <Route path="/activities" component={Engineering} />
             <Route
               path="/about/qualityandpermits"
               component={QualityAndPermits}
@@ -126,6 +128,7 @@ class App extends Component {
                 ></Partners>
               )}
             />
+            <Route path="/about" component={WhoWeAre} />
             <Route
               render={(props) => (
                 <Home
