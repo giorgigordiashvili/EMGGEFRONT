@@ -202,13 +202,19 @@ class Home extends Component {
                           href={project.fbLink}
                           className="  card-link minimal color-emg"
                         >
-                          <FontAwesomeIcon icon={faFacebook} />
+                          <FontAwesomeIcon
+                            name={project.name}
+                            icon={faFacebook}
+                          />
                         </a>
                         <a
                           href={project.twLink}
                           className=" card-link minimal color-emg"
                         >
-                          <FontAwesomeIcon icon={faTwitter} />
+                          <FontAwesomeIcon
+                            name={project.name}
+                            icon={faTwitter}
+                          />
                         </a>
                       </div>
 
