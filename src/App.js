@@ -39,6 +39,9 @@ import Branches from "./components/branches";
 import Partners from "./components/partners";
 import Training from "./components/trainings";
 import SearchPage from "./components/searchPage";
+import Engineering from "./components/engineering";
+import Services from "./components/servicesAct";
+import Customers from "./components/customers";
 
 class App extends Component {
   state = {
@@ -105,6 +108,9 @@ class App extends Component {
             <Route path="/about/strategicvision" component={StrategicVision} />
             <Route path="/about/training" component={Training} />
             <Route path="/about/branches" component={Branches} />
+            <Route path="/activities/engineering" component={Engineering} />
+            <Route path="/activities/services" component={Services} />
+            <Route path="/activities/customers" component={Customers} />
             <Route
               path="/about/qualityandpermits"
               component={QualityAndPermits}
@@ -195,7 +201,7 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/activities" component={Activities} />
+            {/* <Route path="/activities" component={Activities} /> */}
 
             <Route path="/not-found" component={NotFound} />
             <Redirect from="/" exact to="/home" />
