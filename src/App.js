@@ -3,33 +3,28 @@ import ProtectedRoute from "./components/common/protectedRoute";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import LoginForm from "./components/loginForm";
-import EditProject from "./components/editProject";
 import EditCategory from "./components/editCategory";
 import EditNews from "./components/editNews";
 import NotFound from "./components/notFound";
 import Logout from "./components/logout";
 import NavBar from "./components/navBar";
-import Projects from "./components/projects";
 import auth from "./services/authService";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
 import News from "./components/news";
-import Categorised from "./components/Categorised";
-import FullProject from "./components/fullProject";
 import Career from "./components/career";
 import Home from "./components/home";
-import { getProjects } from "./services/projectService";
+import { getProjectsDone } from "./services/projectDoneService";
+import { getProjectsOngoing } from "./services/projectOngoingService";
 import { getNews } from "./services/newsService";
-import { getCategories } from "./services/categoryService";
 import FullNews from "./components/fullNews";
 import { getCareers, deleteCareer } from "./services/careerService";
 import { getPartners, deletePartner } from "./services/partnerService";
 import EditPartner from "./components/editPartner";
 import EditCareer from "./components/editCareer";
 import { toast } from "react-toastify";
-import Activities from "./components/activities";
 import ScrollToTop from "./components/common/ScrollToTop";
 import WhoWeAre from "./components/whoweare";
 import Governance from "./components/governance";
@@ -42,12 +37,16 @@ import SearchPage from "./components/searchPage";
 import Engineering from "./components/engineering";
 import Services from "./components/servicesAct";
 import Customers from "./components/customers";
+import ProjectsOngoing from "./components/projectsOngoing";
+import EditProjectOngoing from "./components/editProjectOngoing";
+import ProjectsDone from "./components/projectsDone";
+import EditProjectDone from "./components/editProjectDone";
 
 class App extends Component {
   state = {
     newss: [],
-    categories: [],
-    projects: [],
+    projectsDone: [],
+    projectsOngoing: [],
     user: {},
     careers: [],
     partners: [],
@@ -55,13 +54,21 @@ class App extends Component {
 
   async componentDidMount() {
     const { data: newss } = await getNews();
-    const { data: projects } = await getProjects();
-    const { data: categories } = await getCategories();
+    const { data: projectsDone } = await getProjectsDone();
+    const { data: projectsOngoing } = await getProjectsOngoing();
+
     const { data: careers } = await getCareers();
     const { data: partners } = await getPartners();
     const user = auth.getCurrentUser();
 
-    this.setState({ careers, user, newss, projects, categories, partners });
+    this.setState({
+      careers,
+      user,
+      newss,
+      projectsDone,
+      projectsOngoing,
+      partners,
+    });
   }
 
   handleDeletePartner = async (partner) => {
@@ -72,7 +79,7 @@ class App extends Component {
       await deletePartner(partner._id);
     } catch (error) {
       if (error.response && error.response.status === 404) {
-        toast.error("This project has already been deleted");
+        toast.error("This partner has already been deleted");
         this.setState({ partners: originalPartners });
       }
     }
@@ -133,7 +140,7 @@ class App extends Component {
               render={(props) => (
                 <Home
                   categories={this.state.categories}
-                  projects={this.state.projects}
+                  projectsOngoing={this.state.projectsOngoing}
                   newss={this.state.newss}
                   user={this.state.user}
                   {...props}
@@ -142,22 +149,6 @@ class App extends Component {
               path="/home"
             />
 
-            <Route
-              render={(props) => (
-                <Categorised user={this.state.user} {...props} />
-              )}
-              path="/projects/category/:id"
-            />
-
-            <Route
-              path="/projects/:id"
-              render={(props) => (
-                <FullProject
-                  projects={this.state.projects}
-                  {...props}
-                ></FullProject>
-              )}
-            />
             <Route
               path="/news/:id"
               render={(props) => (
@@ -174,11 +165,48 @@ class App extends Component {
                 />
               )}
             />
+            <Route
+              path="/projects/ongoing"
+              render={(props) => (
+                <ProjectsOngoing
+                  user={this.state.user}
+                  projectsOngoing={this.state.projectsOngoing}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path="/projects/done"
+              render={(props) => (
+                <ProjectsDone
+                  user={this.state.user}
+                  projectsDone={this.state.projectsDone}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path="/projects/"
+              render={(props) => (
+                <ProjectsOngoing
+                  user={this.state.user}
+                  projectsOngoing={this.state.projectsOngoing}
+                  {...props}
+                />
+              )}
+            />
             <ProtectedRoute path="/partners/:id" component={EditPartner} />
             <ProtectedRoute path="/career/:id" component={EditCareer} />
             <ProtectedRoute path="/category/:id" component={EditCategory} />
-            <ProtectedRoute path="/editproject/:id" component={EditProject} />
             <ProtectedRoute path="/editnews/:id" component={EditNews} />
+            <ProtectedRoute
+              path="/editProjectOngoing/:id"
+              component={EditProjectOngoing}
+            />
+            <ProtectedRoute
+              path="/editProjectDone/:id"
+              component={EditProjectDone}
+            />
             {/* 
           <ProtectedRoute path="/career/:id" component={EditCareer} /> */}
             <Route path="/logout" component={Logout} />
@@ -193,20 +221,8 @@ class App extends Component {
               )}
             />
 
-            <Route
-              path="/projects"
-              render={(props) => (
-                <Projects
-                  categories={this.state.categories}
-                  projects={this.state.projects}
-                  user={this.state.user}
-                  {...props}
-                />
-              )}
-            />
-            {/* <Route path="/activities" component={Activities} /> */}
-
             <Route path="/not-found" component={NotFound} />
+
             <Redirect from="/" exact to="/home" />
             <Redirect to="/not-found" />
           </Switch>

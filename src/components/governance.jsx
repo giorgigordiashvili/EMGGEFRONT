@@ -52,7 +52,7 @@ class Governance extends Component {
               className="nav-item nav-link nav-link-emg"
               to="/about/training"
             >
-              ტრენინგი
+              ტრენინგები
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg"
@@ -86,22 +86,22 @@ class Governance extends Component {
                       <br />
                       <br />
                       <ul className="management">
-                        <li className="text-justify ">
+                        <li className="text-justify special">
                           ეყრდნობა ორგანიზაციის კორპორაციული მართვის საუკეთესო
                           საერთაშორისო პრაქტიკას;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           აძლიერებს კორპორაციულ კულტურას და მიზნების შესაბამისად
                           სრულყოფს ორგანიზაციის სტრუქტურას;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           თანამშრომლობს როგორც ადგილობრივ, ისე უცხოელ
                           პარტნიორებთან;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           აფართოებს საქმიანობის სექტორულ და გეოგრაფიულ არეალს;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           საერთაშორისო გამოცდილების გათვალისწინებით საქართველოში
                           ნერგავს საინჟინრო და სამშენებლო სფეროში მსოფლიოში
                           აპრობირებულ თანამედროვე ტექნოლოგიებსა და ინოვაციებს.

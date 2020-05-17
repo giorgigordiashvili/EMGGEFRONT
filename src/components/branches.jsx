@@ -48,7 +48,7 @@ class Branches extends Component {
               className="nav-item nav-link nav-link-emg"
               to="/about/training"
             >
-              ტრენინგი
+              ტრენინგები
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg active"

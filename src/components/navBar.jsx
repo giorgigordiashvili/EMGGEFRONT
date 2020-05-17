@@ -168,10 +168,38 @@ class NavBar extends Component {
                     </Link>
                   </div>
                 </li>
-                <li className="nav-item">
-                  <NavLink to="/projects" className="nav-link">
+                <li className="nav-item dropdown ">
+                  <NavLink
+                    className="nav-link"
+                    id="activities"
+                    to="/projects/"
+                    data-toggle="dropdown_three"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
                     პროექტები
                   </NavLink>
+                  <div
+                    className={
+                      this.state.dropdown
+                        ? "dropdown-menu show dropdown-custom"
+                        : "dropdown-menu dropdown-custom"
+                    }
+                    aria-labelledby="projects"
+                  >
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/projects/ongoing" }}
+                    >
+                      მიმდინარე პროექტები
+                    </Link>
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/projects/done" }}
+                    >
+                      დასრულებული პროექტები
+                    </Link>
+                  </div>
                 </li>
 
                 <li className="nav-item">

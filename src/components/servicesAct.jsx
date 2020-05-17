@@ -78,56 +78,56 @@ class Services extends Component {
                         <li className="text-justify special">
                           მშენებლობის მენეჯმენტი:
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო სამუშაოების ხარისხის, მოცულობების,
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო სამუშაოების ხარისხის, მოცულობების,
                           ხარჯების, ვადების მართვა (კონტროლი, მონიტორინგი,
                           შეფასება);
                         </li>
-                        <li className="text-justify ml-3">
-                          - პროექტის მართვა;
+                        <li className="text-justify ml-5 deph">
+                          პროექტის მართვა;
                         </li>
-                        <li className="text-justify ml-3">
-                          - კონტრაქტის მართვა;
+                        <li className="text-justify ml-5 deph">
+                          კონტრაქტის მართვა;
                         </li>
-                        <li className="text-justify ml-3">
-                          - რისკების მართვა;
+                        <li className="text-justify ml-5 deph">
+                          რისკების მართვა;
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო ლოგისტიკის წარმოება;
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო ლოგისტიკის წარმოება;
                         </li>
-                        <li className="text-justify ml-3">
-                          - მონაცემთა აღრიცხვა, მართვა და კონტროლი.
+                        <li className="text-justify ml-5 deph">
+                          მონაცემთა აღრიცხვა, მართვა და კონტროლი.
                         </li>
 
                         <li className="text-justify special">
                           საკონსულტაციო მომსახურება:
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო ლოგისტიკის მართვა და კონტროლი;
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო ლოგისტიკის მართვა და კონტროლი;
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო-საექსპლოატაციო კონსულტაციები;
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო-საექსპლოატაციო კონსულტაციები;
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო ლოგისტიკისა და შესასრულებელი სამუშაოების
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო ლოგისტიკისა და შესასრულებელი სამუშაოების
                           მოცულობების გეგმა-გრაფიკების შემუშავება, სამუშაოების
                           შესრულების გეგმის მართვა და მონაცემთა აღრიცხვა;
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო ხარჯების მართვა, აღრიცხვა და კონტროლი;
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო ხარჯების მართვა, აღრიცხვა და კონტროლი;
                         </li>
-                        <li className="text-justify ml-3">
-                          - ხარჯთაღრიცხვებისა და შესრულებული სამუშაოების
+                        <li className="text-justify ml-5 deph">
+                          ხარჯთაღრიცხვებისა და შესრულებული სამუშაოების
                           ანგარიშების წარმოება;
                         </li>
-                        <li className="text-justify ml-3">
-                          - სამშენებლო ლოგისტიკური ინსტრუქციების შემუშავება;
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო ლოგისტიკური ინსტრუქციების შემუშავება;
                         </li>
-                        <li className="text-justify  ml-3">
-                          - უსაფრთხოების სისტემების დანერგვა და მართვა;
+                        <li className="text-justify ml-5 deph">
+                          უსაფრთხოების სისტემების დანერგვა და მართვა;
                         </li>
-                        <li className="text-justify  ml-3">
-                          - სამშენებლო სამუშაოების წარმოებისთვის პროექტების
+                        <li className="text-justify ml-5 deph">
+                          სამშენებლო სამუშაოების წარმოებისთვის პროექტების
                           შერჩევა და შეფასება.
                         </li>
                       </ul>

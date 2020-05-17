@@ -2,7 +2,7 @@ import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { getCategories } from "../services/categoryService";
-import { getProject, saveProject } from "../services/projectService";
+import { getProject, saveProject } from "../services/projectDoneService";
 
 class EditProject extends Form {
   state = {
@@ -16,30 +16,23 @@ class EditProject extends Form {
       shortDesc: "",
       longImage: "",
       shortImage: "",
-      categoryId: ""
+      categoryId: "",
     },
     categories: [],
-    errors: {}
+    errors: {},
   };
   schema = {
     _id: Joi.string(),
-    title: Joi.string()
-      .required()
-      .label("Title"),
-    client: Joi.string()
-      .required()
-      .label("Client"),
-    duration: Joi.number()
-      .required()
-      .min(0)
-      .label("Duration"),
+    title: Joi.string().required().label("Title"),
+    client: Joi.string().required().label("Client"),
+    duration: Joi.number().required().min(0).label("Duration"),
     shortImage: Joi.string().required(),
     longImage: Joi.string().required(),
     shortDesc: Joi.string().required(),
     longDesc: Joi.string().required(),
     twLink: Joi.string(),
     fbLink: Joi.string(),
-    categoryId: Joi.string().required()
+    categoryId: Joi.string().required(),
   };
 
   async populateStyles() {
@@ -76,7 +69,7 @@ class EditProject extends Form {
       longDesc: shoe.longDesc,
       duration: shoe.duration,
       fbLink: shoe.fbLink,
-      twLink: shoe.twLink
+      twLink: shoe.twLink,
     };
   }
 

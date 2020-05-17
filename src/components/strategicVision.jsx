@@ -82,21 +82,18 @@ class StrategicVision extends Component {
                   <div className="column text-center">
                     <img src={ourMission} alt="" />
                     <h5 className="p-2 color-emg">მისია</h5>
-                    <div className="d-flex justify-content-center ">
-                      <p
-                        className="text-justify"
-                        style={{ lineHeight: "2", width: "350px" }}
-                      >
+                    <div className="d-flex ">
+                      <p className="text-justify">
                         <ul className="management ">
-                          <li>
+                          <li className="special">
                             საერთაშორისო სტანდარტების დამკვიდრება ადგილობრივ
                             ბაზარზე
                           </li>
-                          <li>
+                          <li className="special">
                             საუკეთესო საინჟინრო გადაწყვეტილებების მიღების სწორი
                             პრაქტიკის დანერგვა
                           </li>
-                          <li>
+                          <li className="special">
                             ინსპექტირების, ზედამხედველობისა და, ზოგადად,
                             სამშენებლო სექტორის განვითარება მსოფლიოს წამყვან
                             ქვეყნებში აპრობირებული ინოვაციური ტენდენციების
@@ -112,19 +109,27 @@ class StrategicVision extends Component {
                   <div className="column text-center">
                     <img src={ourGoals} alt="" />
                     <h5 className="p-2 color-emg">მიზნები</h5>
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex ">
                       <p
                         className="text-justify"
                         style={{ lineHeight: "2", width: "350px" }}
                       >
                         <ul className="management">
-                          <li>მუდმივი პროფესიული განვითარება</li>
-                          <li>მომსახურების სფეროს გაფართოება</li>
-                          <li>კვალიფიციური მომსახურების შეთავაზება</li>
-                          <li>
+                          <li className="special">
+                            მუდმივი პროფესიული განვითარება
+                          </li>
+                          <li className="special">
+                            მომსახურების სფეროს გაფართოება
+                          </li>
+                          <li className="special">
+                            კვალიფიციური მომსახურების შეთავაზება
+                          </li>
+                          <li className="special">
                             სანდო და საიმედო კომპანიის რეპუტაციის შენარჩუნება
                           </li>
-                          <li>საქართველოს ბაზრის ლიდერობა</li>
+                          <li className="special">
+                            საქართველოს ბაზრის ლიდერობა
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -135,17 +140,18 @@ class StrategicVision extends Component {
                   <div className="column text-center">
                     <img src={priorities} alt="" />
                     <h5 className="p-2 color-emg">პრიორიტეტები</h5>
-                    <div className="d-flex justify-content-center">
-                      <p
-                        className="text-justify"
-                        style={{ lineHeight: "2", width: "350px" }}
-                      >
+                    <div className="d-flex ">
+                      <p className="text-justify">
                         <ul className="management">
-                          <li>მიუკერძოებლობა</li>
-                          <li>სანდოობა</li>
-                          <li>მომსახურების უმაღლესი ხარისხი</li>
-                          <li>გუნდური მუშაობა</li>
-                          <li>მუდმივი ზრდა და განვითარება</li>
+                          <li className="special">მიუკერძოებლობა</li>
+                          <li className="special">სანდოობა</li>
+                          <li className="special">
+                            მომსახურების უმაღლესი ხარისხი
+                          </li>
+                          <li className="special">გუნდური მუშაობა</li>
+                          <li className="special">
+                            მუდმივი ზრდა და განვითარება
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -155,20 +161,20 @@ class StrategicVision extends Component {
                   <div className="column text-center ">
                     <img src={basicPrinciples} alt="" />
                     <h5 className="p-2 color-emg">ძირითადი პრინციპები</h5>
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex ">
                       <p
                         className="text-justify"
                         style={{ lineHeight: "2", width: "350px" }}
                       >
                         <ul className="management">
-                          <li>
+                          <li className="special">
                             სამართლებრივი მოთხოვნებისა და {<br />} რეგულაციების
                             დაცვა
                           </li>
-                          <li>პრინციპულობა</li>
-                          <li>დამოუკიდებლობა</li>
-                          <li>ობიექტურობა</li>
-                          <li>
+                          <li className="special">პრინციპულობა</li>
+                          <li className="special">დამოუკიდებლობა</li>
+                          <li className="special">ობიექტურობა</li>
+                          <li className="special">
                             ადგილობრივი და საერთაშორისო {<br />} სტანდარტებით
                             ხელმძღვანელობა
                           </li>

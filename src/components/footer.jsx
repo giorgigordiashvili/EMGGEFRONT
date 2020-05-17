@@ -15,17 +15,17 @@ class Footer extends Component {
           <form className="form-inline">
             <div className="form-group mx-sm-3 mb-2">
               <label htmlFor="inputPassword2" className="sr-only">
-                Email
+                ელ ფოსტა
               </label>
               <input
                 type="password"
                 className="form-control"
                 id="inputPassword2"
-                placeholder="EMAIL"
+                placeholder=" ელ ფოსტა"
               />
             </div>
             <button type="submit" className="btn subscribe-button mb-2">
-              Subscribe
+              გამოწერა
             </button>
           </form>
         </div>
@@ -92,7 +92,7 @@ class Footer extends Component {
             </div>
           </div>
           <div className="fluid-container d-flex justify-content-center bg-emg-blue p-4 col-sm-12 color-white">
-            © 2019 ინჟინერიის მონიტორინგის ჯგუფი.
+            © 2020 საინჟინრო მონიტორინგის ჯგუფი
           </div>
         </footer>
       </React.Fragment>

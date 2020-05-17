@@ -68,92 +68,94 @@ class Customers extends Component {
                           სხვადასხვა სახელმწიფო სტრუქტურებთან და ფონდებთან,
                           ესენია:
                         </li>
-                        <li className="text-justify ">
-                          - საქართველოს გარემოს დაცვისა და სოფლის მეურნეობის
+                        <li className="text-justify ml-5 deph">
+                          საქართველოს გარემოს დაცვისა და სოფლის მეურნეობის
                           სამინისტრო;
                         </li>
-                        <li className="text-justify ">
-                          - საქართველოს საავტომობილო გზების დეპარტამენტი;
+                        <li className="text-justify ml-5 deph">
+                          საქართველოს საავტომობილო გზების დეპარტამენტი;
                         </li>
-                        <li className="text-justify ">
-                          - საქართველოს თანაინვესტირების ფონდი;
+                        <li className="text-justify ml-5 deph">
+                          საქართველოს თანაინვესტირების ფონდი;
                         </li>
-                        <li className="text-justify ">
-                          - საქართველოს ენერგეტიკის განვითარების ფონდი;
+                        <li className="text-justify ml-5 deph">
+                          საქართველოს ენერგეტიკის განვითარების ფონდი;
                         </li>
-                        <li className="text-justify ">
-                          - საქართველოს მუნიციპალური განვითარების ფონდი;
+                        <li className="text-justify ml-5 deph">
+                          საქართველოს მუნიციპალური განვითარების ფონდი;
                         </li>
-                        <li className="text-justify ">
-                          - საქართველოს ტურიზმის განვითარების ფონდი;
+                        <li className="text-justify ml-5 deph">
+                          საქართველოს ტურიზმის განვითარების ფონდი;
                         </li>
-                        <li className="text-justify ">
-                          - სოფლის მეურნეობის განვითარების საერთაშორისო ფონდი;
+                        <li className="text-justify ml-5 deph">
+                          სოფლის მეურნეობის განვითარების საერთაშორისო ფონდი;
                         </li>
-                        <li className="text-justify ">- საპარტნიორო ფონდი.</li>
+                        <li className="text-justify ml-5 deph">
+                          საპარტნიორო ფონდი.
+                        </li>
                         <li className="text-justify special">
                           იმერეთისა და კახეთის რეგიონების 20 მუნიციპალიტეტთან,
                           ესენია:
                         </li>
-                        <li className="text-justify ">
-                          - ქუთაისის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ქუთაისის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ვანის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ვანის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - თერჯოლის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          თერჯოლის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - საჩხერის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          საჩხერის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ტყიბულის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ტყიბულის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - წყალტუბოს მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          წყალტუბოს მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ხონის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ხონის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ბაღდათის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ბაღდათის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ზესტაფონის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ზესტაფონის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - სამტრედიის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          სამტრედიის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ჭიათურის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ჭიათურის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ხარაგაულის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ხარაგაულის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - თელავის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          თელავის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ახმეტის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ახმეტის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - გურჯაანის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          გურჯაანის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - დედოფლისწყაროს მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          დედოფლისწყაროს მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ლაგოდეხის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          ლაგოდეხის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - საგარეჯოს მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          საგარეჯოს მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - სიღნაღის მუნიციპალიტეტი;
+                        <li className="text-justify ml-5 deph">
+                          სიღნაღის მუნიციპალიტეტი;
                         </li>
-                        <li className="text-justify ">
-                          - ყვარლის მუნიციპალიტეტი.
+                        <li className="text-justify ml-5 deph">
+                          ყვარლის მუნიციპალიტეტი.
                         </li>
                         <li className="text-justify special">
                           ადგილობრივ და საერთაშორისო სამშენებლო, საპროექტო და

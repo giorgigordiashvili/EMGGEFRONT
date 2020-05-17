@@ -8,74 +8,91 @@ import Moment from "react-moment";
 
 class ProjectFlex extends Component {
   render() {
-    const { projects, onDelete } = this.props;
+    const { newss, onDelete, category } = this.props;
     const isAdmin = auth.isAdmin();
-
     return (
-      <div className="card-deck">
-        {projects.map((project) => (
-          <React.Fragment key={project._id}>
-            <div className="card m-2">
-              {isAdmin && (
-                <React.Fragment>
-                  <Link
-                    to={"/editProject/" + project._id}
-                    className="mt-auto card-btn btn btn-primary"
-                  >
-                    რედაქტირება
-                  </Link>
-
-                  <Button
-                    onClick={() => onDelete(project)}
-                    variant="btn card-btn btn-danger"
-                    className="mt-auto"
-                  >
-                    წაშლა
-                  </Button>
-                  <br />
-                </React.Fragment>
-              )}
-              <div className="card-body project-body">
-                <Link to={"/projects/" + project._id}>
-                  <div className="project vh-50 d-flex column align-items-end item-title">
-                    <h5 className="card-title project-title-container pr-4 pl-4 pt-1 pb-2">
-                      <span className="inner-shadow-emg ">{project.title}</span>
-                    </h5>
-                  </div>
+      <div>
+        {newss.map((project) => (
+          <div key={project._id} className="pb-2">
+            {isAdmin && (
+              <React.Fragment>
+                <Link
+                  to={
+                    category == "Ongoing"
+                      ? "/editProjectOngoing/" + project._id
+                      : "/editProjectDone/" + project._id
+                  }
+                  className="mt-auto card-btn btn btn-primary"
+                >
+                  რედაქტირება
                 </Link>
-                <p className="card-text p-2 text-justify">
-                  {project.shortDesc}
-                  <br />
-                  <span className="color-emg">კლიენტი: </span> {project.client}
-                  <br />
-                  <span className="color-emg">ხანგრძლივობა: </span>{" "}
-                  {project.duration}
-                  <br />
-                  <span className="color-emg">პარტნიორები: </span> ???
-                  <br />
-                  <span className="color-emg">ღირებულება:</span>
-                  ???
-                </p>
+
+                <Button
+                  onClick={() => onDelete(project)}
+                  variant="btn card-btn btn-danger"
+                  className="mt-auto"
+                >
+                  წაშლა
+                </Button>
+                <br />
+              </React.Fragment>
+            )}
+            <div className="card card-emg ">
+              <Link
+                className="home-news-link"
+                to={
+                  category == "Ongoing"
+                    ? "/projects/ongoing/" + project._id
+                    : "/projects/done/" + project._id
+                }
+              >
+                <img
+                  alt={project.name}
+                  className="card-img-top home-card-img inner-shadow-emg"
+                  src={project.shortImage}
+                />
+              </Link>
+              <div className="card-body">
+                <h5 className="card-title">
+                  <span className="inner-shadow-emg">
+                    <Link
+                      className="home-news-link"
+                      to={
+                        category == "Ongoing"
+                          ? "/projects/ongoing/" + project._id
+                          : "/projects/done/" + project._id
+                      }
+                    >
+                      {project.title}
+                    </Link>
+                  </span>
+                </h5>
+                <p className="card-text text-justify">{project.shortDesc}</p>
               </div>
-              <div className="card-footer">
-                <small className="text-muted row justify-content-between">
-                  <div>
-                    <a href={project.fbLink} className="card-link color-emg">
-                      <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                    <a href={project.twLink} className="card-link color-emg">
-                      <FontAwesomeIcon icon={faTwitter} />
-                    </a>
-                  </div>
-                  <div className="color-emg">
-                    <Moment format="DD MM YYYY" withTitle>
-                      {project.publishDate}
-                    </Moment>
-                  </div>
-                </small>
+              <div className="card-body d-flex justify-content-between">
+                <div>
+                  <a
+                    href={project.fbLink}
+                    className="  card-link minimal color-emg"
+                  >
+                    <FontAwesomeIcon name={project.name} icon={faFacebook} />
+                  </a>
+                  <a
+                    href={project.twLink}
+                    className=" card-link minimal color-emg"
+                  >
+                    <FontAwesomeIcon name={project.name} icon={faTwitter} />
+                  </a>
+                </div>
+
+                <div className="color-emg minimal-date">
+                  <Moment format="DD MM YYYY" withTitle>
+                    {project.publishDate}
+                  </Moment>
+                </div>
               </div>
             </div>
-          </React.Fragment>
+          </div>
         ))}
       </div>
     );

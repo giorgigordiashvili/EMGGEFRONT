@@ -83,21 +83,21 @@ class Training extends Component {
                       <br />
                       <br />
                       <ul className="management">
-                        <li className="text-justify ">
+                        <li className="text-justify special">
                           ინსპექტირების პროცესის განხორციელების მეთოდები
                           (ოქტომბერი, 2019);
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           ინსპექტირების პროცესის განხორციელების მეთოდები,
                           დაზუსტება-სწავლება, რესურსების, საშუალებების,
                           მოწყობილობებისა და ტექნიკური მოთხოვნების მიმოხილვა
                           (ივნისი, 2019);
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           ხარისხის მართვის სისტემის დოკუმენტების გაცნობა
                           (აპრილი, 2019);
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           სსტ/იეკ 17020:2012/2013 საერთაშორისო სტანდარტების
                           მოთხოვნების ზოგადი მიმოხილვა (აპრილი, 2019).
                         </li>

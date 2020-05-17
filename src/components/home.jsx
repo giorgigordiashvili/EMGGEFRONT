@@ -16,24 +16,21 @@ class Home extends Component {
   state = {};
 
   render() {
-    let { projects, newss } = this.props;
+    let { projectsOngoing, newss } = this.props;
     const projectsResponsive = {
-      slidesToShow: projects.length > 3 ? 4 : projects.length % 4,
-      slidesToScroll: 1,
       responsive: [
         {
           breakpoint: 1210,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
           },
         },
         {
           breakpoint: 990,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
           },
         },
         {
@@ -83,7 +80,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="slider fluid-container row justify-content-center">
-          <div className="certs d-flex flex-column bd-highlight mb-3">
+          <div className="certs d-flex flex-row bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <a href={certTwo}>
                 <img src={certTwo} width="60vh" alt="Accreditation" />
@@ -167,7 +164,7 @@ class Home extends Component {
         </div>
         <div className="fluid-container highlight pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
-            {projects.slice(0, 8).map((project) =>
+            {projectsOngoing.slice(0, 8).map((project) =>
               project.type !== "hidden" ? (
                 <div key={project._id}>
                   <div className="card card-emg mr-4">
