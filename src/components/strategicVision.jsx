@@ -83,7 +83,7 @@ class StrategicVision extends Component {
                     <img src={ourMission} alt="" />
                     <h5 className="p-2 color-emg">მისია</h5>
                     <div className="d-flex ">
-                      <p className="text-center">
+                      <p className="text-justify">
                         <ul className="management ">
                           <li className="special">
                             საერთაშორისო სტანდარტების დამკვიდრება ადგილობრივ
@@ -110,7 +110,7 @@ class StrategicVision extends Component {
                     <img src={ourGoals} alt="" />
                     <h5 className="p-2 color-emg">მიზნები</h5>
                     <div className="d-flex ">
-                      <p className="text-center">
+                      <p className="text-justify">
                         <ul className="management">
                           <li className="special">
                             მუდმივი პროფესიული განვითარება
@@ -137,8 +137,8 @@ class StrategicVision extends Component {
                   <div className="column text-center">
                     <img src={priorities} alt="" />
                     <h5 className="p-2 color-emg">პრიორიტეტები</h5>
-                    <div className="d-flex ">
-                      <p className="text-center ">
+                    <div className="d-flex ml-10">
+                      <p className="text-justify">
                         <ul className="management">
                           <li className="special">მიუკერძოებლობა</li>
                           <li className="special">სანდოობა</li>
@@ -159,7 +159,7 @@ class StrategicVision extends Component {
                     <img src={basicPrinciples} alt="" />
                     <h5 className="p-2 color-emg">ძირითადი პრინციპები</h5>
                     <div className="d-flex ">
-                      <p className="text-center">
+                      <p className="text-justify">
                         <ul className="management">
                           <li className="special">
                             სამართლებრივი მოთხოვნებისა და რეგულაციების დაცვა

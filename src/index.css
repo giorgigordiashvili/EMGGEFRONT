@@ -101,6 +101,9 @@ p {
   height: 10vh;
 }
 
+.ml-10 {
+  margin-left: 140px;
+}
 .navv {
   display: flex;
   align-items: center;
