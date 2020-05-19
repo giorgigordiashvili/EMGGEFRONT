@@ -6,7 +6,8 @@ import {
   saveProjectDone,
 } from "../services/projectDoneService";
 import axios from "axios";
-import { apiUrl } from "../config.json";
+
+import FileUploader from "./fileUploader";
 class EditProjectDone extends Form {
   state = {
     uploadPercentage: 0,
@@ -126,45 +127,7 @@ class EditProjectDone extends Form {
     return (
       <div className="pt-8 container">
         <h1>Edit Category</h1>
-        <form
-          action={apiUrl + "/upload"}
-          method="POST"
-          encType="multipart/form-data"
-        >
-          File Uploader
-          <div className="custom-file mb-3">
-            <input
-              type="file"
-              name="file"
-              id="file"
-              className="custom-file-input"
-              onChange={this.uploadFile}
-            />
-            <div className="mt-2 mb-2 progress">
-              <div
-                className="progress-bar"
-                role="progressbar"
-                style={{
-                  width: this.state.uploadPercentage + `%`,
-                  transition: "width 2s",
-                }}
-                aria-valuenow={25}
-                aria-valuemin={0}
-                aria-valuemax={100}
-              />
-            </div>
-
-            <label htmlFor="file" className="custom-file-label">
-              Choose File
-            </label>
-          </div>
-          <input
-            type="text"
-            className="form-control"
-            defaultValue={this.state.pictureLink}
-            id="myInput"
-          ></input>
-        </form>
+        <FileUploader></FileUploader>
         <hr />
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("title", "დასახელება")}

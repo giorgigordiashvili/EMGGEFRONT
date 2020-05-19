@@ -15,7 +15,7 @@ class Footer extends Component {
           <form className="form-inline">
             <div className="form-group mx-sm-3 mb-2">
               <label htmlFor="inputPassword2" className="sr-only">
-                ელ ფოსტა
+                ელფოსტა
               </label>
               <input
                 type="password"

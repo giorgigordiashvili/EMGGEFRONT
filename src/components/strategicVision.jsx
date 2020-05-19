@@ -83,7 +83,7 @@ class StrategicVision extends Component {
                     <img src={ourMission} alt="" />
                     <h5 className="p-2 color-emg">მისია</h5>
                     <div className="d-flex ">
-                      <p className="text-justify">
+                      <p className="text-center">
                         <ul className="management ">
                           <li className="special">
                             საერთაშორისო სტანდარტების დამკვიდრება ადგილობრივ
@@ -110,10 +110,7 @@ class StrategicVision extends Component {
                     <img src={ourGoals} alt="" />
                     <h5 className="p-2 color-emg">მიზნები</h5>
                     <div className="d-flex ">
-                      <p
-                        className="text-justify"
-                        style={{ lineHeight: "2", width: "350px" }}
-                      >
+                      <p className="text-center">
                         <ul className="management">
                           <li className="special">
                             მუდმივი პროფესიული განვითარება
@@ -141,7 +138,7 @@ class StrategicVision extends Component {
                     <img src={priorities} alt="" />
                     <h5 className="p-2 color-emg">პრიორიტეტები</h5>
                     <div className="d-flex ">
-                      <p className="text-justify">
+                      <p className="text-center ">
                         <ul className="management">
                           <li className="special">მიუკერძოებლობა</li>
                           <li className="special">სანდოობა</li>
@@ -162,20 +159,16 @@ class StrategicVision extends Component {
                     <img src={basicPrinciples} alt="" />
                     <h5 className="p-2 color-emg">ძირითადი პრინციპები</h5>
                     <div className="d-flex ">
-                      <p
-                        className="text-justify"
-                        style={{ lineHeight: "2", width: "350px" }}
-                      >
+                      <p className="text-center">
                         <ul className="management">
                           <li className="special">
-                            სამართლებრივი მოთხოვნებისა და {<br />} რეგულაციების
-                            დაცვა
+                            სამართლებრივი მოთხოვნებისა და რეგულაციების დაცვა
                           </li>
                           <li className="special">პრინციპულობა</li>
                           <li className="special">დამოუკიდებლობა</li>
                           <li className="special">ობიექტურობა</li>
                           <li className="special">
-                            ადგილობრივი და საერთაშორისო {<br />} სტანდარტებით
+                            ადგილობრივი და საერთაშორისო სტანდარტებით
                             ხელმძღვანელობა
                           </li>
                         </ul>
