@@ -129,7 +129,7 @@ class News extends Component {
       <React.Fragment>
         <div className="thumbnail" />
         <div className="container">
-          <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+          <h1 className="currentPageTitle  col-12 col-md-12 pl-04">
             სიახლეები
           </h1>
         </div>

@@ -26,24 +26,6 @@ class SearchPage extends Component {
 
     return (
       <div className="fluid-container pt-8">
-        {projectsDone.length > 0 && (
-          <React.Fragment>
-            <div className="container">
-              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                დასრულებული პროექტები
-              </h1>
-            </div>
-            <div className="fluid-container highlight p-4">
-              <div className="container">
-                <ProjectFlex
-                  category={"Done"}
-                  newss={projectsDone}
-                  onDelete={this.handleDelete}
-                />
-              </div>
-            </div>
-          </React.Fragment>
-        )}
         {projectsOngoing.length > 0 && (
           <React.Fragment>
             <div className="container">
@@ -62,6 +44,25 @@ class SearchPage extends Component {
             </div>
           </React.Fragment>
         )}
+        {projectsDone.length > 0 && (
+          <React.Fragment>
+            <div className="container">
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+                დასრულებული პროექტები
+              </h1>
+            </div>
+            <div className="fluid-container highlight p-4">
+              <div className="container">
+                <ProjectFlex
+                  category={"Done"}
+                  newss={projectsDone}
+                  onDelete={this.handleDelete}
+                />
+              </div>
+            </div>
+          </React.Fragment>
+        )}
+
         {newss.length > 0 && (
           <React.Fragment>
             <div className="container">

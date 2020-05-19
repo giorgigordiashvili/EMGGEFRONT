@@ -41,7 +41,7 @@ import ProjectsOngoing from "./components/projectsOngoing";
 import EditProjectOngoing from "./components/editProjectOngoing";
 import ProjectsDone from "./components/projectsDone";
 import EditProjectDone from "./components/editProjectDone";
-
+import FullProject from "./components/fullProject";
 class App extends Component {
   state = {
     newss: [],
@@ -163,6 +163,24 @@ class App extends Component {
               path="/news/:id"
               render={(props) => (
                 <FullNews newss={this.state.newss} {...props}></FullNews>
+              )}
+            />
+            <Route
+              path="/projects/ongoing/:id"
+              render={(props) => (
+                <FullProject
+                  projects={this.state.projectsOngoing}
+                  {...props}
+                ></FullProject>
+              )}
+            />
+            <Route
+              path="/projects/done/:id"
+              render={(props) => (
+                <FullProject
+                  projects={this.state.projectsDone}
+                  {...props}
+                ></FullProject>
               )}
             />
             <Route

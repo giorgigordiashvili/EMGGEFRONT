@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import auth from "../services/authService";
+import Moment from "react-moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
-import Moment from "react-moment";
 
 class ProjectFlex extends Component {
   render() {
@@ -14,30 +14,30 @@ class ProjectFlex extends Component {
       <div>
         {newss.map((project) => (
           <div key={project._id} className="pb-2">
-            {isAdmin && (
-              <React.Fragment>
-                <Link
-                  to={
-                    category == "Ongoing"
-                      ? "/editProjectOngoing/" + project._id
-                      : "/editProjectDone/" + project._id
-                  }
-                  className="mt-auto card-btn btn btn-primary"
-                >
-                  რედაქტირება
-                </Link>
-
-                <Button
-                  onClick={() => onDelete(project)}
-                  variant="btn card-btn btn-danger"
-                  className="mt-auto"
-                >
-                  წაშლა
-                </Button>
-                <br />
-              </React.Fragment>
-            )}
             <div className="card card-emg ">
+              {isAdmin && (
+                <React.Fragment>
+                  <Link
+                    to={
+                      category == "Ongoing"
+                        ? "/editProjectOngoing/" + project._id
+                        : "/editProjectDone/" + project._id
+                    }
+                    className="mt-auto card-btn btn btn-primary"
+                  >
+                    რედაქტირება
+                  </Link>
+
+                  <Button
+                    onClick={() => onDelete(project)}
+                    variant="btn card-btn btn-danger"
+                    className="mt-auto"
+                  >
+                    წაშლა
+                  </Button>
+                  <br />
+                </React.Fragment>
+              )}
               <Link
                 className="home-news-link"
                 to={
@@ -71,17 +71,11 @@ class ProjectFlex extends Component {
               </div>
               <div className="card-body d-flex justify-content-between">
                 <div>
-                  <a
-                    href={project.fbLink}
-                    className="  card-link minimal color-emg"
-                  >
-                    <FontAwesomeIcon name={project.name} icon={faFacebook} />
+                  <a href="#" className="card-link color-emg">
+                    <FontAwesomeIcon icon={faFacebook} />
                   </a>
-                  <a
-                    href={project.twLink}
-                    className=" card-link minimal color-emg"
-                  >
-                    <FontAwesomeIcon name={project.name} icon={faTwitter} />
+                  <a href="#" className="card-link color-emg">
+                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </div>
 

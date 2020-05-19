@@ -117,7 +117,7 @@ class Home extends Component {
                       <img
                         className="card-img-top home-card-img inner-shadow-emg"
                         src={news.shortImage}
-                        alt="Alt"
+                        alt={news.title}
                       />
                     </Link>
                     <div className="card-body">
@@ -164,13 +164,13 @@ class Home extends Component {
         </div>
         <div className="fluid-container highlight pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
-            {projectsOngoing.slice(0, 8).map((project) =>
+            {projectsOngoing.slice(0, 4).map((project) =>
               project.type !== "hidden" ? (
                 <div key={project._id}>
                   <div className="card card-emg mr-4">
                     <Link
                       className="home-news-link"
-                      to={"/projects/" + project._id}
+                      to={"/projects/ongoing/" + project._id}
                     >
                       <img
                         alt={project.name}
@@ -183,7 +183,7 @@ class Home extends Component {
                         <span className="inner-shadow-emg">
                           <Link
                             className="home-news-link"
-                            to={"/projects/" + project._id}
+                            to={"/project/ongoing" + project._id}
                           >
                             {project.title}
                           </Link>
@@ -195,23 +195,11 @@ class Home extends Component {
                     </div>
                     <div className="card-body d-flex justify-content-between">
                       <div>
-                        <a
-                          href={project.fbLink}
-                          className="  card-link minimal color-emg"
-                        >
-                          <FontAwesomeIcon
-                            name={project.name}
-                            icon={faFacebook}
-                          />
+                        <a href="#" className="card-link color-emg">
+                          <FontAwesomeIcon icon={faFacebook} />
                         </a>
-                        <a
-                          href={project.twLink}
-                          className=" card-link minimal color-emg"
-                        >
-                          <FontAwesomeIcon
-                            name={project.name}
-                            icon={faTwitter}
-                          />
+                        <a href="#" className="card-link color-emg">
+                          <FontAwesomeIcon icon={faTwitter} />
                         </a>
                       </div>
 

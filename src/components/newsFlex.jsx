@@ -12,15 +12,28 @@ class NewsFlex extends Component {
     const isAdmin = auth.isAdmin();
     return (
       <div className="card-deck">
-        {newss.map((news) =>
-          news.type === "hidden" ? (
-            <div
-              className="card highlight"
-              key={news._id}
-              style={{ border: "none" }}
-            ></div>
-          ) : (
+        {newss.map((news) => (
+          <React.Fragment>
             <div key={news._id} className="card  card-emg news-card ">
+              {isAdmin && (
+                <React.Fragment>
+                  <Link
+                    to={"/editNews/" + news._id}
+                    className="mt-auto card-btn btn btn-primary"
+                  >
+                    რედაქტირება
+                  </Link>
+
+                  <Button
+                    onClick={() => onDelete(news)}
+                    variant="btn card-btn btn-danger"
+                    className="mt-auto"
+                  >
+                    წაშლა
+                  </Button>
+                  <br />
+                </React.Fragment>
+              )}
               <Link className="home-news-link" to={"/news/" + news._id}>
                 <img
                   className="card-img-top home-card-img inner-shadow-emg"
@@ -54,8 +67,8 @@ class NewsFlex extends Component {
                 </div>
               </div>
             </div>
-          )
-        )}
+          </React.Fragment>
+        ))}
       </div>
     );
   }

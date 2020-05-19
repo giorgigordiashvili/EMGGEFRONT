@@ -13,35 +13,36 @@ class Career extends Component {
     return (
       <React.Fragment>
         <div className="thumbnail"></div>
-        <div className="container">
+        <div className="container pb-4">
           <h1 className="currentPageTitle pl-04 ">კარიერა</h1>
-          <h5 className="color-emg pb-4 pl-04">იმუშავე ჩვენთან</h5>
-          <h5 className="pl-04">ჩვენი პრინციპები</h5>
-          <p className="pl-04 text-justify">
-            გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევითი ტექსტი სულაც არაა.
-            მისი ფესვები ჯერკიდევ ჩვ. წ. აღ-მდე 45 წლის დროინდელი კლასიკური
-            ლათინური ლიტერატურიდან მოდის. ვირჯინიის შტატში მდებარე
-            ჰემპდენ-სიდნეის კოლეჯის პროფესორმა რიჩარდ მაკკლინტოკმა აიღო ერთ-ერთი
-            ყველაზე იშვიათი ლათინური სიტყვა "consectetur" Lorem Ipsum-პასაჟიდან
-            და გადაწყვიტა მოეძებნა იგი კლასიკურ ლიტერატურაში. ძიება შედეგიანი
-            აღმოჩნდა — ტექსტი Lorem Ipsum გადმოწერილი ყოფილა ციცერონის "de
-            Finibus Bonorum et Malorum"-ის 1.10.32 და 1.10.33 თავებიდან. ეს
-            წიგნი ეთიკის თეორიის ტრაქტატია, რომელიც რენესანსის პერიოდში ძალიან
-            იყო გავრცელებული. Lorem Ipsum-ის პირველი ხაზი, "Lorem ipsum dolor
-            sit amet..." სწორედ ამ წიგნის 1.10.32 თავიდანაა.
-          </p>
-          {isAdmin && (
-            <Link
-              style={{ marginBottom: "10px" }}
-              className="btn btn-primary"
-              to="/career/new"
-            >
-              ვაკანსიის დამატება
-            </Link>
-          )}
+          <h5 className="color-emg  pl-04">იმუშავე ჩვენთან</h5>
         </div>
-        <div className="fluid-container  p-5">
+        <div className="fluid-container highlight p-5">
           <div className="container">
+            <h5 className="pl-04 pb-4">ჩვენი პრინციპები</h5>
+            <p className="pl-04 text-justify">
+              გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევითი ტექსტი სულაც
+              არაა. მისი ფესვები ჯერკიდევ ჩვ. წ. აღ-მდე 45 წლის დროინდელი
+              კლასიკური ლათინური ლიტერატურიდან მოდის. ვირჯინიის შტატში მდებარე
+              ჰემპდენ-სიდნეის კოლეჯის პროფესორმა რიჩარდ მაკკლინტოკმა აიღო
+              ერთ-ერთი ყველაზე იშვიათი ლათინური სიტყვა "consectetur" Lorem
+              Ipsum-პასაჟიდან და გადაწყვიტა მოეძებნა იგი კლასიკურ ლიტერატურაში.
+              ძიება შედეგიანი აღმოჩნდა — ტექსტი Lorem Ipsum გადმოწერილი ყოფილა
+              ციცერონის "de Finibus Bonorum et Malorum"-ის 1.10.32 და 1.10.33
+              თავებიდან. ეს წიგნი ეთიკის თეორიის ტრაქტატია, რომელიც რენესანსის
+              პერიოდში ძალიან იყო გავრცელებული. Lorem Ipsum-ის პირველი ხაზი,
+              "Lorem ipsum dolor sit amet..." სწორედ ამ წიგნის 1.10.32
+              თავიდანაა.
+            </p>
+            {isAdmin && (
+              <Link
+                style={{ marginBottom: "10px" }}
+                className="btn btn-primary"
+                to="/career/new"
+              >
+                ვაკანსიის დამატება
+              </Link>
+            )}
             <div
               className="mb-4 pl-04 accordion"
               id="accordion"
