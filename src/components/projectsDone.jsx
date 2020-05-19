@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import _ from "lodash";
 import ProjectFlex from "./projectFlex";
-import SearchBox from "./searchBox";
 
 class ProjectsDone extends Component {
   state = {
@@ -89,7 +88,7 @@ class ProjectsDone extends Component {
 
   render() {
     const { length: count } = this.props.projectsDone;
-    const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
+    const { pageSize, currentPage } = this.state;
     const { user } = this.props;
     let isAdmin = false;
     if (user) isAdmin = user.isAdmin;

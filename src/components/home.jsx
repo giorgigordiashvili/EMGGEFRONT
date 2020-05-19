@@ -6,11 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.min.js";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import certOne from "../res/ea.jpg";
 import certTwo from "../res/gac.png";
 import certThree from "../res/powerpoint.png";
-import { faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 class Home extends Component {
   state = {};
@@ -134,14 +132,7 @@ class Home extends Component {
                       <p className="card-text text-justify">{news.shortDesc}</p>
                     </div>
                     <div className="card-body d-flex justify-content-between">
-                      <div>
-                        <a href={news.fbLink} className="card-link color-emg">
-                          <FontAwesomeIcon icon={faFacebook} />
-                        </a>
-                        <a href={news.twLink} className="card-link color-emg">
-                          <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                      </div>
+                      <div></div>
                       <div className="color-emg">
                         <Moment format="DD MM YYYY" withTitle>
                           {news.publishDate}
@@ -194,14 +185,7 @@ class Home extends Component {
                       </p>
                     </div>
                     <div className="card-body d-flex justify-content-between">
-                      <div>
-                        <a href="#" className="card-link color-emg">
-                          <FontAwesomeIcon icon={faFacebook} />
-                        </a>
-                        <a href="#" className="card-link color-emg">
-                          <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                      </div>
+                      <div></div>
 
                       <div className="color-emg minimal-date">
                         <Moment format="DD MM YYYY" withTitle>

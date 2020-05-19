@@ -3,8 +3,6 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import auth from "../services/authService";
 import Moment from "react-moment";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 class ProjectFlex extends Component {
   render() {
@@ -19,7 +17,7 @@ class ProjectFlex extends Component {
                 <React.Fragment>
                   <Link
                     to={
-                      category == "Ongoing"
+                      category === "Ongoing"
                         ? "/editProjectOngoing/" + project._id
                         : "/editProjectDone/" + project._id
                     }
@@ -41,7 +39,7 @@ class ProjectFlex extends Component {
               <Link
                 className="home-news-link"
                 to={
-                  category == "Ongoing"
+                  category === "Ongoing"
                     ? "/projects/ongoing/" + project._id
                     : "/projects/done/" + project._id
                 }
@@ -58,7 +56,7 @@ class ProjectFlex extends Component {
                     <Link
                       className="home-news-link"
                       to={
-                        category == "Ongoing"
+                        category === "Ongoing"
                           ? "/projects/ongoing/" + project._id
                           : "/projects/done/" + project._id
                       }
@@ -70,14 +68,7 @@ class ProjectFlex extends Component {
                 <p className="card-text text-justify">{project.shortDesc}</p>
               </div>
               <div className="card-body d-flex justify-content-between">
-                <div>
-                  <a href="#" className="card-link color-emg">
-                    <FontAwesomeIcon icon={faFacebook} />
-                  </a>
-                  <a href="#" className="card-link color-emg">
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </a>
-                </div>
+                <div></div>
 
                 <div className="color-emg minimal-date">
                   <Moment format="DD MM YYYY" withTitle>

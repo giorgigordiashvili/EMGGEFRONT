@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import _ from "lodash";
 import NewsFlex from "./newsFlex";
-import SearchBox from "./searchBox";
 
 class News extends Component {
   state = {
@@ -67,21 +66,7 @@ class News extends Component {
       searchQuery,
     } = this.state;
     let { newss: allProjects } = this.props;
-    let number = allProjects.length % pageSize;
-    // if (number !== 0) {
-    //   number = pageSize - (allProjects.length % pageSize);
-    //   let objs = [];
-    //   for (let i = 0; i < number; i++) {
-    //     objs.push({
-    //       type: "hidden",
-    //       title: "",
-    //       shortDesc: "",
-    //       longDesc: "",
-    //       _id: `${Math.random()}`,
-    //     });
-    //   }
-    //   allProjects = allProjects.concat(objs);
-    // }
+
     let filtered = allProjects;
 
     if (searchQuery)
@@ -105,7 +90,7 @@ class News extends Component {
 
   render() {
     const { length: count } = this.props.newss;
-    const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
+    const { pageSize, currentPage } = this.state;
     const { user } = this.props;
     let isAdmin = false;
     if (user) isAdmin = user.isAdmin;

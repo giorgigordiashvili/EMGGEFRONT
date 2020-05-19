@@ -38,7 +38,7 @@ class NewsFlex extends Component {
                 <img
                   className="card-img-top home-card-img inner-shadow-emg"
                   src={news.shortImage}
-                  alt="Alt"
+                  alt={news.title}
                 />
               </Link>
               <div className="card-body">
