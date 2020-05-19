@@ -108,7 +108,7 @@ class App extends Component {
           <ScrollToTop></ScrollToTop>
           <Switch>
             <Route path="/login" component={LoginForm} />
-            <Route path="/search" component={SearchPage} />
+
             <Route path="/contact" component={Contact} />
             <Route path="/about/whoweare" component={WhoWeAre} />
             <Route path="/about/governance" component={Governance} />
@@ -139,7 +139,6 @@ class App extends Component {
             <Route
               render={(props) => (
                 <Home
-                  categories={this.state.categories}
                   projectsOngoing={this.state.projectsOngoing}
                   newss={this.state.newss}
                   user={this.state.user}
@@ -147,6 +146,17 @@ class App extends Component {
                 />
               )}
               path="/home"
+            />
+            <Route
+              render={(props) => (
+                <SearchPage
+                  projectsOngoing={this.state.projectsOngoing}
+                  projectsDone={this.state.projectsDone}
+                  newss={this.state.newss}
+                  {...props}
+                />
+              )}
+              path="/search"
             />
 
             <Route

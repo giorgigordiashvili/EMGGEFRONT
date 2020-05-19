@@ -20,7 +20,7 @@ class NewsFlex extends Component {
               style={{ border: "none" }}
             ></div>
           ) : (
-            <div key={news._id} className="card card-emg news-card">
+            <div key={news._id} className="card  card-emg news-card ">
               <Link className="home-news-link" to={"/news/" + news._id}>
                 <img
                   className="card-img-top home-card-img inner-shadow-emg"

@@ -307,7 +307,7 @@ ul {
 }
 
 .news-card {
-  margin: 0 10px 0 0 !important;
+  margin: 0 10px 10px 0 !important;
 }
 
 .management > .special::before {
@@ -602,6 +602,9 @@ ul {
 }
 
 @media (min-width: 992px) {
+  .news-card {
+    max-width: 220px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -611,6 +614,10 @@ ul {
     max-height: 240px;
     width: auto;
     height: auto;
+  }
+
+  .news-card {
+    max-width: 265px;
   }
 
   .col-2-4 {

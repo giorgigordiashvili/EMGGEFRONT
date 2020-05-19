@@ -146,12 +146,7 @@ class News extends Component {
             )}
 
             {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
-            <NewsFlex
-              count={this.props.count}
-              onRenewBag={this.props.onRenewBag}
-              newss={newss}
-              onDelete={this.handleDelete}
-            />
+            <NewsFlex newss={newss} onDelete={this.handleDelete} />
             <div className="p-4"></div>
             <Pagination
               itemsCount={totalCount}
