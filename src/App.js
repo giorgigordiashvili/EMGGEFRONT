@@ -270,6 +270,7 @@ class App extends Component {
                 <ProjectsOngoing
                   user={this.state.user}
                   onDelete={this.handleProjectDoneDelete}
+                  fullProjectsDone={this.state.projectsOngoing}
                   projectsOngoing={this.state.projectsOngoing}
                   {...props}
                 />
