@@ -34,9 +34,9 @@ class FullProject extends Component {
             />
           </div>
           <div className="col-md-6">
-            <h3 className="my-3">პროექტის აღწერა</h3>
+            <h3>პროექტის აღწერა</h3>
             <p className="text-justify  ">{project.longDesc}</p>
-            <h3 className="my-3">პროექტის დეტალები</h3>
+            <h3>პროექტის დეტალები</h3>
             <ul className="in-ul dejavu">
               <li>
                 <strong>მდებარეობა:</strong> {project.location}

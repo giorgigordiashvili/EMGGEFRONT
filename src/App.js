@@ -140,6 +140,7 @@ class App extends Component {
               render={(props) => (
                 <Home
                   projectsOngoing={this.state.projectsOngoing}
+                  projectsDone={this.state.projectsDone}
                   newss={this.state.newss}
                   user={this.state.user}
                   {...props}

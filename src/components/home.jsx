@@ -14,7 +14,7 @@ class Home extends Component {
   state = {};
 
   render() {
-    let { projectsOngoing, newss } = this.props;
+    let { projectsOngoing, newss, projectsDone } = this.props;
     const projectsResponsive = {
       responsive: [
         {
@@ -133,7 +133,7 @@ class Home extends Component {
                     </div>
                     <div className="card-body d-flex justify-content-between">
                       <div></div>
-                      <div className="color-emg">
+                      <div className="color-emg-dark">
                         <Moment format="DD MM YYYY" withTitle>
                           {news.publishDate}
                         </Moment>
@@ -151,7 +151,7 @@ class Home extends Component {
 
         {/* PROJECTS START */}
         <div className="container">
-          <h2 className="currentPageTitle pl-03">პროექტები</h2>
+          <h2 className="currentPageTitle pl-03">მიმდინარე პროექტები</h2>
         </div>
         <div className="fluid-container highlight pt-3 pb-3 ">
           <Slider className="container" {...projectsResponsive}>
@@ -174,7 +174,7 @@ class Home extends Component {
                         <span className="inner-shadow-emg">
                           <Link
                             className="home-news-link"
-                            to={"/project/ongoing" + project._id}
+                            to={"/project/ongoing/" + project._id}
                           >
                             {project.title}
                           </Link>
@@ -187,7 +187,7 @@ class Home extends Component {
                     <div className="card-body d-flex justify-content-between">
                       <div></div>
 
-                      <div className="color-emg minimal-date">
+                      <div className="color-emg-dark minimal-date">
                         <Moment format="DD MM YYYY" withTitle>
                           {project.publishDate}
                         </Moment>
@@ -202,6 +202,57 @@ class Home extends Component {
           </Slider>
         </div>
         {/* PROJECTS END */}
+        <div className="container">
+          <h2 className="currentPageTitle pl-03">დასრულებული პროექტები</h2>
+        </div>
+        <div className="fluid-container highlight pt-3 pb-3 ">
+          <Slider className="container" {...projectsResponsive}>
+            {projectsDone.slice(0, 4).map((project) =>
+              project.type !== "hidden" ? (
+                <div key={project._id}>
+                  <div className="card card-emg mr-4">
+                    <Link
+                      className="home-news-link"
+                      to={"/projects/done/" + project._id}
+                    >
+                      <img
+                        alt={project.name}
+                        className="card-img-top home-card-img inner-shadow-emg"
+                        src={project.shortImage}
+                      />
+                    </Link>
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        <span className="inner-shadow-emg">
+                          <Link
+                            className="home-news-link"
+                            to={"/project/done/" + project._id}
+                          >
+                            {project.title}
+                          </Link>
+                        </span>
+                      </h5>
+                      <p className="card-text text-justify">
+                        {project.shortDesc}
+                      </p>
+                    </div>
+                    <div className="card-body d-flex justify-content-between">
+                      <div></div>
+
+                      <div className="color-emg-dark minimal-date">
+                        <Moment format="DD MM YYYY" withTitle>
+                          {project.publishDate}
+                        </Moment>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div></div>
+              )
+            )}
+          </Slider>
+        </div>
       </React.Fragment>
     );
   }

@@ -60,7 +60,7 @@ class NewsFlex extends Component {
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </div>
-                <div className="color-emg">
+                <div className="color-emg-dark">
                   <Moment format="DD MM YYYY" withTitle>
                     {news.publishDate}
                   </Moment>

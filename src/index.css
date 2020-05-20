@@ -1,3 +1,9 @@
+html {
+  --main-bg-color: #f7f7f9;
+  --main-color: #74bb53;
+  --alter-color: #3d5971;
+}
+
 html,
 body {
   max-width: 100%;
@@ -7,7 +13,7 @@ body {
   margin-right: 2rem;
 }
 .dropdown-custom {
-  background-color: rgb(61, 89, 113);
+  background-color: var(--alter-color);
 }
 
 .dropdown-item-custom {
@@ -15,15 +21,15 @@ body {
 }
 
 .dropdown-custom > a:hover {
-  background-color: rgb(61, 89, 113);
+  background-color: var(--alter-color);
   color: white;
-  -webkit-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  -moz-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
+  -webkit-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  -moz-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  box-shadow: inset 0px -1px 0px 0px var(--main-color);
 }
 
 .dropdown-custom > a:active {
-  color: #74bb53;
+  color: var(--main-color);
 }
 
 p {
@@ -87,7 +93,7 @@ p {
 }
 
 .card-emg:hover {
-  border: 1px solid #74bb53;
+  border: 1px solid var(--main-color);
 }
 
 .certs {
@@ -153,11 +159,11 @@ p {
 }
 
 .bg-emg-blue {
-  background-color: #3d5971;
+  background-color: var(--alter-color);
 }
 
 .bg-emg-green {
-  background-color: #74bb53;
+  background-color: var(--main-color);
 }
 
 * {
@@ -176,7 +182,7 @@ p {
   width: 1px;
   height: 100%;
   position: relative;
-  background-color: #74bb53;
+  background-color: var(--main-color);
   transition: all 0.5s ease;
 }
 .search.open {
@@ -218,7 +224,7 @@ p {
   width: 16px;
   height: 16px;
   border-radius: 16px;
-  border: 2px solid #74bb53;
+  border: 2px solid var(--main-color);
   display: block;
   position: relative;
   transition: all 0.5s ease;
@@ -235,7 +241,7 @@ p {
   right: -0.8px;
   top: 12px;
   display: block;
-  background-color: #74bb53;
+  background-color: var(--main-color);
   transform: rotate(-45deg);
   transition: all 0.5s ease;
 }
@@ -247,7 +253,7 @@ p {
   right: -4.8px;
   top: 16px;
   display: block;
-  background-color: #74bb53;
+  background-color: var(--main-color);
   transform: rotate(-45deg);
   transition: all 0.5s ease;
 }
@@ -286,13 +292,13 @@ p {
 }
 
 .line-emg {
-  border: 1px solid #74bb53;
+  border: 1px solid var(--main-color);
 }
 
 .border-emg {
-  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(120, 192, 57, 1);
-  -moz-box-shadow: inset 0px 0px 0px 1px rgba(120, 192, 57, 1);
-  box-shadow: inset 0px 0px 0px 1px rgba(120, 192, 57, 1);
+  -webkit-box-shadow: inset 0px 0px 0px 1px var(--main-color);
+  -moz-box-shadow: inset 0px 0px 0px 1px var(--main-color);
+  box-shadow: inset 0px 0px 0px 1px var(--main-color);
 }
 .thumbnail {
   height: 30vh;
@@ -308,13 +314,13 @@ p {
 
 .btn:focus,
 .btn:active {
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(61, 89, 113, 1);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(61, 89, 113, 1);
-  box-shadow: 0px 0px 10px 1px rgba(61, 89, 113, 1);
+  -webkit-box-shadow: 0px 0px 10px 1px var(--alter-color);
+  -moz-box-shadow: 0px 0px 10px 1px var(--alter-color);
+  box-shadow: 0px 0px 10px 1px var(--alter-color);
 }
 
 .border-color-emg {
-  border-color: #74bb53 !important;
+  border-color: var(--main-color) !important;
 }
 
 ul {
@@ -327,7 +333,7 @@ ul {
 
 .management > .special::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #74bb53; /* Change the color */
+  color: var(--main-color); /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
@@ -354,35 +360,38 @@ ul {
 .currentPageTitle {
   font-size: 2rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.7rem;
 }
 
 .currentPageTitle::first-letter {
-  color: #78c039;
+  color: var(--main-color);
   font-size: 150%;
-  border-bottom: 2px solid #78c039;
+  border-bottom: 2px solid var(--main-color);
 }
 
 .color-emg {
-  color: #78c039;
+  color: var(--main-color);
+}
+.color-emg-dark {
+  color: var(--alter-color);
 }
 
 .map-button:hover {
-  background-color: #3d5971;
+  background-color: var(--alter-color);
 }
 
 .map-close {
-  background-color: #78c039;
+  background-color: var(--main-color);
   color: white;
 }
 
 .map-close:hover {
-  background-color: #3d5971;
+  background-color: var(--alter-color);
   color: white;
 }
 
 .highlight {
-  background-color: #f7f7f9;
+  background-color: var(--main-bg-color);
 }
 
 .vh-30 {
@@ -390,36 +399,36 @@ ul {
 }
 
 .border-emg {
-  border: 1px solid #78c039;
+  border: 1px solid var(--main-color);
   border-radius: 0.25rem;
 }
 
 .border-emg:hover {
-  border: 2px solid #78c039;
+  border: 2px solid var(--main-color);
   border-radius: 0.25rem;
 }
 
 .inner-shadow-emg {
   padding-bottom: 0.1rem;
-  -webkit-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  -moz-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  -webkit-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  -moz-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  box-shadow: inset 0px -2px 0px 0px var(--main-color);
 }
 
 .inner-line-emg {
   padding-bottom: 0.2rem;
-  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
-  -moz-box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
-  box-shadow: inset 0px -2px 0px 0px rgba(120, 192, 57, 1);
+  -webkit-box-shadow: inset 0px -2px 0px 0px var(--main-color);
+  -moz-box-shadow: inset 0px -2px 0px 0px var(--main-color);
+  box-shadow: inset 0px -2px 0px 0px var(--main-color);
 }
 
 .nav-link.active,
 .nav-item.show .nav-link-emg {
   border-color: white !important;
   padding-bottom: 0.7rem;
-  -webkit-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  -moz-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
+  -webkit-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  -moz-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  box-shadow: inset 0px -1px 0px 0px var(--main-color);
 }
 .nav-tabs {
   border: none !important;
@@ -429,9 +438,9 @@ ul {
   color: black !important;
 }
 .nav-item:hover {
-  -webkit-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  -moz-box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
-  box-shadow: inset 0px -1px 0px 0px rgba(120, 192, 57, 1);
+  -webkit-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  -moz-box-shadow: inset 0px -1px 0px 0px var(--main-color);
+  box-shadow: inset 0px -1px 0px 0px var(--main-color);
 }
 .card-deck {
   margin-right: auto;
@@ -447,21 +456,21 @@ ul {
   padding: 0.5rem;
   border-radius: 0;
   border: none;
-  background-color: #f7f7f9;
+  background-color: var(--main-bg-color);
 }
 
 .subscribe-button {
-  background-color: #78c039;
+  background-color: var(--main-color);
   color: white;
 }
 
 .subscribe-button:hover {
-  background-color: #3d5971;
+  background-color: var(--alter-color);
   color: white;
 }
 
 .emg-button {
-  background-color: #78c039;
+  background-color: var(--main-color);
   border: none;
   border-radius: 5px;
   color: white;
@@ -502,7 +511,7 @@ ul {
 }
 
 .emg-button:hover {
-  background-color: #0c2f4d;
+  background-color: var(--alter-color);
   cursor: pointer;
 }
 
@@ -586,25 +595,26 @@ ul {
 }
 
 .slick-prev:before {
-  color: #3d5971 !important;
+  margin-left: -42px;
+  color: var(--alter-color) !important;
 }
 
 .slick-next:before {
-  color: #3d5971 !important;
+  color: var(--alter-color) !important;
 }
 
 .page-item.active > button {
-  background-color: #3d5971 !important;
-  border-color: #3d5971 !important;
+  background-color: var(--alter-color) !important;
+  border-color: var(--alter-color) !important;
 }
 
 .home-news-link:hover {
-  color: #74bb53;
+  color: var(--main-color);
   text-decoration: none;
 }
 
 .item-title:hover {
-  color: #74bb53;
+  color: var(--main-color);
 }
 
 .pl-03 {
@@ -619,7 +629,7 @@ ul {
   padding: 0.4rem;
 }
 .map {
-  border: 2px solid #74bb53;
+  border: 2px solid var(--main-color);
   width: 100%;
   height: 100%;
 }

@@ -70,7 +70,7 @@ class ProjectFlex extends Component {
               <div className="card-body d-flex justify-content-between">
                 <div></div>
 
-                <div className="color-emg minimal-date">
+                <div className="color-emg-dark minimal-date">
                   <Moment format="DD MM YYYY" withTitle>
                     {project.publishDate}
                   </Moment>
