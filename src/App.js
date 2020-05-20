@@ -3,14 +3,12 @@ import ProtectedRoute from "./components/common/protectedRoute";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import LoginForm from "./components/loginForm";
-import EditCategory from "./components/editCategory";
 import EditNews from "./components/editNews";
 import NotFound from "./components/notFound";
 import Logout from "./components/logout";
 import NavBar from "./components/navBar";
 import auth from "./services/authService";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
 import News from "./components/news";
@@ -226,7 +224,6 @@ class App extends Component {
             />
             <ProtectedRoute path="/partners/:id" component={EditPartner} />
             <ProtectedRoute path="/career/:id" component={EditCareer} />
-            <ProtectedRoute path="/category/:id" component={EditCategory} />
             <ProtectedRoute path="/editnews/:id" component={EditNews} />
             <ProtectedRoute
               path="/editProjectOngoing/:id"

@@ -522,12 +522,7 @@ ul {
 .project-title-container {
   background-color: white;
 }
-.project {
-  border-radius: 0;
-  height: 50%;
-  background: linear-gradient(rgba(10, 87, 128, 0.4), rgba(10, 87, 128, 0.4)),
-    url("res/place.jpg");
-}
+
 .project-body {
   padding: 0;
 }
