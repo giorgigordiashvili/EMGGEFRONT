@@ -77,31 +77,6 @@ class Home extends Component {
 
     return (
       <React.Fragment>
-        <div className="slider fluid-container row justify-content-center">
-          <div className="certs d-flex flex-row bd-highlight mb-3">
-            <div className="p-2 bd-highlight">
-              <a href={certTwo}>
-                <img src={certTwo} width="60vh" alt="Accreditation" />
-              </a>
-            </div>
-            <div className="p-2 bd-highlight">
-              <a href={certOne}>
-                <img src={certOne} width="60vh" alt="Accreditation" />
-              </a>
-            </div>
-            <div className="p-2 bd-highlight">
-              <a href={certThree}>
-                <img src={certThree} width="60vh" alt="Presentation" />
-              </a>
-            </div>
-          </div>
-          <img
-            src={emgLogo}
-            className="align-self-center img-fluid p-4 logo"
-            alt=""
-          />
-        </div>
-
         <div className="container">
           <h2 className="currentPageTitle pl-03">სიახლეები</h2>
         </div>
