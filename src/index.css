@@ -1,6 +1,6 @@
 html {
   --main-bg-color: #f7f7f9;
-  --main-color: #74bb53;
+  --main-color: #7abe43;
   --alter-color: #3d5971;
 }
 
@@ -457,6 +457,14 @@ ul {
   border-radius: 0;
   border: none;
   background-color: var(--main-bg-color);
+}
+
+.m--7 {
+  margin-top: -7px;
+}
+
+label {
+  color: var(--main-color);
 }
 
 .subscribe-button {

@@ -13,8 +13,8 @@ class NewsFlex extends Component {
     return (
       <div className="card-deck">
         {newss.map((news) => (
-          <React.Fragment>
-            <div key={news._id} className="card  card-emg news-card ">
+          <React.Fragment key={news._id}>
+            <div className="card  card-emg news-card ">
               {isAdmin && (
                 <React.Fragment>
                   <Link

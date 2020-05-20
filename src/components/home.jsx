@@ -35,9 +35,6 @@ class Home extends Component {
             slidesToScroll: 1,
           },
         },
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ],
     };
     const responsive = {
@@ -66,9 +63,6 @@ class Home extends Component {
             slidesToScroll: 1,
           },
         },
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ],
     };
 
@@ -90,7 +84,7 @@ class Home extends Component {
             {newss.slice(0, 8).map((news) =>
               news.type !== "hidden" ? (
                 <div key={news._id}>
-                  <div className="card card-emg mr-4">
+                  <div className="card card-emg mr-4 ">
                     <Link className="home-news-link" to={"/news/" + news._id}>
                       <img
                         className="card-img-top home-card-img inner-shadow-emg"

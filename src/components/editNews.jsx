@@ -2,7 +2,6 @@ import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { getNew, saveNews } from "../services/newsService";
-import axios from "axios";
 import FileUploader from "./fileUploader";
 class EditStyle extends Form {
   state = {
@@ -64,38 +63,6 @@ class EditStyle extends Form {
     this.props.history.push("/news");
   };
 
-  setLink = async (link) => {
-    let { data } = this.state;
-    data.shortImage = link;
-    this.setState(data);
-  };
-
-  uploadFile = ({ target: { files } }) => {
-    console.log(files[0]);
-    let data = new FormData();
-    data.append("file", files[0]);
-
-    const options = {
-      onUploadProgress: (progressEvent) => {
-        const { loaded, total } = progressEvent;
-        let percent = Math.floor((loaded * 100) / total);
-        console.log(`${loaded} lb of ${total}kb | ${percent}%`);
-
-        if (percent < 100) {
-          this.setState({ uploadPercentage: percent });
-        }
-      },
-    };
-    axios.post(`https://emg.groot.ge/api/upload`, data, options).then((res) => {
-      console.log(res);
-
-      this.setState({
-        uploadPercentage: 100,
-        pictureLink: `https://emg.groot.ge/image/` + res.data.file.filename,
-      });
-    });
-  };
-
   render() {
     return (
       <div className="pt-8 container">
@@ -108,7 +75,6 @@ class EditStyle extends Form {
           {this.renderInput("longImage", "Inside image")}
           {this.renderInput("shortDesc", "Short Description")}
           {this.renderInput("longDesc", "Long Description")}
-
           {this.renderInput("fbLink", "Facebook link")}
           {this.renderInput("twLink", "Twitter link")}
           {this.renderButton("Submit")}

@@ -40,6 +40,10 @@ import EditProjectOngoing from "./components/editProjectOngoing";
 import ProjectsDone from "./components/projectsDone";
 import EditProjectDone from "./components/editProjectDone";
 import FullProject from "./components/fullProject";
+import { deleteNews } from "./services/newsService";
+import { deleteProjectDone } from "./services/projectDoneService";
+import { deleteProjectOngoing } from "./services/projectOngoingService";
+
 class App extends Component {
   state = {
     newss: [],
@@ -54,7 +58,6 @@ class App extends Component {
     const { data: newss } = await getNews();
     const { data: projectsDone } = await getProjectsDone();
     const { data: projectsOngoing } = await getProjectsOngoing();
-
     const { data: careers } = await getCareers();
     const { data: partners } = await getPartners();
     const user = auth.getCurrentUser();
@@ -82,7 +85,51 @@ class App extends Component {
       }
     }
   };
+  handleNewsDelete = async (news) => {
+    const originalNews = this.state.newss;
+    const newss = originalNews.filter((s) => s._id !== news._id);
+    this.setState({ newss });
+    try {
+      await deleteNews(news._id);
+    } catch (error) {
+      if (error.response && error.response.status === 404) {
+        toast.error("This news has already been deleted");
+        this.setState({ newss: originalNews });
+      }
+    }
+  };
 
+  handleProjectDoneDelete = async (project) => {
+    const originalDoneProjects = this.state.projectsDone;
+    const projectsDone = originalDoneProjects.filter(
+      (s) => s._id !== project._id
+    );
+    this.setState({ projectsDone });
+    try {
+      await deleteProjectDone(project._id);
+    } catch (error) {
+      if (error.response && error.response.status === 404) {
+        toast.error("This project has already been deleted");
+        this.setState({ projectsDone: originalDoneProjects });
+      }
+    }
+  };
+
+  handleProjectOngoingDelete = async (project) => {
+    const originalOngoingProjects = this.state.projectsOngoing;
+    const projectsOngoing = originalOngoingProjects.filter(
+      (s) => s._id !== project._id
+    );
+    this.setState({ projectsOngoing });
+    try {
+      await deleteProjectOngoing(project._id);
+    } catch (error) {
+      if (error.response && error.response.status === 404) {
+        toast.error("This project has already been deleted");
+        this.setState({ projectsOngoing: originalOngoingProjects });
+      }
+    }
+  };
   handleDeleteCareer = async (career) => {
     const originalCareers = this.state.careers;
     const careers = originalCareers.filter((s) => s._id !== career._id);
@@ -186,6 +233,7 @@ class App extends Component {
               path="/news"
               render={(props) => (
                 <News
+                  onNewsDelete={this.handleNewsDelete}
                   user={this.state.user}
                   newss={this.state.newss}
                   {...props}
@@ -196,7 +244,9 @@ class App extends Component {
               path="/projects/ongoing"
               render={(props) => (
                 <ProjectsOngoing
+                  fullProjectsDone={this.state.projectsOngoing}
                   user={this.state.user}
+                  onDelete={this.handleProjectOngoingDelete}
                   projectsOngoing={this.state.projectsOngoing}
                   {...props}
                 />
@@ -206,6 +256,8 @@ class App extends Component {
               path="/projects/done"
               render={(props) => (
                 <ProjectsDone
+                  fullProjectsDone={this.state.projectsDone}
+                  onDelete={this.handleProjectDoneDelete}
                   user={this.state.user}
                   projectsDone={this.state.projectsDone}
                   {...props}
@@ -217,6 +269,7 @@ class App extends Component {
               render={(props) => (
                 <ProjectsOngoing
                   user={this.state.user}
+                  onDelete={this.handleProjectDoneDelete}
                   projectsOngoing={this.state.projectsOngoing}
                   {...props}
                 />

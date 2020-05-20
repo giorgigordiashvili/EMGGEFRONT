@@ -1,32 +1,36 @@
-import React, { Component } from "react";
+import React from "react";
 import FontAwesome from "react-fontawesome";
 import { Link } from "react-router-dom";
 import phoneFooter from "../res/phoneFooter.png";
 import mailFooter from "../res/mailFooter.png";
 import locationFooter from "../res/locationFooter.png";
+import Form from "./common/form";
+import Joi from "joi-browser";
+import { saveSubscribe } from "../services/subscribeService";
+import { toast } from "react-toastify";
 
-class Footer extends Component {
-  state = {};
+class Footer extends Form {
+  state = { data: { email: "" }, errors: "" };
+  schema = {
+    _id: Joi.string(),
+    email: Joi.string().required().label("ელფოსტა"),
+  };
+
+  doSubmit = async () => {
+    await saveSubscribe(this.state.data);
+    toast.success("თქვენ წარმატებით გამოიწერეთ სიახლეები.");
+  };
+
   render() {
     return (
       <React.Fragment>
         <hr className="line-emg m-0" />
         <div className="container p-4 d-flex justify-content-center">
-          <form className="form-inline">
-            <div className="form-group mx-sm-3 mb-2">
-              <label htmlFor="inputPassword2" className="sr-only">
-                ელფოსტა
-              </label>
-              <input
-                type="password"
-                className="form-control"
-                id="inputPassword2"
-                placeholder=" ელ ფოსტა"
-              />
+          <form onSubmit={this.handleSubmit} className="form-inline">
+            <div className="form-group mx-sm-3 ">
+              {this.renderInput("email")}
             </div>
-            <button type="submit" className="btn subscribe-button mb-2">
-              გამოწერა
-            </button>
+            {this.renderButton("გამოწერა")}
           </form>
         </div>
         <hr className="line-emg m-0" />
@@ -56,7 +60,11 @@ class Footer extends Component {
                       <td>
                         <img alt="mail" src={mailFooter} />
                       </td>
-                      <td style={{ padding: "15px 0" }}>info@emg.ge</td>
+                      <td style={{ padding: "15px 0" }}>
+                        <a href="mailto:info@emg.ge" className="pr-5">
+                          info@emg.ge
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>

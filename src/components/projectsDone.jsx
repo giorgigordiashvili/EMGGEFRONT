@@ -1,95 +1,38 @@
 import React, { Component } from "react";
-import { deleteProjectDone } from "../services/projectDoneService";
 import { paginate } from "../utils/paginate";
 import Pagination from "./common/pagination";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import _ from "lodash";
 import ProjectFlex from "./projectFlex";
+import qualityAndPermits from "../res/qualityandpermits.png";
 
 class ProjectsDone extends Component {
   state = {
     projectsDone: [],
     categories: [],
     branches: [],
-    pageSize: 4,
+    pageSize: 2,
     currentPage: 1,
     searchQuery: "",
     selectedStyle: null,
     sortColumn: { path: "title", order: "asc" },
   };
 
-  handleDelete = async (project) => {
-    const originalProjects = this.state.projectsDone;
-    const projects = originalProjects.filter((s) => s._id !== project._id);
-    this.setState({ projects });
-    try {
-      await deleteProjectDone(project._id);
-    } catch (error) {
-      if (error.response && error.response.status === 404) {
-        toast.error("This project has already been deleted");
-        this.setState({ projectsDone: originalProjects });
-      }
-    }
-  };
-
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
-  handleStyleSelect = (style) => {
-    this.setState({ selectedStyle: style, searchQuery: "", currentPage: 1 });
-  };
-
-  handleSort = (sortColumn) => {
-    this.setState({ sortColumn });
-  };
-
-  handleSearch = (query) => {
-    this.setState({ searchQuery: query, selectedStyle: null, currentPage: 1 });
-  };
-
-  renderSortIcon = (column) => {
-    const { sortColumn } = this.state;
-
-    if (column.path !== sortColumn.path) return null;
-    if (sortColumn.order === "asc") return <i className="fa fa-sort-asc" />;
-    return <i className="fa fa-sort-desc" />;
-  };
-
   getPagedData = () => {
-    const {
-      pageSize,
-      currentPage,
-      selectedStyle,
-      sortColumn,
-      searchQuery,
-    } = this.state;
+    const { pageSize, currentPage } = this.state;
     let { projectsDone: allProjects } = this.props;
-    let filtered = allProjects;
 
-    if (searchQuery) {
-      console.log(allProjects);
-
-      filtered = allProjects.filter(
-        (s) =>
-          s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          s.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          s.longDesc.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    } else if (selectedStyle && selectedStyle._id)
-      filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
-
-    const sorted = _.orderBy(filtered, [sortColumn.path], sortColumn.order);
-
-    const projects = paginate(sorted, currentPage, pageSize);
-    return { totalCount: filtered.length, data: projects };
+    const projects = paginate(allProjects, currentPage, pageSize);
+    return { totalCount: allProjects.length, data: projects };
   };
 
   render() {
     const { length: count } = this.props.projectsDone;
     const { pageSize, currentPage } = this.state;
-    const { user } = this.props;
+    const { user, onDelete, fullProjectsDone } = this.props;
     let isAdmin = false;
     if (user) isAdmin = user.isAdmin;
 
@@ -147,6 +90,16 @@ class ProjectsDone extends Component {
               </h1>
             </div>
             <div className="fluid-container highlight p-5">
+              <div className="container">
+                <div className="column text-center">
+                  {fullProjectsDone.map((s) => (
+                    <p>
+                      <Link to={"/projects/done/" + s._id}>{s.title}</Link>
+                    </p>
+                  ))}
+                </div>
+              </div>
+
               <div className="container ">
                 {isAdmin && (
                   <Link
@@ -164,7 +117,7 @@ class ProjectsDone extends Component {
                   count={this.props.count}
                   onRenewBag={this.props.onRenewBag}
                   newss={projectsDone}
-                  onDelete={this.handleDelete}
+                  onDelete={onDelete}
                 />
                 <Pagination
                   itemsCount={totalCount}

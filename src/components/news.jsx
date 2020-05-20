@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { deleteNews } from "../services/newsService";
 import { paginate } from "../utils/paginate";
 import Pagination from "./common/pagination";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import _ from "lodash";
 import NewsFlex from "./newsFlex";
 
 class News extends Component {
@@ -19,79 +16,22 @@ class News extends Component {
     sortColumn: { path: "title", order: "asc" },
   };
 
-  handleDelete = async (project) => {
-    const originalProjects = this.state.newss;
-    const projects = originalProjects.filter((s) => s._id !== project._id);
-    this.setState({ projects });
-    try {
-      await deleteNews(project._id);
-    } catch (error) {
-      if (error.response && error.response.status === 404) {
-        toast.error("This project has already been deleted");
-        this.setState({ newss: originalProjects });
-      }
-    }
-  };
-
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
-  handleStyleSelect = (style) => {
-    this.setState({ selectedStyle: style, searchQuery: "", currentPage: 1 });
-  };
-
-  handleSort = (sortColumn) => {
-    this.setState({ sortColumn });
-  };
-
-  handleSearch = (query) => {
-    this.setState({ searchQuery: query, selectedStyle: null, currentPage: 1 });
-  };
-
-  renderSortIcon = (column) => {
-    const { sortColumn } = this.state;
-
-    if (column.path !== sortColumn.path) return null;
-    if (sortColumn.order === "asc") return <i className="fa fa-sort-asc" />;
-    return <i className="fa fa-sort-desc" />;
-  };
-
   getPagedData = () => {
-    const {
-      pageSize,
-      currentPage,
-      selectedStyle,
-      sortColumn,
-      searchQuery,
-    } = this.state;
+    const { pageSize, currentPage } = this.state;
     let { newss: allProjects } = this.props;
 
-    let filtered = allProjects;
-
-    if (searchQuery)
-      filtered = allProjects.filter(
-        (s) =>
-          (s.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
-            s.type !== "hidden") ||
-          (s.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) &&
-            s.type !== "hidden") ||
-          (s.longDesc.toLowerCase().includes(searchQuery.toLowerCase()) &&
-            s.type !== "hidden")
-      );
-    else if (selectedStyle && selectedStyle._id)
-      filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
-
-    const sorted = _.orderBy(filtered, [sortColumn.path], sortColumn.order);
-
-    const projects = paginate(sorted, currentPage, pageSize);
-    return { totalCount: filtered.length, data: projects };
+    const projects = paginate(allProjects, currentPage, pageSize);
+    return { totalCount: allProjects.length, data: projects };
   };
 
   render() {
     const { length: count } = this.props.newss;
     const { pageSize, currentPage } = this.state;
-    const { user } = this.props;
+    const { user, onNewsDelete } = this.props;
     let isAdmin = false;
     if (user) isAdmin = user.isAdmin;
 
@@ -113,6 +53,7 @@ class News extends Component {
     return (
       <React.Fragment>
         <div className="thumbnail" />
+
         <div className="container">
           <h1 className="currentPageTitle  col-12 col-md-12 pl-04">
             სიახლეები
@@ -130,8 +71,7 @@ class News extends Component {
               </Link>
             )}
 
-            {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
-            <NewsFlex newss={newss} onDelete={this.handleDelete} />
+            <NewsFlex newss={newss} onDelete={onNewsDelete} />
             <div className="p-4"></div>
             <Pagination
               itemsCount={totalCount}

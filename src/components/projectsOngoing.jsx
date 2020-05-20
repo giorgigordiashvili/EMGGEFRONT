@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { deleteProjectOngoing } from "../services/projectOngoingService";
 import { paginate } from "../utils/paginate";
 import Pagination from "./common/pagination";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import _ from "lodash";
 import ProjectFlex from "./projectFlex";
 
 class ProjectsOngoing extends Component {
@@ -12,83 +9,29 @@ class ProjectsOngoing extends Component {
     projectsOngoing: [],
     categories: [],
     branches: [],
-    pageSize: 4,
+    pageSize: 2,
     currentPage: 1,
     searchQuery: "",
     selectedStyle: null,
     sortColumn: { path: "title", order: "asc" },
   };
 
-  handleDelete = async (project) => {
-    const originalProjects = this.state.projectsOngoing;
-    const projects = originalProjects.filter((s) => s._id !== project._id);
-    this.setState({ projects });
-    try {
-      await deleteProjectOngoing(project._id);
-    } catch (error) {
-      if (error.response && error.response.status === 404) {
-        toast.error("This project has already been deleted");
-        this.setState({ projectsOngoing: originalProjects });
-      }
-    }
-  };
-
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
-  handleStyleSelect = (style) => {
-    this.setState({ selectedStyle: style, searchQuery: "", currentPage: 1 });
-  };
-
-  handleSort = (sortColumn) => {
-    this.setState({ sortColumn });
-  };
-
-  handleSearch = (query) => {
-    this.setState({ searchQuery: query, selectedStyle: null, currentPage: 1 });
-  };
-
-  renderSortIcon = (column) => {
-    const { sortColumn } = this.state;
-
-    if (column.path !== sortColumn.path) return null;
-    if (sortColumn.order === "asc") return <i className="fa fa-sort-asc" />;
-    return <i className="fa fa-sort-desc" />;
-  };
-
   getPagedData = () => {
-    const {
-      pageSize,
-      currentPage,
-      selectedStyle,
-      sortColumn,
-      searchQuery,
-    } = this.state;
+    const { pageSize, currentPage } = this.state;
     let { projectsOngoing: allProjects } = this.props;
 
-    let filtered = allProjects;
-
-    if (searchQuery)
-      filtered = allProjects.filter(
-        (s) =>
-          s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          s.shortDesc.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          s.longDesc.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    else if (selectedStyle && selectedStyle._id)
-      filtered = allProjects.filter((m) => m.style._id === selectedStyle._id);
-
-    const sorted = _.orderBy(filtered, [sortColumn.path], sortColumn.order);
-
-    const projects = paginate(sorted, currentPage, pageSize);
-    return { totalCount: filtered.length, data: projects };
+    const projects = paginate(allProjects, currentPage, pageSize);
+    return { totalCount: allProjects.length, data: projects };
   };
 
   render() {
     const { length: count } = this.props.projectsOngoing;
     const { pageSize, currentPage } = this.state;
-    const { user } = this.props;
+    const { user, onDelete, fullProjectsDone } = this.props;
     let isAdmin = false;
     if (user) isAdmin = user.isAdmin;
 
@@ -100,9 +43,9 @@ class ProjectsOngoing extends Component {
             <Link
               style={{ marginBottom: "10px" }}
               className="btn btn-primary ml-1"
-              to="/editProjectOngoing/new"
+              to="/editProjectDone/new"
             >
-              მიმდინარე პროექტის დამატება
+              დასრულებული პროექტის დამატება
             </Link>
             <p>ბაზაში პროექტები არ არის დამატებული</p>
           </div>
@@ -126,7 +69,7 @@ class ProjectsOngoing extends Component {
               მიმდინარე პროექტები
             </Link>
             <Link
-              className="nav-item nav-link nav-link-emg "
+              className="nav-item nav-link nav-link-emg  "
               to="/projects/done"
             >
               დასრულებული პროექტები
@@ -142,35 +85,45 @@ class ProjectsOngoing extends Component {
           >
             <div className="container">
               <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                მიმდინარე პროექტები
+                დასრულებული პროექტები
               </h1>
             </div>
             <div className="fluid-container highlight p-5">
+              <div className="container">
+                <div className="column text-center">
+                  {fullProjectsDone.map((s) => (
+                    <p>
+                      <Link to={"/projects/ongoing/" + s._id}>{s.title}</Link>
+                    </p>
+                  ))}
+                </div>
+              </div>
+
               <div className="container ">
                 {isAdmin && (
                   <Link
                     style={{ marginBottom: "10px" }}
                     className="btn btn-primary ml-1"
-                    to="/editProjectOngoing/new"
+                    to="/editProjectDone/new"
                   >
-                    მიმდინარე პროექტის დამატება
+                    დასრულებული პროექტის დამატება
                   </Link>
                 )}
 
                 {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
-                <ProjectFlex
-                  category={"Ongoing"}
+                {/* <ProjectFlex
+                  category={"Done"}
                   count={this.props.count}
                   onRenewBag={this.props.onRenewBag}
                   newss={projectsOngoing}
-                  onDelete={this.handleDelete}
+                  onDelete={onDelete}
                 />
                 <Pagination
                   itemsCount={totalCount}
                   pageSize={pageSize}
                   onPageChange={this.handlePageChange}
                   currentPage={currentPage}
-                />
+                /> */}
               </div>
             </div>
           </div>

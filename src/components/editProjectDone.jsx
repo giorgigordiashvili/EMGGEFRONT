@@ -5,12 +5,10 @@ import {
   getProjectDone,
   saveProjectDone,
 } from "../services/projectDoneService";
-import axios from "axios";
-
 import FileUploader from "./fileUploader";
+
 class EditProjectDone extends Form {
   state = {
-    uploadPercentage: 0,
     pictureLink: "",
     data: {
       title: "",
@@ -91,36 +89,6 @@ class EditProjectDone extends Form {
     await saveProjectDone(this.state.data);
 
     this.props.history.push("/projects/done");
-  };
-
-  setLink = async (link) => {
-    let { data } = this.state;
-    data.shortImage = link;
-    this.setState(data);
-  };
-
-  uploadFile = ({ target: { files } }) => {
-    console.log(files[0]);
-    let data = new FormData();
-    data.append("file", files[0]);
-
-    const options = {
-      onUploadProgress: (progressEvent) => {
-        const { loaded, total } = progressEvent;
-        let percent = Math.floor((loaded * 100) / total);
-        console.log(`${loaded} lb of ${total}kb | ${percent}%`);
-
-        if (percent < 100) {
-          this.setState({ uploadPercentage: percent });
-        }
-      },
-    };
-    axios.post(`https://emg.groot.ge/api/upload`, data, options).then((res) => {
-      this.setState({
-        uploadPercentage: 100,
-        pictureLink: `https://emg.groot.ge/image/` + res.data.file.filename,
-      });
-    });
   };
 
   render() {
