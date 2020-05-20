@@ -6,9 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.min.js";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import certOne from "../res/ea.jpg";
-import certTwo from "../res/gac.png";
-import certThree from "../res/powerpoint.png";
 
 class Home extends Component {
   state = {};
@@ -77,6 +74,14 @@ class Home extends Component {
 
     return (
       <React.Fragment>
+        <div className="slider fluid-container row justify-content-center">
+          <img
+            src={emgLogo}
+            className="align-self-center img-fluid p-4 logo"
+            alt=""
+          />
+        </div>
+
         <div className="container">
           <h2 className="currentPageTitle pl-03">სიახლეები</h2>
         </div>
