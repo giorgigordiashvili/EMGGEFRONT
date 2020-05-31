@@ -99,7 +99,7 @@ class ProjectsOngoing extends Component {
                 </ul>
               </div>
 
-              <div className="container ">
+              <div className="container pl-4 pr-25">
                 {isAdmin && (
                   <Link
                     style={{ marginBottom: "10px" }}
