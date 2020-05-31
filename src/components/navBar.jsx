@@ -21,7 +21,9 @@ class NavBar extends Component {
       dropdown: true,
     },
     isOpen: false,
+    toggle: false,
   };
+
   componentDidMount() {
     const user = auth.getCurrentUser();
     this.setState({ user });
@@ -46,7 +48,12 @@ class NavBar extends Component {
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-dark">
             <button
-              className="navbar-toggler"
+              className={
+                !this.state.toggle
+                  ? "navbar-toggler"
+                  : "navbar-toggler collapsed"
+              }
+              onClick={() => console.log("test")}
               type="button"
               data-toggle="collapse"
               data-target="#navbarCollapse"

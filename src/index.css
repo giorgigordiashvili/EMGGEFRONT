@@ -515,7 +515,11 @@ label {
 }
 
 .opacity-8 {
-  opacity: 0.5;
+  opacity: 0.7;
+}
+
+.opacity-1 {
+  opacity: 1;
 }
 
 .emg-button:hover {

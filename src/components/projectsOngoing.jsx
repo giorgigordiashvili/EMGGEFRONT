@@ -85,18 +85,18 @@ class ProjectsOngoing extends Component {
           >
             <div className="container">
               <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
-                დასრულებული პროექტები
+                მიმდინარე პროექტები
               </h1>
             </div>
-            <div className="fluid-container highlight p-5">
-              <div className="container">
-                <div className="column text-center">
+            <div className="fluid-container highlight pt-5 pb-5 ">
+              <div className="container ">
+                <ul className="management pl-4">
                   {fullProjectsDone.map((s) => (
-                    <p>
+                    <li className="special">
                       <Link to={"/projects/ongoing/" + s._id}>{s.title}</Link>
-                    </p>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
 
               <div className="container ">
@@ -111,7 +111,7 @@ class ProjectsOngoing extends Component {
                 )}
 
                 {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
-                {/* <ProjectFlex
+                <ProjectFlex
                   category={"Done"}
                   count={this.props.count}
                   onRenewBag={this.props.onRenewBag}
@@ -123,7 +123,7 @@ class ProjectsOngoing extends Component {
                   pageSize={pageSize}
                   onPageChange={this.handlePageChange}
                   currentPage={currentPage}
-                /> */}
+                />
               </div>
             </div>
           </div>

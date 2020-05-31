@@ -38,7 +38,7 @@ class Footer extends Form {
           <div className="container pt-5 pb-5 column pl-04">
             <div className="row">
               <div className="col-md-6 col-12">
-                <h5 className="color-emg pb-3">კონტაქტი</h5>
+                <h5 className="color-emg-dark pb-3">კონტაქტი</h5>
                 <table className="table-contact">
                   <tbody>
                     <tr>
@@ -80,17 +80,20 @@ class Footer extends Form {
               </div>
             </div>
           </div>
-          <div className="fluid-container p-3 mb-5 bg-emg-green color-white opacity-8">
+          <div className="fluid-container p-3 mb-5 bg-emg-green color-emg-dark opacity-8">
             <div className="container">
               <div className="pl-04">
                 გამოგვყევით
-                <Link to="#" className="card-link-emg p-2 color-white">
+                <Link
+                  to="#"
+                  className="card-link-emg opacity-1 p-2 color-emg-dark"
+                >
                   <FontAwesome
                     name="facebook"
                     className="fab fa-facebook-f"
                   ></FontAwesome>
                 </Link>
-                <Link to="#" className="card-link-emg p-2 color-white">
+                <Link to="#" className="card-link-emg p-2 color-emg-dark">
                   <FontAwesome
                     name="twitter"
                     className="fab fa-twitter"

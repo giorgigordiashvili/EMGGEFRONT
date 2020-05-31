@@ -63,23 +63,23 @@ class Contact extends Form {
                     link={"https://map.google.com"}
                   ></MapLogo>
                   <div className="column">
-                    <span className="color-emg" style={{ margin: 0 }}>
-                      სათავო ოფისი: თბილისი
-                    </span>
-                    <br />
-                    <p style={{ margin: 0, fontSize: 25 }}>
-                      საქართველო, თბილისი 0101 კ. ქუთათელაძის ქ. N8
-                    </p>
+                    <h3 className="color-emg">სათავო ოფისი: თბილისი</h3>
+
+                    <p>საქართველო, თბილისი 0101 კ. ქუთათელაძის ქ. N8</p>
                     <p>
                       <img alt="phone" className="p-1 pl-5" src={homeFooter} />
                       <a href="tel:+995322709709" className="pr-5 ">
                         (+995 32) 2 709 709
                       </a>
-
+                    </p>
+                    <p>
                       <img alt="phone" className="p-1 pl-5" src={phoneFooter} />
                       <a href="tel:+995591599292" className="pr-5">
                         (+995) 591 59 92 92
                       </a>
+                    </p>
+                    <p>
+                      {" "}
                       <img alt="mail" className="p-1 pl-5" src={mailFooter} />
                       <a href="mailto:info@emg.ge" className="pr-5">
                         info@emg.ge
@@ -87,7 +87,7 @@ class Contact extends Form {
                     </p>
                   </div>
                 </div>
-                <div className="container p-5"></div>
+
                 <div className="col-6 col-md-6 row">
                   <MapLogo
                     city="Kutaisi"

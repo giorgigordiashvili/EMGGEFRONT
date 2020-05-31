@@ -91,13 +91,13 @@ class ProjectsDone extends Component {
             </div>
             <div className="fluid-container highlight p-5">
               <div className="container">
-                <div className="column text-center">
+                <ul className="management pl-4">
                   {fullProjectsDone.map((s) => (
-                    <p>
+                    <li className="special">
                       <Link to={"/projects/done/" + s._id}>{s.title}</Link>
-                    </p>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
 
               <div className="container ">
