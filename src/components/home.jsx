@@ -85,13 +85,21 @@ class Home extends Component {
               news.type !== "hidden" ? (
                 <div key={news._id}>
                   <div className="card card-emg mr-4 ">
-                    <Link className="home-news-link" to={"/news/" + news._id}>
-                      <img
-                        className="card-img-top home-card-img inner-shadow-emg"
-                        src={news.shortImage}
-                        alt={news.title}
-                      />
-                    </Link>
+                    <img
+                      style={
+                        this.state.hover
+                          ? { cursor: "pointer" }
+                          : { cursor: "default" }
+                      }
+                      onMouseEnter={() => this.setState({ hover: true })}
+                      onMouseOut={() => this.setState({ hover: false })}
+                      onClick={() =>
+                        this.props.history.push("/news/" + news._id)
+                      }
+                      className="card-img-top home-card-img inner-shadow-emg"
+                      src={news.shortImage}
+                      alt={news.title}
+                    />
                     <div className="card-body">
                       <h5 className="card-title">
                         <span className="inner-shadow-emg">
@@ -133,16 +141,23 @@ class Home extends Component {
               project.type !== "hidden" ? (
                 <div key={project._id}>
                   <div className="card card-emg mr-4">
-                    <Link
-                      className="home-news-link"
-                      to={"/projects/ongoing/" + project._id}
-                    >
-                      <img
-                        alt={project.name}
-                        className="card-img-top home-card-img inner-shadow-emg"
-                        src={project.shortImage}
-                      />
-                    </Link>
+                    <img
+                      style={
+                        this.state.hover
+                          ? { cursor: "pointer" }
+                          : { cursor: "default" }
+                      }
+                      onMouseEnter={() => this.setState({ hover: true })}
+                      onMouseOut={() => this.setState({ hover: false })}
+                      onClick={() =>
+                        this.props.history.push(
+                          "/projects/ongoing/" + project._id
+                        )
+                      }
+                      alt={project.title}
+                      className="card-img-top home-card-img inner-shadow-emg"
+                      src={project.shortImage}
+                    />
                     <div className="card-body">
                       <h5 className="card-title">
                         <span className="inner-shadow-emg">
@@ -185,16 +200,21 @@ class Home extends Component {
               project.type !== "hidden" ? (
                 <div key={project._id}>
                   <div className="card card-emg mr-4">
-                    <Link
-                      className="home-news-link"
-                      to={"/projects/done/" + project._id}
-                    >
-                      <img
-                        alt={project.name}
-                        className="card-img-top home-card-img inner-shadow-emg"
-                        src={project.shortImage}
-                      />
-                    </Link>
+                    <img
+                      alt={project.title}
+                      style={
+                        this.state.hover
+                          ? { cursor: "pointer" }
+                          : { cursor: "default" }
+                      }
+                      onMouseEnter={() => this.setState({ hover: true })}
+                      onMouseOut={() => this.setState({ hover: false })}
+                      onClick={() =>
+                        this.props.history.push("/projects/done/" + project._id)
+                      }
+                      className="card-img-top home-card-img inner-shadow-emg"
+                      src={project.shortImage}
+                    />
                     <div className="card-body">
                       <h5 className="card-title">
                         <span className="inner-shadow-emg">
