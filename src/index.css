@@ -88,10 +88,6 @@ p {
   font-size: 13px;
 }
 
-.card-emg {
-  border: 1px solid transparent;
-}
-
 .card-emg:hover {
   border: 1px solid var(--main-color);
 }
@@ -447,9 +443,10 @@ ul {
   margin-left: auto;
 }
 .card-emg {
+  transition: all 0.5s ease;
   padding: 0.5rem;
   border-radius: 0;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .card-emg-dark {

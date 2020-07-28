@@ -137,7 +137,7 @@ class StrategicVision extends Component {
                   <div className="column text-center">
                     <img src={priorities} alt="" />
                     <h5 className="p-2 color-emg">პრიორიტეტები</h5>
-                    <div className="d-flex ml-10">
+                    <div className="d-flex ">
                       <p className="text-justify">
                         <ul className="management">
                           <li className="special">მიუკერძოებლობა</li>

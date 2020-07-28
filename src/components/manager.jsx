@@ -30,12 +30,22 @@ class Manager extends Component {
             />
             <div
               className="card-body text-center"
-              style={{ minHeight: "115px" }}
+              style={{
+                minHeight: "170px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
             >
               <h5 className="card-title mb-0">
                 <span className="inner-shadow-emg">{name}</span>
               </h5>
-              <div className="card-text text-black-50 ">{position}</div>
+              <div
+                className="card-text text-black-50 "
+                style={{ paddingTop: "1rem" }}
+              >
+                {position}
+              </div>
             </div>
           </div>
         </button>

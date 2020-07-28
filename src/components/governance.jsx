@@ -122,7 +122,7 @@ class Governance extends Component {
                 <Manager
                   name="იოვანე სიხარულიძე"
                   img={
-                    "https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
+                    "https://www.revixpert.ch/app/uploads/portrait-placeholder.jpg"
                   }
                   position="გენერალური დირექტორი"
                   id="manager1"
