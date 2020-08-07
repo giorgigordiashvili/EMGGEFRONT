@@ -7,7 +7,7 @@ class MapLogo extends Component {
     const { link } = this.props;
     return (
       <div>
-        <a href={link} type="button" className="btn ">
+        <a href={link} className="btn ">
           <img className="location map-button" src={locationImage} alt="" />
         </a>
       </div>
