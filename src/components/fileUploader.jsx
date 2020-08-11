@@ -8,7 +8,7 @@ export default class FileUploader extends Component {
   render() {
     return (
       <form
-        action={apiUrl + "/upload"}
+        action={apiUrl + "/api/upload"}
         method="POST"
         encType="multipart/form-data"
       >

@@ -104,7 +104,7 @@ class ProjectsOngoing extends Component {
                   <Link
                     style={{ marginBottom: "10px" }}
                     className="btn btn-primary ml-1"
-                    to="/editProjectDone/new"
+                    to="/editProjectOngoing/new"
                   >
                     დასრულებული პროექტის დამატება
                   </Link>
@@ -112,7 +112,7 @@ class ProjectsOngoing extends Component {
 
                 {/* <SearchBox value={searchQuery} onChange={this.handleSearch} /> */}
                 <ProjectFlex
-                  category={"Done"}
+                  category={"Ongoing"}
                   count={this.props.count}
                   onRenewBag={this.props.onRenewBag}
                   newss={projectsOngoing}

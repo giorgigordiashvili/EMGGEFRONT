@@ -65,7 +65,7 @@ class Contact extends Form {
                   <div className="column">
                     <h3 className="color-emg">სათავო ოფისი: თბილისი</h3>
 
-                    <p>საქართველო, თბილისი 0101 კ. ქუთათელაძის ქ. N8</p>
+                    <p>საქართველო, თბილისი 0177, ალექსანდრე ყაზბეგის #47</p>
                     <p>
                       <img alt="phone" className="p-1 pl-5" src={homeFooter} />
                       <a href="tel:+995322709709" className="pr-5 ">
