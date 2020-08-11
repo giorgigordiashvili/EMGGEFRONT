@@ -45,7 +45,7 @@ class ProjectsOngoing extends Component {
               className="btn btn-primary ml-1"
               to="/editProjectDone/new"
             >
-              დასრულებული პროექტის დამატება
+              მიმდინარე პროექტის დამატება
             </Link>
             <p>ბაზაში პროექტები არ არის დამატებული</p>
           </div>
