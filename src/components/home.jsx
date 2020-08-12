@@ -76,7 +76,7 @@ class Home extends Component {
           />
         </div>
 
-        <div className="container">
+        {/* <div className="container">
           <h2 className="currentPageTitle pl-03">სიახლეები</h2>
         </div>
         <div className="fluid-container highlight pt-3 pb-3">
@@ -129,7 +129,7 @@ class Home extends Component {
             )}
           </Slider>
           <div className="container p-4"></div>
-        </div>
+        </div> */}
 
         {/* PROJECTS START */}
         <div className="container">
