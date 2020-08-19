@@ -40,9 +40,7 @@ class Career extends Component {
               სტაჟირების შედეგების შეფასებიდან გამომდინარე მიიღება
               გადაწყვეტილება კომპანიაში შემდგომი დასაქმების შესახებ.
             </p>
-            {!careers.length && (
-              <p className="pl-04 text-justify">ამჟამად ვაკანსიები არ გვაქვს</p>
-            )}
+
             <p className="pl-04 text-justify">
               ამასთან, ჩვენ ყოველთვის მზად ვართ, შევხვდეთ ენერგიულ და ნიჭიერ
               პროფესიონალებს, რომლებსაც ჩვენი გუნდის წევრობა სურთ.
@@ -52,6 +50,9 @@ class Career extends Component {
               მომავალში, გთხოვთ, გამოაგზავნოთ თქვენი CV და სამოტივაციო წერილი
               მისამართზე: hr@emg.ge
             </p>
+            {!careers.length && (
+              <p className="pl-04 text-justify">ამჟამად ვაკანსიები არ გვაქვს</p>
+            )}
             {isAdmin && (
               <Link
                 style={{ marginBottom: "10px" }}
