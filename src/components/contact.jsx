@@ -70,24 +70,24 @@ class Contact extends Component {
                 <div className="form-row ">
                   <div className="form-group col-md-6 ">
                     <label htmlFor="inputEmail4" className="color-emg">
-                      სახელი
+                      სახელი გვარი
                     </label>
                     <input
                       type="text"
                       className="form-control"
                       id="inputEmail4"
-                      placeholder="სახელი"
+                      placeholder="სახელი გვარი"
                     />
                   </div>
                   <div className="form-group col-md-6">
                     <label htmlFor="inputPassword4" className="color-emg">
-                      თემა
+                      ელ-ფოსტა
                     </label>
                     <input
                       type="text"
                       className="form-control"
                       id="inputPassword4"
-                      placeholder="თემა"
+                      placeholder="ელ-ფოსტა"
                     />
                   </div>
                 </div>
@@ -96,13 +96,13 @@ class Contact extends Component {
                     htmlFor="exampleFormControlTextarea1"
                     className="color-emg"
                   >
-                    წერილი
+                    შეტყობინება
                   </label>
                   <textarea
                     className="form-control"
                     id="exampleFormControlTextarea1"
                     rows={3}
-                    defaultValue={""}
+                    defaultValue="შეტყობინება"
                   />
                 </div>
                 <button
@@ -135,7 +135,9 @@ class Contact extends Component {
                         სათაო ოფისი: თბილისი
                       </span>
                       <br />
-                      <p style={{ margin: 0, fontSize: 25 }}>კ. ქუთათელაძე 8</p>
+                      <p style={{ margin: 0, fontSize: 25 }}>
+                        ალექსანდრე ყაზბეგის #47
+                      </p>
                     </div>
                   </div>
                   <div className="container p-5"></div>
