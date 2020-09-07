@@ -52,7 +52,7 @@ class Governance extends Component {
               className="nav-item nav-link nav-link-emg"
               to="/about/training"
             >
-              ტრენინგი
+              ტრენინგები
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg"
@@ -86,22 +86,22 @@ class Governance extends Component {
                       <br />
                       <br />
                       <ul className="management">
-                        <li className="text-justify ">
+                        <li className="text-justify special">
                           ეყრდნობა ორგანიზაციის კორპორაციული მართვის საუკეთესო
                           საერთაშორისო პრაქტიკას;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           აძლიერებს კორპორაციულ კულტურას და მიზნების შესაბამისად
                           სრულყოფს ორგანიზაციის სტრუქტურას;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           თანამშრომლობს როგორც ადგილობრივ, ისე უცხოელ
                           პარტნიორებთან;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           აფართოებს საქმიანობის სექტორულ და გეოგრაფიულ არეალს;
                         </li>
-                        <li className="text-justify">
+                        <li className="text-justify special">
                           საერთაშორისო გამოცდილების გათვალისწინებით საქართველოში
                           ნერგავს საინჟინრო და სამშენებლო სფეროში მსოფლიოში
                           აპრობირებულ თანამედროვე ტექნოლოგიებსა და ინოვაციებს.
@@ -122,20 +122,20 @@ class Governance extends Component {
                 <Manager
                   name="იოვანე სიხარულიძე"
                   img={
-                    "https://www.hbwealthadvisors.com/sites/default/files/imagecache/team-sm/users/hbwealthadvisors/images/Generic_Placeholder_-_Profile2.jpg"
+                    "https://www.revixpert.ch/app/uploads/portrait-placeholder.jpg"
                   }
                   position="გენერალური დირექტორი"
                   id="manager1"
                   profession="მათემატიკოსი, ფინანსისტი"
                   education={[
-                    "საქართველოს ტექნიკური უნივერსიტეტი - მაგისტრი, საბანკო საქმე",
-                    "თბილისის სახელმწიფო უნივერსიტეტი - მაგისტრი, გამოყენებითი მათემატიკა და კომპიუტერული მეცნიერება",
+                    "საქართველოს ტექნიკური უნივერსიტეტი – მაგისტრი, საბანკო საქმე",
+                    "თბილისის სახელმწიფო უნივერსიტეტი – მაგისტრი, გამოყენებითი მათემატიკა და კომპიუტერული მეცნიერება",
                   ]}
                   experience="საბანკო სექტორში წამყვან პოზიციებზე მუშაობის 17-წლიანი სტაჟი"
                   work={{
                     pretext: "საქმიანობის სფერო",
                     text:
-                      "5 წელზე მეტია მუშაობს ტექნოლოგიების, პროექტების მართვის, ინვესტირებისა და საკონსულტაციო მომსახურების, ბოლო 3 წელი კი - ინსპექტირების, ექსპერტიზისა და ზედამხედველობის მიმართულებით",
+                      "5 წელზე მეტია მუშაობს ტექნოლოგიების, პროექტების მართვის, ინვესტირებისა და საკონსულტაციო მომსახურების, ბოლო 3 წელი კი – ინსპექტირების, ექსპერტიზისა და ზედამხედველობის მიმართულებით",
                   }}
                 ></Manager>
                 <Manager
@@ -145,7 +145,7 @@ class Governance extends Component {
                   id="manager2"
                   profession="ინჟინერი"
                   education={[
-                    "საქართველოს პოლიტექნიკური ინსტიტუტი - მაგისტრი, საავტომობილო გზების ინჟინერია",
+                    "საქართველოს პოლიტექნიკური ინსტიტუტი – მაგისტრი, საავტომობილო გზების ინჟინერია",
                   ]}
                   experience="სახელმწიფო თუ კერძო სტრუქტურებში წამყვან პოზიციებზე მუშაობის 40-წლიანი სტაჟი"
                   work={{

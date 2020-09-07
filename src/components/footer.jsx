@@ -1,33 +1,36 @@
-import React, { Component } from "react";
+import React from "react";
 import FontAwesome from "react-fontawesome";
 import { Link } from "react-router-dom";
 import phoneFooter from "../res/phoneFooter.png";
 import mailFooter from "../res/mailFooter.png";
 import locationFooter from "../res/locationFooter.png";
+import Form from "./common/form";
+import Joi from "joi-browser";
+import { saveSubscribe } from "../services/subscribeService";
+import { toast } from "react-toastify";
 
-class Footer extends Component {
-  state = {};
+class Footer extends Form {
+  state = { data: { email: "" }, errors: "" };
+  schema = {
+    _id: Joi.string(),
+    email: Joi.string().required().label("ელფოსტა"),
+  };
+
+  doSubmit = async () => {
+    await saveSubscribe(this.state.data);
+    toast.success("თქვენ წარმატებით გამოიწერეთ სიახლეები.");
+  };
+
   render() {
     return (
       <React.Fragment>
-        
         <hr className="line-emg m-0" />
         <div className="container p-4 d-flex justify-content-center">
-          <form className="form-inline">
-            <div className="form-group mx-sm-3 mb-2">
-              <label htmlFor="inputPassword2" className="sr-only">
-                Email
-              </label>
-              <input
-                type="password"
-                className="form-control"
-                id="inputPassword2"
-                placeholder="EMAIL"
-              />
+          <form onSubmit={this.handleSubmit} className="form-inline">
+            <div className="form-group mx-sm-3 ">
+              {this.renderInput("email")}
             </div>
-            <button type="submit" className="btn subscribe-button mb-2">
-              Subscribe
-            </button>
+            {this.renderButton("გამოწერა")}
           </form>
         </div>
         <hr className="line-emg m-0" />
@@ -35,26 +38,33 @@ class Footer extends Component {
           <div className="container pt-5 pb-5 column pl-04">
             <div className="row">
               <div className="col-md-6 col-12">
-                <h5 className="color-emg pb-3">კონტაქტი</h5>
+                <h5 className="color-emg-dark pb-3">კონტაქტი</h5>
                 <table className="table-contact">
                   <tbody>
+                    <tr>
+                      <td style={{ padding: "15px 0" }}>
+                        <img alt="location" src={locationFooter} />
+                      </td>
+                      <td>საქართველო, თბილისი 0101, კ. ქუთათელაძის ქ. N8</td>
+                    </tr>
                     <tr>
                       <td style={{ width: "38px" }}>
                         <img alt="phone" src={phoneFooter} />
                       </td>
-                      <td>(995) 591 59 92 92 / (032) 2 709 709</td>
-                    </tr>
-                    <tr>
-                      <td style={{ padding: "15px 0" }}>
-                        <img alt="mail" src={mailFooter} />
+                      <td>
+                        <a href="tel:+995322709709">(+995 32) 2 709 709</a> /{" "}
+                        <a href="tel:+995591599292">(+995) 591 59 92 92</a>
                       </td>
-                      <td style={{ padding: "15px 0" }}>info@emg.ge</td>
                     </tr>
                     <tr>
                       <td>
-                        <img alt="location" src={locationFooter} />
+                        <img alt="mail" src={mailFooter} />
                       </td>
-                      <td>8 კ. ქუთათელაძე, თბილისი 0101</td>
+                      <td style={{ padding: "15px 0" }}>
+                        <a href="mailto:info@emg.ge" className="pr-5">
+                          info@emg.ge
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -70,17 +80,20 @@ class Footer extends Component {
               </div>
             </div>
           </div>
-          <div className="fluid-container p-3 mb-5 bg-emg-green color-white opacity-8">
+          <div className="fluid-container p-3 mb-5 bg-emg-green color-emg-dark opacity-8">
             <div className="container">
               <div className="pl-04">
                 გამოგვყევით
-                <Link to="#" className="card-link-emg p-2 color-white">
+                <Link
+                  to="#"
+                  className="card-link-emg opacity-1 p-2 color-emg-dark"
+                >
                   <FontAwesome
                     name="facebook"
                     className="fab fa-facebook-f"
                   ></FontAwesome>
                 </Link>
-                <Link to="#" className="card-link-emg p-2 color-white">
+                <Link to="#" className="card-link-emg p-2 color-emg-dark">
                   <FontAwesome
                     name="twitter"
                     className="fab fa-twitter"
@@ -90,7 +103,7 @@ class Footer extends Component {
             </div>
           </div>
           <div className="fluid-container d-flex justify-content-center bg-emg-blue p-4 col-sm-12 color-white">
-            © 2019 ინჟინერიის მონიტორინგის ჯგუფი.
+            © 2020 საინჟინრო მონიტორინგის ჯგუფი
           </div>
         </footer>
       </React.Fragment>

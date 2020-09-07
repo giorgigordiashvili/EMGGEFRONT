@@ -2,7 +2,7 @@ import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { getPartner, savePartner } from "../services/partnerService";
-
+import FileUploader from "./fileUploader";
 class EditCareer extends Form {
   state = {
     data: {
@@ -50,6 +50,7 @@ class EditCareer extends Form {
   render() {
     return (
       <div className="pt-8 container">
+        <FileUploader></FileUploader>
         <h1>Edit Partner</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("name", "Name")}

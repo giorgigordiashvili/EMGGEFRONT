@@ -2,9 +2,10 @@ import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { getNew, saveNews } from "../services/newsService";
-
+import FileUploader from "./fileUploader";
 class EditStyle extends Form {
   state = {
+    pictureLink: "",
     data: {
       title: "",
       shortDesc: "",
@@ -12,33 +13,19 @@ class EditStyle extends Form {
       shortImage: "",
       longImage: "",
       fbLink: "",
-      twLink: ""
+      twLink: "",
     },
-    errors: {}
+    errors: {},
   };
   schema = {
-    title: Joi.string()
-      .required()
-      .label("Title"),
-    shortDesc: Joi.string()
-      .required()
-      .label("Short Description"),
-    longDesc: Joi.string()
-      .required()
-      .label("Long Description"),
-    shortImage: Joi.string()
-      .required()
-      .label("Outside image"),
-    longImage: Joi.string()
-      .required()
-      .label("Inside image"),
-    fbLink: Joi.string()
-      .required()
-      .label("Facebook link"),
-    twLink: Joi.string()
-      .required()
-      .label("Twitter link"),
-    _id: Joi.string().label("ID")
+    title: Joi.string().required().label("Title"),
+    shortDesc: Joi.string().required().label("Short Description"),
+    longDesc: Joi.string().required().label("Long Description"),
+    shortImage: Joi.string().required().label("Outside image"),
+    longImage: Joi.string().required().label("Inside image"),
+    fbLink: Joi.string().required().label("Facebook link"),
+    twLink: Joi.string().required().label("Twitter link"),
+    _id: Joi.string().label("ID"),
   };
 
   async populateStyle() {
@@ -66,7 +53,7 @@ class EditStyle extends Form {
       shortImage: style.shortImage,
       longImage: style.longImage,
       fbLink: style.fbLink,
-      twLink: style.twLink
+      twLink: style.twLink,
     };
   }
 
@@ -80,12 +67,14 @@ class EditStyle extends Form {
     return (
       <div className="pt-8 container">
         <h1>Edit Category</h1>
+        <FileUploader></FileUploader>
+        <hr />
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("title", "Title")}
-          {this.renderInput("shortDesc", "Short Description")}
-          {this.renderInput("longDesc", "Long Description")}
           {this.renderInput("shortImage", "Outside image")}
           {this.renderInput("longImage", "Inside image")}
+          {this.renderInput("shortDesc", "Short Description")}
+          {this.renderInput("longDesc", "Long Description")}
           {this.renderInput("fbLink", "Facebook link")}
           {this.renderInput("twLink", "Twitter link")}
           {this.renderButton("Submit")}

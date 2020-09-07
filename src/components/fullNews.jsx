@@ -12,30 +12,26 @@ class FullNews extends Component {
 
     return (
       <React.Fragment>
-        <div className="container pt-8">
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item">
-              <Link to="/news">სიახლეები</Link>
-            </li>
-            <li className="breadcrumb-item active">{news.title}</li>
-          </ol>
+        <div className="thumbnail" />
+        <div className="container ">
+          <h1 className="currentPageTitle ">{news.title}</h1>
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-12 p-3">
-              <img
-                src={news.longImage}
-                alt={news.title}
-                className="img-fluid inner-shadow-emg"
-              />
-            </div>
-            <div className="col-lg-6 col-12 p-3 text-justify">
-              <h5 className=" color-emg ">{news.title}</h5>
-              <p>{news.longDesc}</p>
+        <div className="fluid-container highlight">
+          <div className="container pt-3 pb-3">
+            <div className="row">
+              <div className="col-lg-6 col-12 pl-03">
+                <img
+                  src={news.longImage}
+                  alt={news.title}
+                  className="img-fluid inner-shadow-emg"
+                />
+              </div>
+              <div className="col-lg-6 col-12 text-justify">
+                <p>{news.longDesc}</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="container p-5"></div>
       </React.Fragment>
     );
   }

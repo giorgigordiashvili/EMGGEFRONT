@@ -1,11 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { getBranches } from "../services/branchService";
-import contactImageOne from "../res/ccc1.jpg";
-import contactImageTwo from "../res/ccc2.jpg";
-import contactImageThree from "../res/ccc3.jpg";
+import phoneFooter from "../res/phoneFooter.png";
+import mailFooter from "../res/mailFooter.png";
+import homeFooter from "../res/home.png";
+import Form from "./common/form";
+import Joi from "joi-browser";
 import MapLogo from "./map";
-
-class Contact extends Component {
+import { saveContact } from "../services/contactService";
+class Contact extends Form {
   state = {
     branches: [],
     style: "mapbox://styles/mapbox/light-v9",
@@ -17,58 +19,147 @@ class Contact extends Component {
       zoom: 11,
       maxZoom: 16,
     },
+    data: {
+      name: "",
+      email: "",
+      letter: "",
+    },
+    errors: {},
   };
 
+  schema = {
+    _id: Joi.string(),
+    name: Joi.string().required().label("სახელი"),
+    letter: Joi.string().required().label("წერილი"),
+    email: Joi.string().required().label("ელფოსტა"),
+  };
   async componentDidMount() {
     const { data: branches } = await getBranches();
     this.setState({ branches });
   }
+
+  doSubmit = async () => {
+    await saveContact(this.state.data);
+    this.props.history.push("/contact");
+  };
+
   render() {
     return (
       <React.Fragment>
-        <div className="container pt-5">
-          <h1 className="currentPageTitle pl-04">კონტაქტი</h1>
+        <div className="thumbnail" />
+        <div className="container ">
+          <h1 className="currentPageTitle ">ფილიალები</h1>
+        </div>
+        <div className="fluid-container highlight">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 row">
+                <div
+                  className="col-12"
+                  style={{ margin: 0, fontSize: 40, textAlign: "center" }}
+                >
+                  <MapLogo
+                    city="Tbilisi"
+                    link={"https://map.google.com"}
+                  ></MapLogo>
+                  <div className="column">
+                    <h3 className="color-emg">სათავო ოფისი: თბილისი</h3>
 
-          <div className="row">
-            <div className="col-12 ">
-              <iframe
-                title="Big map on contact page"
-                width="100%"
-                height="400px"
-                frameBorder={0}
-                scrolling="no"
-                marginHeight={0}
-                marginWidth={0}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.9221375752163!2d44.74112131543614!3d41.72219897923487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447310d0442439%3A0x741ac75e14ceafaa!2zOCDhg5nhg5Dhg5rhg5jhg6Hhg6Lhg6Dhg5Dhg6Lhg5Qg4YOl4YOj4YOX4YOQ4YOX4YOU4YOa4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwg4YOX4YOR4YOY4YOa4YOY4YOh4YOYIDAxNzc!5e0!3m2!1ska!2sge!4v1568564871496!5m2!1ska!2sge"
-              />
+                    <p>საქართველო, თბილისი 0177, ალექსანდრე ყაზბეგის #47</p>
+                    <p>
+                      <img alt="phone" className="p-1 pl-5" src={homeFooter} />
+                      <a href="tel:+995322709709" className="pr-5 ">
+                        (+995 32) 2 709 709
+                      </a>
+                    </p>
+                    <p>
+                      <img alt="phone" className="p-1 pl-5" src={phoneFooter} />
+                      <a href="tel:+995591599292" className="pr-5">
+                        (+995) 591 59 92 92
+                      </a>
+                    </p>
+                    <p>
+                      {" "}
+                      <img alt="mail" className="p-1 pl-5" src={mailFooter} />
+                      <a href="mailto:info@emg.ge" className="pr-5">
+                        info@emg.ge
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="col-6 col-md-6 row">
+                  <MapLogo
+                    city="Kutaisi"
+                    link={"https://map.google.com"}
+                  ></MapLogo>
+                  <div className="column mt-2">
+                    <h3 className="color-emg">ქუთაისი</h3>
+                    <p> საქართველო, ქუთაისი 4600 თამარ მეფის ქ. N66/68</p>
+                    <p>
+                      <img alt="mail" className="pr-1" src={mailFooter} />
+                      <a href="mailto:imereti@emg.ge">imereti@emg.ge</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="col-6 col-md-6 row">
+                  <MapLogo
+                    city="Zestafoni"
+                    link={"https://map.google.com"}
+                  ></MapLogo>{" "}
+                  <div className="column mt-2">
+                    <h3 className="color-emg">ზესტაფონი</h3>
+                    <p>საქართველო, ზესტაფონი 2000 გ. ნიკოლაძის ქ. N36</p>
+                    <p>
+                      <img alt="mail" className="pr-1" src={mailFooter} />
+                      <a href="mailto:imereti@emg.ge">imereti@emg.ge</a>
+                    </p>
+                  </div>
+                </div>
+                <div className="col-6 col-md-6 row">
+                  <MapLogo
+                    city="Chiatura"
+                    link={"https://map.google.com"}
+                  ></MapLogo>{" "}
+                  <div className="column mt-2 ">
+                    <h3 className="color-emg">ჭიათურა</h3>
+                    <p>საქართველო, ჭიათურა 5500 ნინოშვილის ქ. N5</p>
+                    <p>
+                      <img alt="mail" className="pr-1" src={mailFooter} />
+                      <a href="mailto:imereti@emg.ge">imereti@emg.ge</a>
+                    </p>
+                  </div>
+                </div>
+                <div className="col-6 col-md-6 row">
+                  <MapLogo
+                    city="Telavi"
+                    link={"https://map.google.com"}
+                  ></MapLogo>{" "}
+                  <div className="column mt-2">
+                    <h3 className="color-emg">თელავი</h3>
+                    <p>საქართველო, თელავი 2200 რუსთაველის ქ. N86</p>
+                    <p>
+                      <img alt="mail" className="pr-1" src={mailFooter} />
+                      <a href="mailto:kakheti@emg.ge">kakheti@emg.ge</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="container p-5"></div>
-        <div>
-          <div className="fluid-container highlight">
-            <div className="container p-5"></div>
-            <div className="container ">
-              <div className="row justify-content-center">
-                <img
-                  className="col-sm-12 col-md-4 img-fluid"
-                  src={contactImageOne}
-                  alt=""
-                />
-                <img
-                  className="col-sm-12 col-md-4 img-fluid"
-                  src={contactImageTwo}
-                  alt=""
-                />
-                <img
-                  className="col-sm-12 col-md-4 img-fluid"
-                  src={contactImageThree}
-                  alt=""
-                />
-              </div>
-              <form className="p-4">
+
+        <div className="container">
+          <h1 className="currentPageTitle pl-04">კონტაქტი</h1>
+        </div>
+        <div className="fluid-container highlight">
+          <div className="container ">
+            <div className="container pt-5">
+              <form onSubmit={this.handleSubmit}>
                 <div className="form-row ">
                   <div className="form-group col-md-6 ">
+<<<<<<< HEAD
                     <label htmlFor="inputEmail4" className="color-emg">
                       სახელი გვარი
                     </label>
@@ -104,15 +195,21 @@ class Contact extends Component {
                     rows={3}
                     defaultValue="შეტყობინება"
                   />
+=======
+                    {this.renderInput("name", "სახელი")}
+                  </div>
+                  <div className="form-group col-md-6">
+                    {this.renderInput("email", "ელფოსტა")}
+                  </div>
                 </div>
-                <button
-                  type="submit"
-                  className="btn btn-primary emg-button pl-3 pr-3 pt-1 pb-1"
-                >
-                  გაგზავნა
-                </button>
+                <div className="form-group">
+                  {this.renderInput("letter", "წერილი")}
+>>>>>>> 2264a1a19eca4da36c2447d0acde5a8990d400f3
+                </div>
+                {this.renderButton("გაგზავნა")}
               </form>
             </div>
+<<<<<<< HEAD
             <div className="container p-5"></div>
           </div>
           <div className="fluid-container">
@@ -228,6 +325,9 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
+=======
+            <div className="container pt-5"></div>
+>>>>>>> 2264a1a19eca4da36c2447d0acde5a8990d400f3
           </div>
         </div>
       </React.Fragment>

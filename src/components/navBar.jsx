@@ -21,7 +21,9 @@ class NavBar extends Component {
       dropdown: true,
     },
     isOpen: false,
+    toggle: false,
   };
+
   componentDidMount() {
     const user = auth.getCurrentUser();
     this.setState({ user });
@@ -46,7 +48,12 @@ class NavBar extends Component {
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-dark">
             <button
-              className="navbar-toggler"
+              className={
+                !this.state.toggle
+                  ? "navbar-toggler"
+                  : "navbar-toggler collapsed"
+              }
+              onClick={() => console.log("test")}
               type="button"
               data-toggle="collapse"
               data-target="#navbarCollapse"
@@ -71,7 +78,7 @@ class NavBar extends Component {
                     className="nav-link"
                     id="aboutus"
                     to="/about/"
-                    data-toggle="dropdown"
+                    data-toggle="dropdown_one"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
@@ -129,15 +136,77 @@ class NavBar extends Component {
                     </Link>
                   </div>
                 </li>
-                <li className="nav-item">
-                  <NavLink to="/activities" className="nav-link ">
-                    საქმიანობები
+                <li className="nav-item dropdown ">
+                  <NavLink
+                    className="nav-link"
+                    id="activities"
+                    to="/activities/"
+                    data-toggle="dropdown_two"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    საქმიანობა
                   </NavLink>
+                  <div
+                    className={
+                      this.state.dropdown
+                        ? "dropdown-menu show dropdown-custom"
+                        : "dropdown-menu dropdown-custom"
+                    }
+                    aria-labelledby="activities"
+                  >
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/activities/engineering" }}
+                    >
+                      საინჟინრო მიმართულება
+                    </Link>
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/activities/services" }}
+                    >
+                      მომსახურება
+                    </Link>
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/activities/customers" }}
+                    >
+                      დამკვეთები
+                    </Link>
+                  </div>
                 </li>
-                <li className="nav-item">
-                  <NavLink to="/projects" className="nav-link">
+                <li className="nav-item dropdown ">
+                  <NavLink
+                    className="nav-link"
+                    id="activities"
+                    to="/projects/"
+                    data-toggle="dropdown_three"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
                     პროექტები
                   </NavLink>
+                  <div
+                    className={
+                      this.state.dropdown
+                        ? "dropdown-menu show dropdown-custom"
+                        : "dropdown-menu dropdown-custom"
+                    }
+                    aria-labelledby="projects"
+                  >
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/projects/ongoing" }}
+                    >
+                      მიმდინარე პროექტები
+                    </Link>
+                    <Link
+                      className="dropdown-item dropdown-item-custom"
+                      to={{ pathname: "/projects/done" }}
+                    >
+                      დასრულებული პროექტები
+                    </Link>
+                  </div>
                 </li>
 
                 <li className="nav-item">

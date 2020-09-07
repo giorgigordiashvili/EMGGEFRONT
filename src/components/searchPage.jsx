@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { getSearch } from "../services/searchService";
-import { Link } from "react-router-dom";
+import ProjectFlex from "./projectFlex";
+import NewsFlex from "./newsFlex";
 
 class SearchPage extends Component {
-  state = { search: "", data: [] };
-  async componentDidMount() {
-    let { data } = await getSearch();
-    this.setState({ data });
+  handleData(data) {
     let search = this.props.location.search;
     search = decodeURIComponent(search);
     search = search.replace(/%20/g, " ");
@@ -17,55 +14,68 @@ class SearchPage extends Component {
         s.shortDesc.includes(search) ||
         s.longDesc.includes(search)
     );
-    data = Array.from(data);
-    this.setState({ search, data });
+
+    return Array.from(data);
   }
 
   render() {
-    const { data } = this.state;
+    let projectsOngoing = this.handleData(this.props.projectsOngoing);
+    let projectsDone = this.handleData(this.props.projectsDone);
+    let newss = this.handleData(this.props.newss);
 
     return (
-      <div className="container pt-8">
-        <div className="container p-3"></div>
-        <div class="card-deck">
-          {data.map((s) => (
-            <div className="card" key={s._id}>
-              {s.category ? (
-                <Link className="home-news-link" to={"/projects/" + s._id}>
-                  <img
-                    className="card-img-top inner-shadow-emg"
-                    src={s.shortImage}
-                    alt="Card image cap"
-                  />
-                </Link>
-              ) : (
-                <Link className="home-news-link" to={"/news/" + s._id}>
-                  <img
-                    className="card-img-top inner-shadow-emg"
-                    src={s.shortImage}
-                    alt="Card image cap"
-                  />
-                </Link>
-              )}
-
-              <div className="card-body">
-                <h5 className="card-title">
-                  {s.category ? (
-                    <Link className="home-news-link" to={"/projects/" + s._id}>
-                      <span className="inner-shadow-emg">{s.title}</span>
-                    </Link>
-                  ) : (
-                    <Link className="home-news-link" to={"/news/" + s._id}>
-                      <span className="inner-shadow-emg">{s.title}</span>
-                    </Link>
-                  )}
-                </h5>
-                <p className="card-text">{s.shortDesc}</p>
+      <div className="fluid-container pt-8">
+        {projectsOngoing.length > 0 && (
+          <React.Fragment>
+            <div className="container">
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+                მიმდინარე პროექტები
+              </h1>
+            </div>
+            <div className="fluid-container highlight p-4">
+              <div className="container">
+                <ProjectFlex
+                  category={"Ongoing"}
+                  newss={projectsOngoing}
+                  onDelete={this.handleDelete}
+                />
               </div>
             </div>
-          ))}
-        </div>
-        <div className="container p-4"></div>
+          </React.Fragment>
+        )}
+        {projectsDone.length > 0 && (
+          <React.Fragment>
+            <div className="container">
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+                დასრულებული პროექტები
+              </h1>
+            </div>
+            <div className="fluid-container highlight p-4">
+              <div className="container">
+                <ProjectFlex
+                  category={"Done"}
+                  newss={projectsDone}
+                  onDelete={this.handleDelete}
+                />
+              </div>
+            </div>
+          </React.Fragment>
+        )}
+
+        {newss.length > 0 && (
+          <React.Fragment>
+            <div className="container">
+              <h1 className="currentPageTitle mt-3 col-12 col-md-12 pl-04">
+                სიახლეები
+              </h1>
+            </div>
+            <div className="fluid-container highlight p-4">
+              <div className="container">
+                <NewsFlex newss={newss} onDelete={this.handleDelete} />
+              </div>
+            </div>
+          </React.Fragment>
+        )}
       </div>
     );
   }

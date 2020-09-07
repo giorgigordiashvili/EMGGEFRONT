@@ -48,7 +48,7 @@ class Partners extends Component {
               className="nav-item nav-link nav-link-emg"
               to="/about/training"
             >
-              ტრენინგი
+              ტრენინგები
             </Link>
             <Link
               className="nav-item nav-link nav-link-emg"
@@ -72,11 +72,9 @@ class Partners extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-12 col-md-12 pl-04 dejavu">
-                    „საინჟინრო მონიტორინგის ჯგუფის“ ფარგლებში ფუნქციონირებს
-                    ტრენინგცენტრი, ორიენტირებული კადრების მუდმივ
-                    ზრდა-განვითარებაზე, კვალიფიკაციის ამაღლებაზე, ორგანიზაციის
-                    მომსახურების ხარისხის გაუმჯობესებასა და კორპორაციული
-                    კულტურის სრულყოფაზე. <br /> <br />
+                    „საინჟინრო მონიტორინგის ჯგუფი“ თანამშრომლობს სანდო და მაღალი
+                    რეპუტაციის მქონე იმგვარ ცნობილ ორგანიზაციებთან, როგორებიცაა:{" "}
+                    <br /> <br />
                     <Partner
                       onDeletePartner={this.props.onDeletePartner}
                       user={this.props.user}
