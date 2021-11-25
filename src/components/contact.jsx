@@ -159,7 +159,6 @@ class Contact extends Form {
               <form onSubmit={this.handleSubmit}>
                 <div className="form-row ">
                   <div className="form-group col-md-6 ">
-<<<<<<< HEAD
                     <label htmlFor="inputEmail4" className="color-emg">
                       სახელი გვარი
                     </label>
@@ -195,21 +194,10 @@ class Contact extends Form {
                     rows={3}
                     defaultValue="შეტყობინება"
                   />
-=======
-                    {this.renderInput("name", "სახელი")}
-                  </div>
-                  <div className="form-group col-md-6">
-                    {this.renderInput("email", "ელფოსტა")}
-                  </div>
-                </div>
-                <div className="form-group">
-                  {this.renderInput("letter", "წერილი")}
->>>>>>> 2264a1a19eca4da36c2447d0acde5a8990d400f3
                 </div>
                 {this.renderButton("გაგზავნა")}
               </form>
             </div>
-<<<<<<< HEAD
             <div className="container p-5"></div>
           </div>
           <div className="fluid-container">
@@ -325,9 +313,6 @@ class Contact extends Form {
                 </div>
               </div>
             </div>
-=======
-            <div className="container pt-5"></div>
->>>>>>> 2264a1a19eca4da36c2447d0acde5a8990d400f3
           </div>
         </div>
       </React.Fragment>

@@ -3,7 +3,6 @@ import { paginate } from "../utils/paginate";
 import Pagination from "./common/pagination";
 import { Link } from "react-router-dom";
 import ProjectFlex from "./projectFlex";
-import qualityAndPermits from "../res/qualityandpermits.png";
 
 class ProjectsDone extends Component {
   state = {
