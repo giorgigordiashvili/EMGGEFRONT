@@ -68,8 +68,8 @@ class Contact extends Form {
                     <p>საქართველო, თბილისი 0177, ალექსანდრე ყაზბეგის #47</p>
                     <p>
                       <img alt="phone" className="p-1 pl-5" src={homeFooter} />
-                      <a href="tel:+995322709709" className="pr-5 ">
-                        (+995 32) 2 709 709
+                      <a href="tel:+995322151000" className="pr-5 ">
+                      (+995) 032 2 15 10 00
                       </a>
                     </p>
                     <p>

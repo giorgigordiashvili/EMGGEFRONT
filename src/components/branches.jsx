@@ -98,8 +98,8 @@ class Branches extends Component {
                           className="p-1 pl-5"
                           src={homeFooter}
                         />
-                        <a href="tel:+995322709709" className="pr-5 ">
-                          (+995 32) 2 709 709
+                        <a href="tel:+995322151000" className="pr-5 ">
+                        (+995) 032 2 15 10 00 
                         </a>
 
                         <img
@@ -108,7 +108,7 @@ class Branches extends Component {
                           src={phoneFooter}
                         />
                         <a href="tel:+995591599292" className="pr-5">
-                          (+995) 591 59 92 92
+                        (+995) 591 59 92 92
                         </a>
                         <img alt="mail" className="p-1 pl-5" src={mailFooter} />
                         <a href="mailto:info@emg.ge" className="pr-5">

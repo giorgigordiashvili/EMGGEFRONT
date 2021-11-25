@@ -45,14 +45,14 @@ class Footer extends Form {
                       <td style={{ padding: "15px 0" }}>
                         <img alt="location" src={locationFooter} />
                       </td>
-                      <td>საქართველო, თბილისი 0101, კ. ქუთათელაძის ქ. N8</td>
+                      <td>საქართველო, თბილისი 0177, ალ. ყაზბეგის გამზ. # 47</td>
                     </tr>
                     <tr>
                       <td style={{ width: "38px" }}>
                         <img alt="phone" src={phoneFooter} />
                       </td>
                       <td>
-                        <a href="tel:+995322709709">(+995 32) 2 709 709</a> /{" "}
+                        <a href="tel:+995322151000">(+995) 032 2 15 10 00</a> /{" "}
                         <a href="tel:+995591599292">(+995) 591 59 92 92</a>
                       </td>
                     </tr>
