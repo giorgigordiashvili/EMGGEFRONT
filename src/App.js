@@ -31,6 +31,7 @@ import QualityAndPermits from "./components/qualityandpermits";
 import Branches from "./components/branches";
 import Partners from "./components/partners";
 import Training from "./components/trainings";
+import Certificates from "./components/certificates";
 import SearchPage from "./components/searchPage";
 import Engineering from "./components/engineering";
 import Services from "./components/servicesAct";
@@ -157,6 +158,7 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
             <Route path="/about/whoweare" component={WhoWeAre} />
             <Route path="/about/governance" component={Governance} />
+            <Route path="/about/certificates" component={Certificates} />
             <Route path="/about/strategicvision" component={StrategicVision} />
             <Route path="/about/training" component={Training} />
             <Route path="/about/branches" component={Branches} />

@@ -1,66 +1,17 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import basicPrinciples from "../res/basicprinciples.png";
 import ourGoals from "../res/ourgoals.png";
 import ourMission from "../res/ourmission.png";
 import priorities from "../res/priorities.png";
+import AboutHeader from "./shared/aboutHeader";
 
 class StrategicVision extends Component {
   render() {
     return (
       <div>
         <div className="thumbnail" />
-        <nav className="container">
-          <div
-            className="nav nav-tabs justify-content-center"
-            id="nav-tab"
-            role="tablist"
-          >
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/whoweare"
-            >
-              ვინ ვართ ჩვენ
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/governance"
-            >
-              მმართველობა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg active"
-              to="/about/strategicvision"
-            >
-              სტრატეგიული ხედვა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/qualityandpermits"
-            >
-              ხარისხი და პასუხისმგებლობა
-            </Link>
+        <AboutHeader active="strategicvision" />
 
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/partners"
-            >
-              პარტნიორები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/training"
-            >
-              ტრენინგები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/branches"
-            >
-              ფილიალები
-            </Link>
-          </div>
-        </nav>
         <div
           className="tab-pane fade show"
           id="nav-strategic-vision"

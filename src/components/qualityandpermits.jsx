@@ -1,66 +1,17 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import qualityAndPermits from "../res/qualityandpermits.png";
 import employeeQualification from "../res/employeequalification.png";
 import qualityManagement from "../res/qualitymanagement.png";
 import healthAndSafetyManagement from "../res/healthandsafetymanagement.png";
+import AboutHeader from "./shared/aboutHeader";
 
 class QualityAndPermits extends Component {
   render() {
     return (
       <div>
         <div className="thumbnail" />
-        <nav className="container">
-          <div
-            className="nav nav-tabs justify-content-center"
-            id="nav-tab"
-            role="tablist"
-          >
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/whoweare"
-            >
-              ვინ ვართ ჩვენ
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/governance"
-            >
-              მმართველობა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/strategicvision"
-            >
-              სტრატეგიული ხედვა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg active"
-              to="/about/qualityandpermits"
-            >
-              ხარისხი და პასუხისმგებლობა
-            </Link>
+        <AboutHeader active="qualityandpermits" />
 
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/partners"
-            >
-              პარტნიორები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/training"
-            >
-              ტრენინგები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/branches"
-            >
-              ფილიალები
-            </Link>
-          </div>
-        </nav>
         <div
           className="tab-pane fade show"
           id="nav-quality-and-permits"
@@ -80,10 +31,19 @@ class QualityAndPermits extends Component {
                     <img src={qualityAndPermits} alt="" />
                     <h5 className="p-2 color-emg">აკრედიტაცია</h5>
                     <p className="text-justify">
-                    შპს „საინჟინრო მონიტორინგის ჯგუფი“ არის A ტიპის ინსპექტირების ორგანო, რომელიც აკრედიტირებულია სსიპ "აკრედიტაციის ერთიანი ეროვნული ორგანოს, აკრედიტაციის ცენტრის" მიერ SST ISO / IEC 17020: 2012/2013 საერთაშორისო სტანდარტების შესაბამისად და აღიარებულია EA (ევროპული აკრედიტაცია) გენერალური ასამბლეას მიერ. აკრედიტაციის მოწმობის ს/კ: GAC-IB-0320
+                      შპს „საინჟინრო მონიტორინგის ჯგუფი“ არის A ტიპის
+                      ინსპექტირების ორგანო, რომელიც აკრედიტირებულია სსიპ
+                      "აკრედიტაციის ერთიანი ეროვნული ორგანოს, აკრედიტაციის
+                      ცენტრის" მიერ SST ISO / IEC 17020: 2012/2013 საერთაშორისო
+                      სტანდარტების შესაბამისად და აღიარებულია EA (ევროპული
+                      აკრედიტაცია) გენერალური ასამბლეას მიერ. აკრედიტაციის
+                      მოწმობის ს/კ: GAC-IB-0320
                     </p>
                     <p className="text-justify">
-                    ასევე, კომპანიამ წარმატებით გაიარა ISO სერტიფიკაციის ყველა მოთხოვნა 2021 წლის ივლისში და 2021 წლის 9 აგვისტოს მიიღო სერტიფიკატი TÜV SÜD Management Service GmbH–გან. (სერტიფიკატის რეგისტრაციის ნომერი: 12 100 62504 TMS.)
+                      ასევე, კომპანიამ წარმატებით გაიარა ISO სერტიფიკაციის ყველა
+                      მოთხოვნა 2021 წლის ივლისში და 2021 წლის 9 აგვისტოს მიიღო
+                      სერტიფიკატი TÜV SÜD Management Service GmbH–გან.
+                      (სერტიფიკატის რეგისტრაციის ნომერი: 12 100 62504 TMS.)
                     </p>
                   </div>
                 </div>

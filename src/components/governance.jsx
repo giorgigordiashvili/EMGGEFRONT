@@ -1,67 +1,18 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Manager from "./manager";
 import managerOne from "../../src/res/pavle.png";
 import managerTwo from "../../src/res/tamaz.png";
 import managerThree from "../../src/res/mikheil.png";
 import managerFour from "../../src/res/gia.png";
+import AboutHeader from "./shared/aboutHeader";
 
 class Governance extends Component {
   render() {
     return (
       <div>
         <div className="thumbnail" />
-        <nav className="container">
-          <div
-            className="nav nav-tabs justify-content-center"
-            id="nav-tab"
-            role="tablist"
-          >
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/whoweare"
-            >
-              ვინ ვართ ჩვენ
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg active"
-              to="/about/governance"
-            >
-              მმართველობა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/strategicvision"
-            >
-              სტრატეგიული ხედვა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/qualityandpermits"
-            >
-              ხარისხი და პასუხისმგებლობა
-            </Link>
+        <AboutHeader active="governance" />
 
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/partners"
-            >
-              პარტნიორები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/training"
-            >
-              ტრენინგები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/branches"
-            >
-              ფილიალები
-            </Link>
-          </div>
-        </nav>
         <div className="tab-content" id="nav-tabContent">
           <div
             className="tab-pane fade show active"
@@ -134,8 +85,7 @@ class Governance extends Component {
                   experience="საბანკო სექტორში წამყვან პოზიციებზე მუშაობის 17-წლიანი სტაჟი"
                   work={{
                     pretext: "საქმიანობის სფერო",
-                    text:
-                      "5 წელზე მეტია მუშაობს ტექნოლოგიების, პროექტების მართვის, ინვესტირებისა და საკონსულტაციო მომსახურების, ბოლო 3 წელი კი – ინსპექტირების, ექსპერტიზისა და ზედამხედველობის მიმართულებით",
+                    text: "5 წელზე მეტია მუშაობს ტექნოლოგიების, პროექტების მართვის, ინვესტირებისა და საკონსულტაციო მომსახურების, ბოლო 3 წელი კი – ინსპექტირების, ექსპერტიზისა და ზედამხედველობის მიმართულებით",
                   }}
                 ></Manager>
                 <Manager
@@ -150,8 +100,7 @@ class Governance extends Component {
                   experience="სახელმწიფო თუ კერძო სტრუქტურებში წამყვან პოზიციებზე მუშაობის 40-წლიანი სტაჟი"
                   work={{
                     pretext: "განხორციელებული პროექტები",
-                    text:
-                      "მისი უშუალო ზედამხედველობით განხორციელდა გზების, ხიდებისა და გვირაბების მშენებლობა-რეაბილიტაციისა და მოვლა-შენახვის 20-მდე მასშტაბური პროექტი საქართველოში",
+                    text: "მისი უშუალო ზედამხედველობით განხორციელდა გზების, ხიდებისა და გვირაბების მშენებლობა-რეაბილიტაციისა და მოვლა-შენახვის 20-მდე მასშტაბური პროექტი საქართველოში",
                   }}
                 ></Manager>
                 <Manager
@@ -168,8 +117,7 @@ class Governance extends Component {
                   experience="სამშენებლო სფეროში მუშაობის 10-წლიანი სტაჟი როგორც საქართველოში, ისე მის საზღვრებს გარეთ"
                   work={{
                     pretext: "განხორციელებული პროექტები",
-                    text:
-                      "მისი პორტფოლიო მოიცავს საქართველოში,საფრანგეთსა და იტალიაში აშენებულ მრავალფუნქციურ სასტუმროებსა და საცხოვრებელ კორპუსებს (მთავარი კონსტრუქტორი), სხვადასხვა ფუნქციური დანიშნულების შენობა-ნაგებობებს (ინსპექტორი)",
+                    text: "მისი პორტფოლიო მოიცავს საქართველოში,საფრანგეთსა და იტალიაში აშენებულ მრავალფუნქციურ სასტუმროებსა და საცხოვრებელ კორპუსებს (მთავარი კონსტრუქტორი), სხვადასხვა ფუნქციური დანიშნულების შენობა-ნაგებობებს (ინსპექტორი)",
                   }}
                 ></Manager>
                 <Manager
@@ -185,8 +133,7 @@ class Governance extends Component {
                   როგორც სახელმწიფო, ისე კერძო ორგანიზაციებში"
                   work={{
                     pretext: "განხორციელებული პროექტები",
-                    text:
-                      "აქვს განსხვავებული ფუნქციური დანიშნულების ობიექტებზე მუშაობის მრავალწლიანი გამოცდილება. მის, როგორც მთავარი სპეციალისტის, პროფესიულ ანგარიშზე ათობით პროექტი ირიცხება დედაქალაქსა და რეგიონებში",
+                    text: "აქვს განსხვავებული ფუნქციური დანიშნულების ობიექტებზე მუშაობის მრავალწლიანი გამოცდილება. მის, როგორც მთავარი სპეციალისტის, პროფესიულ ანგარიშზე ათობით პროექტი ირიცხება დედაქალაქსა და რეგიონებში",
                   }}
                 ></Manager>
                 <Manager
@@ -203,8 +150,7 @@ class Governance extends Component {
                   experience="არქიტექტურის სფეროში მუშაობის 20-წლიანი სტაჟი"
                   work={{
                     pretext: "განხორციელებული პროექტები",
-                    text:
-                      "შესრულებული აქვს 15-მდე მასშტაბური პროექტი თბილისსა და რეგიონებში, მათ შორის, სასტუმრო კომპლექსები, მულტიფუნქციური შენობები, საცხოვრებელი კორპუსები, ისტორიული ნაგებობების რეკონსტრუქცია და სხვა",
+                    text: "შესრულებული აქვს 15-მდე მასშტაბური პროექტი თბილისსა და რეგიონებში, მათ შორის, სასტუმრო კომპლექსები, მულტიფუნქციური შენობები, საცხოვრებელი კორპუსები, ისტორიული ნაგებობების რეკონსტრუქცია და სხვა",
                   }}
                 ></Manager>
               </div>

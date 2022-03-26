@@ -1,62 +1,13 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import AboutHeader from "./shared/aboutHeader";
 
 class WhoWeAre extends Component {
   render() {
     return (
       <div>
         <div className="thumbnail" />
-        <nav className="container">
-          <div
-            className="nav nav-tabs justify-content-center"
-            id="nav-tab"
-            role="tablist"
-          >
-            <Link
-              className="nav-item nav-link nav-link-emg active"
-              to="/about/whoweare"
-            >
-              ვინ ვართ ჩვენ
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/governance"
-            >
-              მმართველობა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/strategicvision"
-            >
-              სტრატეგიული ხედვა
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg "
-              to="/about/qualityandpermits"
-            >
-              ხარისხი და პასუხისმგებლობა
-            </Link>
+        <AboutHeader active="whoweare" />
 
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/partners"
-            >
-              პარტნიორები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/training"
-            >
-              ტრენინგები
-            </Link>
-            <Link
-              className="nav-item nav-link nav-link-emg"
-              to="/about/branches"
-            >
-              ფილიალები
-            </Link>
-          </div>
-        </nav>
         <div className="tab-content" id="nav-tabContent">
           <div
             className="tab-pane fade show active"
