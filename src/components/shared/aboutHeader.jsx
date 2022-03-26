@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function AboutHeader({ active }) {
+export default function aboutHeader({ active }) {
   return (
     <nav className="container">
       <div

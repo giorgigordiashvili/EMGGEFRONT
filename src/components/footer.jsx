@@ -84,15 +84,15 @@ class Footer extends Form {
             <div className="container">
               <div className="pl-04">
                 გამოგვყევით
-                <Link
-                  to="https://www.facebook.com/EMG.Consulting.2016/"
+                <a
+                  href="https://www.facebook.com/EMG.Consulting.2016/"
                   className="card-link-emg opacity-1 p-2 color-emg-dark"
                 >
                   <FontAwesome
                     name="facebook"
                     className="fab fa-facebook-f"
                   ></FontAwesome>
-                </Link>
+                </a>
                 <Link to="#" className="card-link-emg p-2 color-emg-dark">
                   <FontAwesome
                     name="twitter"
